@@ -1,0 +1,21 @@
+{
+    "name": "cotalpa",
+    "displayName": "Cotalpa",
+    "description": "Monokai Theme Variation",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.38.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Monokai Cotalpa",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Monokai Cotalpa-color-theme.json"
+            }
+        ]
+    }
+}
