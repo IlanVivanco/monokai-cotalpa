@@ -1,5 +1,5 @@
 # Monokai Cotalpa Theme for VS Code
-![Preview]('https://raw.githubusercontent.com/IlanVivanco/monokai-cotalpa/master/images/screenshot.png')
+![Preview](https://raw.githubusercontent.com/IlanVivanco/monokai-cotalpa/master/images/screenshot.png)
 
 # Installation
 
