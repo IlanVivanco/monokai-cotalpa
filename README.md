@@ -9,7 +9,7 @@
 5. Code > Preferences > Color Theme > **Monokai Cotalpa**
 6. Enjoy
 
-## I you don't like something
+## If you don't like something
 
 First, this theme is new so if something is funky, please open an issue.
 If you would like to change something, you can either open a PR and see if I'd like it added, or override the colors in your own settings.json file.
