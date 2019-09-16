@@ -1,13 +1,28 @@
 {
     "name": "cotalpa",
-    "displayName": "Cotalpa",
+    "displayName": "Monokai Cotalpa",
     "description": "Monokai Theme Variation",
-    "version": "0.0.1",
+    "publisher": "ilanvivanco",
+    "version": "0.0.1",    
+    "icon": "images/logo.png",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/IlanVivanco/monokai-cotalpa"
+    },
+    "galleryBanner": {
+      "color": "#273136",
+      "theme": "dark"
+    },
     "engines": {
         "vscode": "^1.38.0"
     },
     "categories": [
         "Themes"
+    ],
+    "keywords": [
+      "VSCode",
+      "Themes",
+      "Monokai"
     ],
     "contributes": {
         "themes": [
