@@ -1,36 +1,41 @@
 {
-    "name": "cotalpa",
-    "displayName": "Monokai Cotalpa",
-    "description": "Monokai Theme Variation",
-    "publisher": "ilanvivanco",
-    "version": "0.0.1",    
-    "icon": "images/logo.png",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/IlanVivanco/monokai-cotalpa"
-    },
-    "galleryBanner": {
-      "color": "#273136",
-      "theme": "dark"
-    },
-    "engines": {
-        "vscode": "^1.38.0"
-    },
-    "categories": [
-        "Themes"
-    ],
-    "keywords": [
-      "VSCode",
-      "Themes",
-      "Monokai"
-    ],
-    "contributes": {
-        "themes": [
-            {
-                "label": "Monokai Cotalpa",
-                "uiTheme": "vs-dark",
-                "path": "./themes/Monokai Cotalpa-color-theme.json"
-            }
-        ]
-    }
+	"name": "cotalpa",
+	"displayName": "Monokai Cotalpa",
+	"description": "Monokai Theme Variation for VS Code",
+	"publisher": "ilanvivanco",
+	"version": "0.0.1",
+	"icon": "images/logo.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/IlanVivanco/monokai-cotalpa"
+	},
+	"galleryBanner": {
+		"color": "#273136",
+		"theme": "dark"
+	},
+	"engines": {
+		"vscode": "^1.38.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"keywords": [
+		"VSCode",
+		"Themes",
+		"Monokai"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Monokai Cotalpa",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Monokai Cotalpa-color-theme.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "9fc56e4f-3620-4ee5-8b75-14b121f2c2f1",
+		"publisherDisplayName": "Ilán Vivanco",
+		"publisherId": "1af87088-d596-49ae-a584-77fc8f1e066a"
+	}
 }
