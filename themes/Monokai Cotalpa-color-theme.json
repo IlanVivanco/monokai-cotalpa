@@ -652,7 +652,8 @@
 			"scope": "invalid",
 			"settings": {
 				"name": "Invalid",
-				"fontStyle": "italic"
+				// "foreground": "#8e9a9e"
+				// "fontStyle": "italic"
 			}
 		},
 		{
