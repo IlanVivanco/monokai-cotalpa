@@ -317,7 +317,10 @@
 			}
 		},
 		{
-			"scope": ["comment variable", "comment variable.other"],
+			"scope": [
+				"comment variable",
+				"comment variable.other"
+			],
 			"settings": {
 				"name": "JSDoc variable",
 				"foreground": "#b8c0c2"
@@ -457,7 +460,10 @@
 			}
 		},
 		{
-			"scope": ["entity.name.function", "entity.name.function.templated"],
+			"scope": [
+				"entity.name.function",
+				"entity.name.function.templated"
+			],
 			"settings": {
 				"name": "Functions",
 				"foreground": "#a2e57b"
@@ -607,7 +613,10 @@
 			}
 		},
 		{
-			"scope": ["entity.name.function", "support.function"],
+			"scope": [
+				"entity.name.function",
+				"support.function"
+			],
 			"settings": {
 				"name": "Function names / calls",
 				"foreground": "#a2e57b"
@@ -948,7 +957,10 @@
 			}
 		},
 		{
-			"scope": ["entity.name.constant.preprocessor", "meta.preprocessor"],
+			"scope": [
+				"entity.name.constant.preprocessor",
+				"meta.preprocessor"
+			],
 			"settings": {
 				"name": "Preprocessor",
 				"foreground": "#82bffc"
@@ -1045,6 +1057,14 @@
 			}
 		},
 		{
+			"scope": [
+				"markup.inline.raw",
+			],
+			"settings": {
+				"foreground": "#82ddfc"
+			}
+		},
+		{
 			"scope": "region.redish",
 			"settings": {
 				"name": "region red color",
@@ -1115,7 +1135,10 @@
 			}
 		},
 		{
-			"scope": ["source.scss", "source.sass"],
+			"scope": [
+				"source.scss",
+				"source.sass"
+			],
 			"settings": {
 				"name": "SASS, SCSS default",
 				"foreground": "#8e9a9e"
@@ -1219,7 +1242,10 @@
 			}
 		},
 		{
-			"scope": ["storage.modifier", "storage.type.modifier"],
+			"scope": [
+				"storage.modifier",
+				"storage.type.modifier"
+			],
 			"settings": {
 				"name": "Keywords that affect the storage of a variable, function or data structure should use the following scope. Examples include static, inline, const, public and private.",
 				"fontStyle": "italic",
@@ -1262,7 +1288,10 @@
 			}
 		},
 		{
-			"scope": ["string.other.link.title", "string.other.link.description"],
+			"scope": [
+				"string.other.link.title",
+				"string.other.link.description"
+			],
 			"settings": {
 				"name": "link title",
 				"foreground": "#fc8f82"
@@ -1286,7 +1315,10 @@
 			}
 		},
 		{
-			"scope": ["string.other.ref", "string.other.restructuredtext.ref"],
+			"scope": [
+				"string.other.ref",
+				"string.other.restructuredtext.ref"
+			],
 			"settings": {
 				"name": "refs (Restructured text)",
 				"foreground": "#a2e57b"
@@ -1335,7 +1367,10 @@
 			}
 		},
 		{
-			"scope": ["support.type", "entity.name.type.object.console"],
+			"scope": [
+				"support.type",
+				"entity.name.type.object.console"
+			],
 			"settings": {
 				"name": "Library type",
 				"fontStyle": "italic",
@@ -1379,14 +1414,20 @@
 			}
 		},
 		{
-			"scope": ["variable", "variable.other"],
+			"scope": [
+				"variable",
+				"variable.other"
+			],
 			"settings": {
 				"name": "Variable",
 				"foreground": "#f4fafe"
 			}
 		},
 		{
-			"scope": ["variable.parameter", "parameters variable.function"],
+			"scope": [
+				"variable.parameter",
+				"parameters variable.function"
+			],
 			"settings": {
 				"name": "Function arguments",
 				"fontStyle": "italic",
