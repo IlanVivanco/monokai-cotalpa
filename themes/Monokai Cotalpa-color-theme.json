@@ -1553,6 +1553,31 @@
 			"settings": {
 				"foreground": "#de82fc"
 			}
-		}
+		},
+		{
+			"scope": [
+				"keyword.other.DML.sql",
+				"keyword.other.DDL.create.II.sql",
+			],
+			"settings": {
+				"foreground": "#82ddfc"
+			}
+		},
+		{
+			"scope": [
+				"constant.numeric.sql",
+			],
+			"settings": {
+				"foreground": "#82bffc"
+			}
+		},
+		{
+			"scope": [
+				"keyword.other.sql",
+			],
+			"settings": {
+				"foreground": "#a2e57b"
+			}
+		},
 	]
 }
