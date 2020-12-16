@@ -6,7 +6,6 @@
 		"activityBar.activeBorder": "#fcde82",
 		"activityBar.background": "#151718",
 		"activityBar.border": "#151718",
-		"activityBar.dropBackground": "#1e2223bf",
 		"activityBar.foreground": "#b8c0c2",
 		"activityBar.inactiveForeground": "#545f62",
 		"activityBarBadge.background": "#fcde82",
@@ -170,7 +169,6 @@
 		"notifications.foreground": "#b8c0c2",
 		"panel.background": "#394042",
 		"panel.border": "#273136",
-		"panel.dropBackground": "#1e2223bf",
 		"panelTitle.activeBorder": "#fcde82",
 		"panelTitle.activeForeground": "#fcde82",
 		"panelTitle.inactiveForeground": "#8e9a9e",
@@ -297,7 +295,6 @@
 				"comment text"
 			],
 			"settings": {
-				"name": "Comments and overrides inside comments",
 				"fontStyle": "italic",
 				"foreground": "#6f7e82"
 			}
@@ -305,14 +302,12 @@
 		{
 			"scope": "comment storage.type",
 			"settings": {
-				"name": "JSDoc storage type",
 				"foreground": "#6f7e82"
 			}
 		},
 		{
 			"scope": "comment entity.name.type",
 			"settings": {
-				"name": "JSDoc entity name",
 				"foreground": "#b8c0c2"
 			}
 		},
@@ -322,140 +317,120 @@
 				"comment variable.other"
 			],
 			"settings": {
-				"name": "JSDoc variable",
 				"foreground": "#b8c0c2"
 			}
 		},
 		{
 			"scope": "comment keyword.codetag.notation",
 			"settings": {
-				"name": "Comment TODO / FIXME (at least in VSCode Python)",
 				"foreground": "#82bffc"
 			}
 		},
 		{
 			"scope": "comment.git-status.header.remote",
 			"settings": {
-				"name": "git status remote",
 				"foreground": "#fc8f82"
 			}
 		},
 		{
 			"scope": "comment.git-status.header.local",
 			"settings": {
-				"name": "git status local",
 				"foreground": "#82ddfc"
 			}
 		},
 		{
 			"scope": "comment.other.git-status.head",
 			"settings": {
-				"name": "git status remote",
 				"foreground": "#f4fafe"
 			}
 		},
 		{
 			"scope": "constant",
 			"settings": {
-				"name": "Constant",
 				"foreground": "#82bffc"
 			}
 		},
 		{
 			"scope": "constant.other",
 			"settings": {
-				"name": "Constant",
 				"foreground": "#f4fafe"
 			}
 		},
 		{
 			"scope": "constant.other.php",
 			"settings": {
-				"name": "Constant",
 				"foreground": "#82bffc"
 			}
 		},
 		{
 			"scope": "constant.other.property",
 			"settings": {
-				"name": "Constant as property",
 				"foreground": "#82bffc"
 			}
 		},
 		{
 			"scope": "constant.other.citation.latex",
 			"settings": {
-				"name": "Constant in latex",
 				"foreground": "#82bffc"
 			}
 		},
 		{
 			"scope": "constant.other.color",
 			"settings": {
-				"name": "Constant as color (in css / sass)",
 				"foreground": "#82bffc"
 			}
 		},
 		{
 			"scope": "constant.other.character-class.escape",
 			"settings": {
-				"name": "Constant as character class escape (e.g. in regex)",
 				"foreground": "#82bffc"
 			}
 		},
 		{
 			"scope": "constant.other.key",
 			"settings": {
-				"name": "Constant as key (e.g. in puppet manifests)",
 				"foreground": "#82bffc"
 			}
 		},
 		{
 			"scope": "constant.other.symbol",
 			"settings": {
-				"name": "Constant as symbol (e.g. in ruby)",
 				"foreground": "#fcb882"
 			}
 		},
 		{
 			"scope": "constant.numeric",
 			"settings": {
-				"name": "Number",
 				"foreground": "#82bffc"
 			}
 		},
 		{
 			"scope": "constant.language",
 			"settings": {
-				"name": "Constant",
 				"foreground": "#82bffc"
 			}
 		},
 		{
 			"scope": "constant.character.escape",
 			"settings": {
-				"name": "Character escape",
 				"foreground": "#82bffc"
 			}
 		},
 		{
 			"scope": "constant.numeric.line-number.find-in-files",
 			"settings": {
-				"name": "Search result line numbers",
 				"foreground": "#545f62"
 			}
 		},
 		{
 			"scope": "constant.numeric.line-number.match.find-in-files",
 			"settings": {
-				"name": "Search result matched line numbes",
 				"foreground": "#fcde82"
 			}
 		},
 		{
 			"scope": "entity.name.section",
 			"settings": {
-				"name": "Sections",
 				"foreground": "#fcde82"
 			}
 		},
@@ -465,14 +440,12 @@
 				"entity.name.function.templated"
 			],
 			"settings": {
-				"name": "Functions",
 				"foreground": "#a2e57b"
 			}
 		},
 		{
 			"scope": "entity.name.function.member.static",
 			"settings": {
-				"name": "Functions",
 				"foreground": "#f4fafe"
 			}
 		},
@@ -483,56 +456,48 @@
 				"entity.name.type.namespace"
 			],
 			"settings": {
-				"name": "Class template",
 				"foreground": "#82ddfc"
 			}
 		},
 		{
 			"scope": "entity.name.label",
 			"settings": {
-				"name": "label",
 				"foreground": "#82bffc"
 			}
 		},
 		{
 			"scope": "entity.name.function.preprocessor",
 			"settings": {
-				"name": "Macros",
 				"foreground": "#82ddfc"
 			}
 		},
 		{
 			"scope": "entity.name",
 			"settings": {
-				"name": "Entity name",
 				"foreground": "#a2e57b"
 			}
 		},
 		{
 			"scope": "entity.name.class",
 			"settings": {
-				"name": "Class name",
 				"foreground": "#82ddfc"
 			}
 		},
 		{
 			"scope": "entity.name.constant",
 			"settings": {
-				"name": "Constant name",
 				"foreground": "#82bffc"
 			}
 		},
 		{
 			"scope": "entity.name.namespace",
 			"settings": {
-				"name": "Namespace",
 				"foreground": "#f4fafe"
 			}
 		},
 		{
 			"scope": "entity.other.inherited-class",
 			"settings": {
-				"name": "Inherited class",
 				"fontStyle": "italic",
 				"foreground": "#82ddfc"
 			}
@@ -540,7 +505,6 @@
 		{
 			"scope": "entity.name.function",
 			"settings": {
-				"name": "Function name",
 				"foreground": "#a2e57b"
 			}
 		},
@@ -551,14 +515,12 @@
 				"entity.name.tag support.class.component"
 			],
 			"settings": {
-				"name": "Tag name",
 				"foreground": "#fc8f82"
 			}
 		},
 		{
 			"scope": "entity.name.function.operator",
 			"settings": {
-				"name": "Operator",
 				"foreground": "#fc8f82"
 			}
 		},
@@ -569,14 +531,12 @@
 				"entity.name.type.class.value"
 			],
 			"settings": {
-				"name": "Entity name type",
 				"foreground": "#82ddfc"
 			}
 		},
 		{
 			"scope": "entity.other.attribute-name",
 			"settings": {
-				"name": "Tag attribute",
 				"fontStyle": "italic",
 				"foreground": "#82ddfc"
 			}
@@ -589,14 +549,12 @@
 				"entity.other.attribute-name.css"
 			],
 			"settings": {
-				"name": "CSS class",
 				"foreground": "#a2e57b"
 			}
 		},
 		{
 			"scope": "entity.other.attribute-name.id.css",
 			"settings": {
-				"name": "CSS id",
 				"foreground": "#fcb882"
 			}
 		},
@@ -607,7 +565,6 @@
 				"entity.other.pseudo-element.css"
 			],
 			"settings": {
-				"name": "CSS pseudo class",
 				"fontStyle": "italic",
 				"foreground": "#82ddfc"
 			}
@@ -618,49 +575,42 @@
 				"support.function"
 			],
 			"settings": {
-				"name": "Function names / calls",
 				"foreground": "#a2e57b"
 			}
 		},
 		{
 			"scope": "entity.other.git-status.hex",
 			"settings": {
-				"name": "git status commit hex",
 				"foreground": "#82bffc"
 			}
 		},
 		{
 			"scope": "entity.other.jinja2.delimiter",
 			"settings": {
-				"name": "jinja delimiters",
 				"foreground": "#8e9a9e"
 			}
 		},
 		{
 			"scope": "entity.name.operator.custom-literal",
 			"settings": {
-				"name": "custom literal",
 				"foreground": "#f4fafe"
 			}
 		},
 		{
 			"scope": "entity.name.operator.custom-literal.string",
 			"settings": {
-				"name": "custom literal string",
 				"foreground": "#fcde82"
 			}
 		},
 		{
 			"scope": "entity.name.operator.custom-literal.number",
 			"settings": {
-				"name": "custom literal number",
 				"foreground": "#82bffc"
 			}
 		},
 		{
 			"scope": "invalid",
 			"settings": {
-				"name": "Invalid",
 				// "foreground": "#8e9a9e"
 				// "fontStyle": "italic"
 			}
@@ -668,21 +618,18 @@
 		{
 			"scope": "keyword",
 			"settings": {
-				"name": "Keyword",
 				"foreground": "#fc8f82"
 			}
 		},
 		{
 			"scope": "keyword.control",
 			"settings": {
-				"name": "Control keywords examples include if, try, end and while. Some syntaxes prefer to mark if and else with the conditional variant. The import variant is often used in appropriate situations.",
 				"foreground": "#fc8f82"
 			}
 		},
 		{
 			"scope": "keyword.control.directive",
 			"settings": {
-				"name": "keyword control directive",
 				"foreground": "#fc8f82"
 			}
 		},
@@ -693,14 +640,12 @@
 				"keyword.operator.new"
 			],
 			"settings": {
-				"name": "Operator",
 				"foreground": "#fc8f82"
 			}
 		},
 		{
 			"scope": "keyword.other.substitution",
 			"settings": {
-				"name": "Substitution string",
 				"foreground": "#8e9a9e"
 			}
 		},
@@ -710,7 +655,6 @@
 				"keyword.other.template.end"
 			],
 			"settings": {
-				"name": "Template literal begin / end",
 				"foreground": "#fc8f82"
 			}
 		},
@@ -720,49 +664,42 @@
 				"keyword.operator.table.row.restructuredtext keyword.operator.table.data.restructuredtext"
 			],
 			"settings": {
-				"name": "RestructuredText heading, table markup",
 				"foreground": "#8e9a9e"
 			}
 		},
 		{
 			"scope": "markup.italic",
 			"settings": {
-				"name": "Italic",
 				"fontStyle": "italic"
 			}
 		},
 		{
 			"scope": "markup.bold",
 			"settings": {
-				"name": "Bold",
 				"fontStyle": "bold"
 			}
 		},
 		{
 			"scope": "markup.heading",
 			"settings": {
-				"name": "Heading",
 				"foreground": "#fcde82"
 			}
 		},
 		{
 			"scope": "markup.raw",
 			"settings": {
-				"name": "Raw",
 				"foreground": "#fcb882"
 			}
 		},
 		{
 			"scope": "markup.underline",
 			"settings": {
-				"name": "Underline",
 				"fontStyle": "underline"
 			}
 		},
 		{
 			"scope": "markup.underline.link",
 			"settings": {
-				"name": "Link",
 				"foreground": "#a2e57b"
 			}
 		},
@@ -772,7 +709,6 @@
 				"markup.inserted punctuation.definition.inserted"
 			],
 			"settings": {
-				"name": "Diff inserted",
 				"foreground": "#a2e57b"
 			}
 		},
@@ -782,7 +718,6 @@
 				"markup.deleted punctuation.definition.deleted"
 			],
 			"settings": {
-				"name": "Diff deleted",
 				"foreground": "#fc8f82"
 			}
 		},
@@ -792,7 +727,6 @@
 				"markup.changed punctuation.definition.changed"
 			],
 			"settings": {
-				"name": "Diff changed",
 				"foreground": "#fcde82"
 			}
 		},
@@ -802,21 +736,18 @@
 				"markup.ignored punctuation.definition.ignored"
 			],
 			"settings": {
-				"name": "Diff ignored",
 				"foreground": "#8e9a9e"
 			}
 		},
 		{
 			"scope": "markup.untracked",
 			"settings": {
-				"name": "Diff untracked",
 				"foreground": "#8e9a9e"
 			}
 		},
 		{
 			"scope": "markup.quote",
 			"settings": {
-				"name": "Markup quote",
 				"fontStyle": "italic"
 			}
 		},
@@ -830,7 +761,6 @@
 				"meta.function-call.method.without-arguments.js"
 			],
 			"settings": {
-				"name": "Braces, delimiters",
 				"foreground": "#8e9a9e"
 			}
 		},
@@ -840,21 +770,18 @@
 				"meta.function-call.arguments.python meta.function-call.python"
 			],
 			"settings": {
-				"name": "Function call",
 				"foreground": "#a2e57b"
 			}
 		},
 		{
 			"scope": "meta.function-call.python meta.function-call.arguments.python",
 			"settings": {
-				"name": "Function arguments",
 				"foreground": "#f4fafe"
 			}
 		},
 		{
 			"scope": "meta.instance.constructor",
 			"settings": {
-				"name": "Constructor (new MyClass())",
 				"foreground": "#a2e57b"
 			}
 		},
@@ -864,7 +791,6 @@
 				"meta.attribute.class.html string"
 			],
 			"settings": {
-				"name": "Class string name (i.e. in html attributes)",
 				"foreground": "#a2e57b"
 			}
 		},
@@ -874,7 +800,6 @@
 				"meta.attribute.id.html string"
 			],
 			"settings": {
-				"name": "ID string name (i.e. in html attributes)",
 				"foreground": "#fcb882"
 			}
 		},
@@ -914,7 +839,6 @@
 				"source.json meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary string"
 			],
 			"settings": {
-				"name": "JSON keys (and invisibles)",
 				"foreground": "#f4fafe"
 			}
 		},
@@ -938,21 +862,18 @@
 				"source.json meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value string"
 			],
 			"settings": {
-				"name": "JSON values",
 				"foreground": "#fcde82"
 			}
 		},
 		{
 			"scope": "meta.object.member",
 			"settings": {
-				"name": "Object members",
 				"foreground": "#f4fafe"
 			}
 		},
 		{
 			"scope": "meta.property-list.css variable.other",
 			"settings": {
-				"name": "SCSS Variable",
 				"foreground": "#fcb882"
 			}
 		},
@@ -962,21 +883,18 @@
 				"meta.preprocessor"
 			],
 			"settings": {
-				"name": "Preprocessor",
 				"foreground": "#82bffc"
 			}
 		},
 		{
 			"scope": "meta.diff.git-diff.header",
 			"settings": {
-				"name": "git diff header",
 				"foreground": "#fcde82"
 			}
 		},
 		{
 			"scope": "punctuation",
 			"settings": {
-				"name": "Punctuation",
 				"foreground": "#8e9a9e"
 			}
 		},
@@ -991,21 +909,18 @@
 				"punctuation.definition.string.end.html source.css"
 			],
 			"settings": {
-				"name": "Punctuation tags",
 				"foreground": "#8e9a9e"
 			}
 		},
 		{
 			"scope": "punctuation.definition.group",
 			"settings": {
-				"name": "Group (i.e. in regex)",
 				"foreground": "#f4fafe"
 			}
 		},
 		{
 			"scope": "punctuation.definition.comment",
 			"settings": {
-				"name": "Comment start / end",
 				"foreground": "#6f7e82"
 			}
 		},
@@ -1016,7 +931,6 @@
 				"punctuation.definition.entity.css"
 			],
 			"settings": {
-				"name": "Variable indicator (i.e. in php or in include directives in sass)",
 				"foreground": "#b8c0c2"
 			}
 		},
@@ -1028,7 +942,6 @@
 				"punctuation.section.embedded source"
 			],
 			"settings": {
-				"name": "Punctuation section embedded (i.e. ?php blocks in html)",
 				"foreground": "#fcb882"
 			}
 		},
@@ -1042,18 +955,7 @@
 				"string.quoted.template punctuation.definition.string.end"
 			],
 			"settings": {
-				"name": "Punctuation template string (`example`)",
 				"foreground": "#fc8f82"
-			}
-		},
-		{
-			"scope": [
-				"meta.paragraph.markdown meta.dummy.line-break",
-				"meta.paragraph.markdown meta.hard-line-break.markdown"
-			],
-			"settings": {
-				"Name": "Punctuation hard line break in Markdown",
-				"background": "#82bffc"
 			}
 		},
 		{
@@ -1067,70 +969,54 @@
 		{
 			"scope": "region.redish",
 			"settings": {
-				"name": "region red color",
-				"foreground": "#fc8f82",
-				"background": "#fc8f8259"
+				"foreground": "#fc8f82"
 			}
 		},
 		{
 			"scope": "region.orangish",
 			"settings": {
-				"name": "region orange color",
-				"foreground": "#fcb882",
-				"background": "#fcb88259"
+				"foreground": "#fcb882"
 			}
 		},
 		{
 			"scope": "region.yellowish",
 			"settings": {
-				"name": "region yellow color",
-				"foreground": "#fcde82",
-				"background": "#fcde8259"
+				"foreground": "#fcde82"
 			}
 		},
 		{
 			"scope": "region.greenish",
 			"settings": {
-				"name": "region green color",
-				"foreground": "#a2e57b",
-				"background": "#a2e57b59"
+				"foreground": "#a2e57b"
 			}
 		},
 		{
 			"scope": "region.bluish",
 			"settings": {
-				"name": "region blue color",
-				"foreground": "#82ddfc",
-				"background": "#82ddfc59"
+				"foreground": "#82ddfc"
 			}
 		},
 		{
 			"scope": "region.purplish",
 			"settings": {
-				"name": "region purple color",
-				"foreground": "#82bffc",
-				"background": "#82bffc59"
+				"foreground": "#82bffc"
 			}
 		},
 		{
 			"scope": "region.pinkish",
 			"settings": {
-				"name": "region pink color",
-				"foreground": "#fc8f82",
-				"background": "#fc8f8259"
+				"foreground": "#fc8f82"
 			}
 		},
 		{
 			"scope": "region.whitish",
 			"settings": {
-				"name": "White for ST3 for non-colorized scheme",
 				"foreground": "#f4fafe"
 			}
 		},
 		{
 			"scope": "source",
 			"settings": {
-				"name": "source",
 				"foreground": "#f4fafe"
 			}
 		},
@@ -1140,7 +1026,6 @@
 				"source.sass"
 			],
 			"settings": {
-				"name": "SASS, SCSS default",
 				"foreground": "#8e9a9e"
 			}
 		},
@@ -1158,7 +1043,6 @@
 				"source.less variable.declaration.less"
 			],
 			"settings": {
-				"name": "SASS, SCSS and LESS variables",
 				"fontStyle": "italic",
 				"foreground": "#fcb882"
 			}
@@ -1166,7 +1050,6 @@
 		{
 			"scope": "source.git-show.commit.sha",
 			"settings": {
-				"name": "git",
 				"foreground": "#82bffc"
 			}
 		},
@@ -1179,7 +1062,6 @@
 				"source.git-diff.command meta.diff.git-diff.header.to-file"
 			],
 			"settings": {
-				"name": "git",
 				"foreground": "#8e9a9e"
 			}
 		},
@@ -1189,14 +1071,12 @@
 				"source.git-show meta.diff.git-diff.header.extended.index.to-sha"
 			],
 			"settings": {
-				"name": "git diff header hash",
 				"foreground": "#82bffc"
 			}
 		},
 		{
 			"scope": "source.git-show meta.diff.range.unified",
 			"settings": {
-				"name": "git diff header range",
 				"foreground": "#fcb882"
 			}
 		},
@@ -1206,21 +1086,18 @@
 				"source.git-show meta.diff.header.to-file"
 			],
 			"settings": {
-				"name": "git diff header files",
 				"foreground": "#8e9a9e"
 			}
 		},
 		{
 			"scope": "storage",
 			"settings": {
-				"name": "Storage",
 				"foreground": "#fc8f82"
 			}
 		},
 		{
 			"scope": "storage.type",
 			"settings": {
-				"name": "Types and definition/declaration keywords should use the following scope. Examples include int, bool, char, func, function, class and def. Depending on the language and semantics, const may be this or storage.modifier.",
 				"fontStyle": "italic",
 				"foreground": "#82ddfc"
 			}
@@ -1228,16 +1105,14 @@
 		{
 			"scope": "storage.type.extends",
 			"settings": {
-				"name": "Extends",
-				"fontStyle": "normal",
+				"fontStyle": "",
 				"foreground": "#fc8f82"
 			}
 		},
 		{
 			"scope": "storage.type.function.arrow",
 			"settings": {
-				"name": "Fat arrow function",
-				"fontStyle": "normal",
+				"fontStyle": "",
 				"foreground": "#fc8f82"
 			}
 		},
@@ -1247,7 +1122,6 @@
 				"storage.type.modifier"
 			],
 			"settings": {
-				"name": "Keywords that affect the storage of a variable, function or data structure should use the following scope. Examples include static, inline, const, public and private.",
 				"fontStyle": "italic",
 				"foreground": "#fc8f82"
 			}
@@ -1255,35 +1129,30 @@
 		{
 			"scope": "storage.class.restructuredtext.ref",
 			"settings": {
-				"name": "refs (Restructured text)",
 				"foreground": "#82bffc"
 			}
 		},
 		{
 			"scope": "string",
 			"settings": {
-				"name": "String",
 				"foreground": "#fcde82"
 			}
 		},
 		{
 			"scope": "string.unquoted.label",
 			"settings": {
-				"name": "String label",
 				"foreground": "#f4fafe"
 			}
 		},
 		{
 			"scope": "string source",
 			"settings": {
-				"name": "Source in template string",
 				"foreground": "#f4fafe"
 			}
 		},
 		{
 			"scope": "string source punctuation.section.embedded",
 			"settings": {
-				"name": "Embedded punctuation begin / end in template string",
 				"foreground": "#8e9a9e"
 			}
 		},
@@ -1293,14 +1162,12 @@
 				"string.other.link.description"
 			],
 			"settings": {
-				"name": "link title",
 				"foreground": "#fc8f82"
 			}
 		},
 		{
 			"scope": "string.other.link.description.title",
 			"settings": {
-				"name": "link description",
 				"foreground": "#82ddfc"
 			}
 		},
@@ -1310,7 +1177,6 @@
 				"string.regexp punctuation.definition.string.end"
 			],
 			"settings": {
-				"name": "String regexp begin / end",
 				"foreground": "#fc8f82"
 			}
 		},
@@ -1320,49 +1186,42 @@
 				"string.other.restructuredtext.ref"
 			],
 			"settings": {
-				"name": "refs (Restructured text)",
 				"foreground": "#a2e57b"
 			}
 		},
 		{
 			"scope": "string.other.git-status.help.key",
 			"settings": {
-				"name": "git key in git status help text",
 				"foreground": "#b8c0c2"
 			}
 		},
 		{
 			"scope": "string.other.git-status.remote",
 			"settings": {
-				"name": "git status remote",
 				"foreground": "#fc8f82"
 			}
 		},
 		{
 			"scope": "support.constant",
 			"settings": {
-				"name": "Library constant",
 				"foreground": "#82ddfc"
 			}
 		},
 		{
 			"scope": "support.constant.handlebars",
 			"settings": {
-				"name": "Handlebars start / end",
 				"foreground": "#8e9a9e"
 			}
 		},
 		{
 			"scope": "support.type.vendor-prefix.css",
 			"settings": {
-				"name": "vendor prefix",
 				"foreground": "#b8c0c2"
 			}
 		},
 		{
 			"scope": "support.function",
 			"settings": {
-				"name": "Function name",
 				"foreground": "#a2e57b"
 			}
 		},
@@ -1372,7 +1231,6 @@
 				"entity.name.type.object.console"
 			],
 			"settings": {
-				"name": "Library type",
 				"fontStyle": "italic",
 				"foreground": "#82ddfc"
 			}
@@ -1380,36 +1238,31 @@
 		{
 			"scope": "support.variable",
 			"settings": {
-				"name": "Support variables",
 				"foreground": "#82ddfc"
 			}
 		},
 		{
 			"scope": "support.type.property-name",
 			"settings": {
-				"name": "Library type property",
-				"fontStyle": "normal",
+				"fontStyle": "",
 				"foreground": "#f4fafe"
 			}
 		},
 		{
 			"scope": "support.class",
 			"settings": {
-				"name": "Library class",
 				"foreground": "#82ddfc"
 			}
 		},
 		{
 			"scope": "text",
 			"settings": {
-				"name": "text",
 				"foreground": "#f4fafe"
 			}
 		},
 		{
 			"scope": "text.find-in-files",
 			"settings": {
-				"name": "Search result",
 				"foreground": "#f4fafe"
 			}
 		},
@@ -1419,7 +1272,6 @@
 				"variable.other"
 			],
 			"settings": {
-				"name": "Variable",
 				"foreground": "#f4fafe"
 			}
 		},
@@ -1429,7 +1281,6 @@
 				"parameters variable.function"
 			],
 			"settings": {
-				"name": "Function arguments",
 				"fontStyle": "italic",
 				"foreground": "#fcb882"
 			}
@@ -1441,7 +1292,6 @@
 				"variable.parameter.function.language.special.cls.python"
 			],
 			"settings": {
-				"name": "Reserved variable names that are specified by the language, such as this, self, super, arguments. Also in function arguments (e.g. like in Python)",
 				"fontStyle": "italic",
 				"foreground": "#b8c0c2"
 			}
@@ -1449,35 +1299,30 @@
 		{
 			"scope": "variable.language.arguments",
 			"settings": {
-				"name": "Reserved variable names: 'arguments'",
 				"foreground": "#82bffc"
 			}
 		},
 		{
 			"scope": "variable.other.class",
 			"settings": {
-				"name": "Library function",
 				"foreground": "#82ddfc"
 			}
 		},
 		{
 			"scope": "variable.other.constant",
 			"settings": {
-				"name": "Immutable variables, often via a const modifier, should receive the following scope. Depending on the language and semantics, entity.name.constant may be a better choice.",
 				"foreground": "#82bffc"
 			}
 		},
 		{
 			"scope": "variable.other.member",
 			"settings": {
-				"name": "Fields, properties, members and attributes of a class or other data structure should use:",
 				"foreground": "#f4fafe"
 			}
 		},
 		{
 			"scope": "variable.other.enummember",
 			"settings": {
-				"name": "Enum member",
 				"foreground": "#82bffc"
 			}
 		},
@@ -1488,21 +1333,18 @@
 				"variable.other.event"
 			],
 			"settings": {
-				"name": "Variable property",
 				"foreground": "#f4fafe"
 			}
 		},
 		{
 			"scope": "variable.function",
 			"settings": {
-				"name": "Function and method names should be scoped using the following, but only when they are being invoked. When defined, they should use entity.name.function.",
 				"foreground": "#a2e57b"
 			}
 		},
 		{
 			"scope": "variable.other.substitution",
 			"settings": {
-				"name": "Substitution (restructured text)",
 				"foreground": "#fcb882"
 			}
 		},
@@ -1512,21 +1354,18 @@
 				"source.ruby variable.other.readwrite.class.ruby"
 			],
 			"settings": {
-				"name": "Ruby instance variables",
 				"foreground": "#82bffc"
 			}
 		},
 		{
 			"scope": "source.jinja2 variable.other.jinja2.block",
 			"settings": {
-				"name": "jinja2 variable block",
 				"foreground": "#a2e57b"
 			}
 		},
 		{
 			"scope": "source.jinja2 variable.other.jinja2",
 			"settings": {
-				"name": "jinja2 variable",
 				"foreground": "#fcb882"
 			}
 		},
