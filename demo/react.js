@@ -1,7 +1,7 @@
 /**
- * Demo of Shades of Purple VSCode theme.
+ * Demo of Monokai Cotalpa VS Code theme.
  *
- * I'm 💜'ing it.
+ * I'm lovin it.
  */
 import React from 'react';
 import { render } from 'react-dom';
@@ -36,9 +36,9 @@ class VSCode extends React.Component {
 		return (
 			<Wrap>
 				<button onClick={() => alert('Stop clicking me!')}>{this.props.value}</button>
-				<Message>Testing the React.js Syntax in VSCode Shades of Purple 💜 theme.</Message>
+				<Message>Testing the React.js Syntax in VSCode.</Message>
 			</Wrap>
-		);
+		)
 	}
 }
 

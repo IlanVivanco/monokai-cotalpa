@@ -5,8 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
-const world = '🗺️';
-console.log( world );
+const theme = 'Monokai Cotalpa';
+console.log( theme );
 
 @NgModule({
 	imports: [BrowserModule, FormsModule],
@@ -14,4 +14,4 @@ console.log( world );
 	bootstrap: [AppComponent]
 })
 
-export class AppModule {}
+export class User {}

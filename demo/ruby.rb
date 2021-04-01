@@ -30,11 +30,11 @@ class Array
             self[i] = code.call(n)
         end
     end
-end                                    
+end
 
 num_array = Array(1..10)
 
-num_array.iterator! { |n| n**2 } 
+num_array.iterator! { |n| n**2 }
 
 puts num_array.inspect
 
@@ -42,7 +42,7 @@ puts num_array.inspect
 def args(&code)
     one, two, three = 1, 2, 3
     code.call(one, two, three)
-    puts "Finished the method."
+    puts "Monokai Cotalpa theme."
 end
 
 block_par = proc { |a,b,c| puts "The first is #{a} and the second is #{b} and the last one is #{c}" }

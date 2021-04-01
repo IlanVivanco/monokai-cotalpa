@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+fmt.Println("Monokai Cotalpa")
+
 // fib returns a function that returns
 // successive Fibonacci numbers.
 func fib() func() int {

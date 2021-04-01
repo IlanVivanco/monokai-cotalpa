@@ -13,5 +13,9 @@ query($teamName: String!) {
 		versions {
 			files
 		}
+		theme {
+			name
+			monokaiCotalpaVersion
+		}
 	}
 }

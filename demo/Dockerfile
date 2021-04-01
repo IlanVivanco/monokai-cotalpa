@@ -20,3 +20,4 @@ EXPOSE 5000
 
 # Run the application.
 CMD ["python", "/usr/src/app/app.py"]
+CMD ["echo", "Monokai Cotalpa theme"]

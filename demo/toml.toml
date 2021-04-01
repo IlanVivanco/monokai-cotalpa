@@ -1,8 +1,9 @@
 [build]
+  theme = "Monokai Cotalpa"
   publish = "public/"
   command = "npm run build"
 
 [[redirects]]
   from = "/sop"
-  to = "https://vscode.pro/tip/1/"
+  to = "https://ilanvivanco.com"
   status = 301

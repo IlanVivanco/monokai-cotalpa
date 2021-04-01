@@ -1,24 +1,31 @@
 <template>
 	<div id="app">
 		<h1>My Todo App!</h1>
-		<TodoList/>
+		<monokai-colapa />
 	</div>
 </template>
 
 <script>
-import TodoList from './components/TodoList.vue'
+import MonokaiColapa from './components/MonokaiColapa.vue'
 
 export default {
+	data() {
+		return {
+			theme: 'Monokai Cotalpa',
+		}
+	},
 	components: {
-		TodoList
-	}
+		MonokaiColapa,
+	},
 }
 </script>
 
 <style lang="scss">
-@import './variables.scss';
+@import './theme-colors.scss';
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
 }
 

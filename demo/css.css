@@ -2,10 +2,18 @@
  * Checkout this CSS File.
  */
 
-.theme {
+.table {
 	display: table;
 	width: 100%;
 	color: #b362ff;
+}
+
+.table::after {
+	content: 'Monokai Cotalpa';
+	display: block;
+	width: 10px;
+	height: 10px;
+	background: red;
 }
 
 a {
@@ -15,6 +23,22 @@ a {
 
 a:hover {
 	opacity: 1;
+}
+
+a[href$='.pdf'] {
+	text-decoration: underline;
+}
+
+ul {
+	list-style: none;
+}
+
+li:last-of-type {
+	margin: 0;
+}
+
+li:nth-last-child(2n) {
+	margin-left: 10px;
 }
 
 .css-class {

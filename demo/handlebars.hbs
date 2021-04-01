@@ -1,17 +1,11 @@
 {{!-- Handlebars.js Example --}}
 {{!-- Install handlebars extension --}}
 
-# CHANGELOG: Shades of Purple
+# CHANGELOG: Monokai Cotalpa
 
 All notable changes are documented in this file.
 
-Become a VSCode Power User with me https://VSCode.pro →
-
 {{#each releases}}
-
-  ![hr](https://raw.githubusercontent.com/ahmadawais/shades-of-purple-vscode/master/images/hr.png)
-
-  <br>
 
   {{#if href}}
     ### RELEASE: [{{title}}]({{href}}){{#if tag}}{{/if}}
@@ -35,5 +29,5 @@ Become a VSCode Power User with me https://VSCode.pro →
    > {{subject}} [`{{shorthash}}`]({{href}}) <br>
   {{/commit-list}}
 
-    <br>
+  <br>
 {{/each}}

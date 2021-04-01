@@ -2,7 +2,7 @@
 /**
  * PHP is fun
  *
- * Shades of purple is genius.
+ * Monokai Cotalpa VS Code theme.
  *
  * @param String hello Hello.
  * @param Number count Count of hells said.
@@ -15,14 +15,14 @@
 // Header.
 get_header();
 
-$ahmad = 'Ahmad';
-$awais = 'Awais';
+$ilan    = 'Ilán';
+$vivanco = 'Vivanco';
 
 // Display the page to admins and subscribers only.
 if ( current_user_can( 'administrator' ) || current_user_can( 'subscriber' ) ) {
 	echo 'HELLO!';
 } else {
-	wp_safe_redirect( 'https://VSCode.pro', 302 );
+	wp_safe_redirect( 'https://ilanvivanco.com', 302 );
 	exit;
 }
 
@@ -39,7 +39,6 @@ class Small {
 	 * Name.
 	 *
 	 * @var String
-	 * @since 1.0.0
 	 */
 	public static $name;
 
@@ -49,7 +48,6 @@ class Small {
 	 * @param Number $num1 First number.
 	 * @param Number $num2 First number.
 	 * @return Number
-	 * @since 1.0.0
 	 */
 	public static function sum( $num1, $num2 ) {
 		return $num1 + $num2;
@@ -58,7 +56,7 @@ class Small {
 
 // SQL for the win.
 $get = "SELECT *
-			FROM blog
+			FROM `wp`.`blog`
 			WHERE country='$country'
 			AND who='host'
 			ORDER BY date DESC";

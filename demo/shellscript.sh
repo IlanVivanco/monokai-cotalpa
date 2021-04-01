@@ -1,4 +1,5 @@
 # Demo Shell Script file.
+theme='Monokai Cotalpa'
 
 ####.#### —————————————————— ALIASES —————————————————— ####.####
 
@@ -20,7 +21,10 @@ alias week='date +%V'
 
 # Command line magic.
 function rainbow() {
-	yes "$(seq 231 -1 16)" | while read i; do printf "\x1b[48;5;${i}m\n"; sleep .02; done
+	yes "$(seq 231 -1 16)" | while read i; do
+		printf "\x1b[48;5;${i}m\n"
+		sleep .02
+	done
 }
 
 # Show macOS Battery Percentage.
