@@ -1,7 +1,30 @@
-.someClass {
-  font-family: sans;
+/**
+ * Checkout this CSS File.
+ */
+
+.theme {
+	display: table;
+	width: 100%;
+	color: #b362ff;
 }
 
-#someID {
-  background: yellow;
+a {
+	text-decoration: none;
+	opacity: 0.8;
+}
+
+a:hover {
+	opacity: 1;
+}
+
+.css-class {
+	display: grid;
+	width: 100%;
+	color: #bada55;
+}
+
+#css-id {
+	display: inline;
+	padding: 5rem;
+	background: goldenrod;
 }

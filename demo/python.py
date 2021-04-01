@@ -1,24 +1,22 @@
+#
+#  Swap two vars in Python
+#
+import numpy as np
 
+# Swaps
+data = np.random.random(2)
 
+print(data)
 
-class A:
-    def __init__(self, a):
-        self.a = a
+data[0], data[1] = data[1], data[0]
 
-from flask import Flask, jsonify, make_response, request
+print(data)
 
-app = Flask('python-flask-seed')
+# Does not swap.
+data = np.random.random((2, 2))
 
+print(data)
 
-@app.route('/welcome', methods=['POST'])
-def welcome(self, a):
-    content = request.get_json(silent=True, force=True)
+data[0], data[1] = data[1], data[0]
 
-    try:
-        message = 'Welcome %s!' % content['name']
-        response = {'message': message}
-        return make_response(jsonify(response), 200)
-
-    except Exception as ex:
-        response = {'error': 'name is required'}
-        return make_response(jsonify(response), 400)
+print(data)
