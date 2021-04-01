@@ -1,5 +1,9 @@
 # Monokai Cotalpa Theme for VS Code
+
 [![Version](https://img.shields.io/visual-studio-marketplace/v/ilanvivanco.cotalpa?labelColor=545f62&color=6b7678&style=flat-square&label=Version)](https://marketplace.visualstudio.com/items?itemName=ilanvivanco.cotalpa) [![Downloads](https://img.shields.io/visual-studio-marketplace/d/ilanvivanco.cotalpa?labelColor=545f62&color=6b7678&style=flat-square&label=Downloads)](https://marketplace.visualstudio.com/items?itemName=ilanvivanco.cotalpa)
+
+🎨 Yet another Monokai color scheme for VS Code.
+
 ![Preview](https://raw.githubusercontent.com/IlanVivanco/monokai-cotalpa/master/images/screenshot.png)
 
 # Installation
@@ -12,7 +16,9 @@
 6. Enjoy
 
 ## Extras
+
 If you happen to use the [Bracket Pair Colorizer 2](https://github.com/CoenraadS/Bracket-Pair-Colorizer-2) plugin, you can add these to your `settings.json` to match the theme.
+
 ```
     "bracket-pair-colorizer-2.highlightActiveScope" : true,
     "bracket-pair-colorizer-2.colors" : [
