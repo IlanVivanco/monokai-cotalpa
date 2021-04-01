@@ -34,3 +34,27 @@ First, this theme is new so if something is funky, please open an issue.
 If you would like to change something, you can either open a PR and see if I'd like it added, or override the colors in your own settings.json file.
 
 https://code.visualstudio.com/docs/getstarted/theme-color-reference
+
+## Color reference
+
+| Color                                                                         |    HEX    |      RGBA       |
+| :---------------------------------------------------------------------------- | :-------: | :-------------: |
+| ![#82bffc](https://via.placeholder.com/13/82bffc/000000?text=+) `Blue`        | `#82bffc` | `130, 191, 252` |
+| ![#a2e57b](https://via.placeholder.com/13/a2e57b/000000?text=+) `Green`       | `#a2e57b` | `162, 229, 123` |
+| ![#b6aefa](https://via.placeholder.com/13/b6aefa/000000?text=+) `Violet`      | `#b6aefa` | `182, 174, 250` |
+| ![#fc8f82](https://via.placeholder.com/13/fc8f82/000000?text=+) `Red`         | `#fc8f82` | `252, 143, 130` |
+| ![#fcb882](https://via.placeholder.com/13/fcb882/000000?text=+) `Orange`      | `#fcb882` | `252, 184, 130` |
+| ![#fcde82](https://via.placeholder.com/13/fcde82/000000?text=+) `Yellow`      | `#fcde82` | `252, 222, 130` |
+| ![#151718](https://via.placeholder.com/13/151718/000000?text=+) `Grayscale 9` | `#151718` |  `21, 23, 24`   |
+| ![#1e2223](https://via.placeholder.com/13/1e2223/000000?text=+) `Grayscale 8` | `#1e2223` |  `30, 34, 35`   |
+| ![#273136](https://via.placeholder.com/13/273136/000000?text=+) `Grayscale 7` | `#273136` |  `39, 49, 54`   |
+| ![#394042](https://via.placeholder.com/13/394042/000000?text=+) `Grayscale 6` | `#394042` |  `57, 64, 66`   |
+| ![#545f62](https://via.placeholder.com/13/545f62/000000?text=+) `Grayscale 5` | `#545f62` |  `84, 95, 98`   |
+| ![#6f7e82](https://via.placeholder.com/13/6f7e82/000000?text=+) `Grayscale 4` | `#6f7e82` | `111, 126, 130` |
+| ![#8e9a9e](https://via.placeholder.com/13/8e9a9e/000000?text=+) `Grayscale 3` | `#8e9a9e` | `142, 154, 158` |
+| ![#b8c0c2](https://via.placeholder.com/13/b8c0c2/000000?text=+) `Grayscale 2` | `#b8c0c2` | `184, 192, 194` |
+| ![#f4fafe](https://via.placeholder.com/13/f4fafe/000000?text=+) `Grayscale 1` | `#f4fafe` | `244, 250, 254` |
+| ![#fa4c37](https://via.placeholder.com/13/fa4c37/000000?text=+) `Error`       | `#fa4c37` |  `250, 76, 55`  |
+| ![#c99805](https://via.placeholder.com/13/c99805/000000?text=+) `Warn`        | `#c99805` |  `201, 152, 5`  |
+| ![#82a0fc](https://via.placeholder.com/13/82a0fc/000000?text=+) `Info`        | `#82a0fc` | `130, 160, 252` |
+|                                                                               |           |                 |
