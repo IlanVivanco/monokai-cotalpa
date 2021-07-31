@@ -29,15 +29,16 @@
 	"contributes": {
 		"themes": [
 			{
-				"label": "Monokai Cotalpa",
+				"label": "Monokai Cotalpa Dark",
 				"uiTheme": "vs-dark",
-				"path": "./dist/monokai-cotalpa-color-theme.json"
+				"path": "./themes/theme-monokai-cotalpa-dark.json"
 			}
 		]
 	},
 	"devDependencies": {
 		"chroma-js": "^2.1.2",
 		"fs-extra": "^10.0.0",
+		"npm-watch": "^0.11.0",
 		"prettier": "^2.2.1",
 		"vsce": "^1.87.0"
 	},
@@ -45,5 +46,12 @@
 		"id": "9fc56e4f-3620-4ee5-8b75-14b121f2c2f1",
 		"publisherDisplayName": "Ilán Vivanco",
 		"publisherId": "1af87088-d596-49ae-a584-77fc8f1e066a"
+	},
+	"watch": {
+		"build": "src/*.js"
+	},
+	"scripts": {
+		"build": "node ./src/buildThemes.js",
+		"watch": "npm-watch"
 	}
 }
