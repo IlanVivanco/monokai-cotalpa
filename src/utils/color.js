@@ -2,7 +2,7 @@
 
 import chroma from 'chroma-js'
 
-function alpha(color, alpha) {
+function alpha(color, alpha = 1) {
 	return chroma(color).alpha(alpha).hex()
 }
 
