@@ -1,5 +1,5 @@
-import { alpha } from './utils/color.js'
-import { color } from './colors.js'
+import chroma from './utils/color.js'
+import theme from './colors.js'
 
 export const themeBase = {
 	// VSCode Theme Color reference.
@@ -13,67 +13,67 @@ export const themeBase = {
 	colors: {
 		// Activity bar
 		// https://code.visualstudio.com/api/references/theme-color#activity-bar
-		'activityBar.background': color.gray9,
-		'activityBar.dropBorder': color.gray2,
-		'activityBar.foreground': color.gray2,
-		'activityBar.inactiveForeground': color.gray5,
-		'activityBar.border': color.gray9,
-		'activityBarBadge.background': color.yellow,
-		'activityBarBadge.foreground': color.gray7,
-		'activityBar.activeBorder': color.yellow,
-		'activityBar.activeBackground': alpha(color.yellow, 0.1),
-		'activityBar.activeFocusBorder': color.yellow,
+		'activityBar.background': theme.darkBackground,
+		'activityBar.dropBorder': theme.focusedForeground,
+		'activityBar.foreground': theme.focusedForeground,
+		'activityBar.inactiveForeground': theme.gray5,
+		'activityBar.border': theme.darkBackground,
+		'activityBarBadge.background': theme.strings,
+		'activityBarBadge.foreground': theme.background,
+		'activityBar.activeBorder': theme.strings,
+		'activityBar.activeBackground': chroma(theme.strings).alpha(0.1).hex(),
+		'activityBar.activeFocusBorder': theme.strings,
 
 		// Sidebar
 		// https://code.visualstudio.com/api/references/theme-color#side-bar
-		'sideBar.background': color.gray8,
-		'sideBar.border': color.gray9,
-		'sideBar.dropBackground': alpha(color.gray8, 0.75),
-		'sideBar.foreground': color.gray3,
-		'sideBarTitle.foreground': color.gray5,
-		'sideBarSectionHeader.background': alpha(color.gray7, 0.5),
-		'sideBarSectionHeader.foreground': alpha(color.gray3, 0.75),
-		'sideBarSectionHeader.border': alpha(color.gray8, 1),
+		'sideBar.background': theme.dimmedBackground,
+		'sideBar.border': theme.darkBackground,
+		'sideBar.dropBackground': chroma(theme.dimmedBackground).alpha(0.75).hex(),
+		'sideBar.foreground': theme.mutedForeground,
+		'sideBarTitle.foreground': theme.gray5,
+		'sideBarSectionHeader.background': chroma(theme.background).alpha(0.5).hex(),
+		'sideBarSectionHeader.foreground': chroma(theme.mutedForeground).alpha(0.75).hex(),
+		'sideBarSectionHeader.border': chroma(theme.dimmedBackground).alpha(1).hex(),
 
 		// Minimap
 		// https://code.visualstudio.com/api/references/theme-color#minimap
-		'minimap.findMatchHighlight': alpha(color.gray2, 0.15),
-		'minimap.selectionHighlight': alpha(color.blue, 0.3),
-		'minimap.errorHighlight': alpha(color.red, 0.8),
-		'minimap.warningHighlight': alpha(color.yellow, 0.5),
-		'minimap.background': color.gray7,
-		'minimapSlider.background': alpha(color.gray1, 0.05),
-		'minimapSlider.hoverBackground': alpha(color.gray1, 0.1),
-		'minimapSlider.activeBackground': alpha(color.gray1, 0.1),
-		'minimapGutter.addedBackground': color.green,
-		'minimapGutter.modifiedBackground': color.orange,
-		'minimapGutter.deletedBackground': color.red,
+		'minimap.findMatchHighlight': chroma(theme.focusedForeground).alpha(0.15).hex(),
+		'minimap.selectionHighlight': chroma(theme.keyword).alpha(0.3).hex(),
+		'minimap.errorHighlight': chroma(theme.operator).alpha(0.8).hex(),
+		'minimap.warningHighlight': chroma(theme.strings).alpha(0.5).hex(),
+		'minimap.background': theme.background,
+		'minimapSlider.background': chroma(theme.foreground).alpha(0.05).hex(),
+		'minimapSlider.hoverBackground': chroma(theme.foreground).alpha(0.1).hex(),
+		'minimapSlider.activeBackground': chroma(theme.foreground).alpha(0.1).hex(),
+		'minimapGutter.addedBackground': theme.function,
+		'minimapGutter.modifiedBackground': theme.attribute,
+		'minimapGutter.deletedBackground': theme.operator,
 
-		'badge.background': color.yellow,
-		'badge.foreground': color.gray7,
+		'badge.background': theme.strings,
+		'badge.foreground': theme.background,
 
-		'breadcrumb.activeSelectionForeground': color.gray1,
-		'breadcrumb.focusForeground': color.gray2,
-		'breadcrumb.foreground': color.gray3,
+		'breadcrumb.activeSelectionForeground': theme.foreground,
+		'breadcrumb.focusedForeground': theme.focusedForeground,
+		'breadcrumb.foreground': theme.mutedForeground,
 
-		'button.background': color.gray6,
-		'button.foreground': color.gray3,
-		'button.hoverBackground': color.gray7,
+		'button.background': theme.lightBackground,
+		'button.foreground': theme.mutedForeground,
+		'button.hoverBackground': theme.background,
 
-		'debugExceptionWidget.background': color.gray6,
-		'debugExceptionWidget.border': color.gray7,
-		'debugToolBar.background': color.gray6,
-		'descriptionForeground': color.gray3,
+		'debugExceptionWidget.background': theme.lightBackground,
+		'debugExceptionWidget.border': theme.background,
+		'debugToolBar.background': theme.lightBackground,
+		'descriptionForeground': theme.mutedForeground,
 
-		'diffEditor.insertedTextBackground': alpha(color.green, 0.1),
-		'diffEditor.insertedTextBorder': alpha(color.gray9, 0),
-		'diffEditor.removedTextBackground': alpha(color.red, 0.1),
-		'diffEditor.removedTextBorder': alpha(color.gray9, 0),
+		'diffEditor.insertedTextBackground': chroma(theme.function).alpha(0.1).hex(),
+		'diffEditor.insertedTextBorder': chroma(theme.darkBackground).alpha(0).hex(),
+		'diffEditor.removedTextBackground': chroma(theme.operator).alpha(0.1).hex(),
+		'diffEditor.removedTextBorder': chroma(theme.darkBackground).alpha(0).hex(),
 
-		'dropdown.background': color.gray7,
-		'dropdown.border': color.gray7,
-		'dropdown.foreground': color.gray3,
-		'dropdown.listBackground': color.gray6,
+		'dropdown.background': theme.background,
+		'dropdown.border': theme.background,
+		'dropdown.foreground': theme.mutedForeground,
+		'dropdown.listBackground': theme.lightBackground,
 
 		// Editor Colors
 		// https://code.visualstudio.com/api/references/theme-color#editor-colors
@@ -168,316 +168,316 @@ export const themeBase = {
 		'editorGutter.commentRangeForeground': null,
 		'editorGutter.foldingControlForeground': null,
 
-		'editor.background': color.gray7,
-		'editor.findMatchBackground': alpha(color.gray1, 0.15),
-		'editor.findMatchBorder': color.yellow,
-		'editor.findMatchHighlightBackground': alpha(color.gray1, 0.15),
-		'editor.findMatchHighlightBorder': alpha(color.gray9, 0),
-		'editor.findRangeHighlightBackground': alpha(color.gray1, 0.05),
-		'editor.findRangeHighlightBorder': alpha(color.gray9, 0),
-		'editor.foreground': color.gray1,
-		'editor.hoverHighlightBackground': alpha(color.gray1, 0.05),
-		'editor.inactiveSelectionBackground': alpha(color.gray1, 0.05),
-		'editor.lineHighlightBackground': alpha(color.gray1, 0.05),
-		'editor.lineHighlightBorder': alpha(color.gray9, 0),
-		'editor.rangeHighlightBackground': color.gray6,
-		'editor.rangeHighlightBorder': color.gray6,
-		'editor.selectionBackground': alpha(color.gray2, 0.15),
-		'editor.selectionHighlightBackground': alpha(color.gray1, 0.15),
-		'editor.selectionHighlightBorder': alpha(color.gray9, 0),
-		'editor.wordHighlightBackground': alpha(color.gray1, 0.15),
-		'editor.wordHighlightBorder': alpha(color.gray9, 0),
-		'editor.wordHighlightStrongBackground': alpha(color.gray1, 0.15),
-		'editor.wordHighlightStrongBorder': alpha(color.gray9, 0),
-		'editorBracketMatch.background': color.gray7,
-		'editorBracketMatch.border': color.gray4,
-		'editorCodeLens.foreground': color.gray4,
-		'editorCursor.background': color.gray7,
-		'editorCursor.foreground': color.gray1,
-		'editorError.border': alpha(color.gray9, 0),
-		'editorError.foreground': color.red,
+		'editor.background': theme.background,
+		'editor.findMatchBackground': chroma(theme.foreground).alpha(0.15).hex(),
+		'editor.findMatchBorder': theme.strings,
+		'editor.findMatchHighlightBackground': chroma(theme.foreground).alpha(0.15).hex(),
+		'editor.findMatchHighlightBorder': chroma(theme.darkBackground).alpha(0).hex(),
+		'editor.findRangeHighlightBackground': chroma(theme.foreground).alpha(0.05).hex(),
+		'editor.findRangeHighlightBorder': chroma(theme.darkBackground).alpha(0).hex(),
+		'editor.foreground': theme.foreground,
+		'editor.hoverHighlightBackground': chroma(theme.foreground).alpha(0.05).hex(),
+		'editor.inactiveSelectionBackground': chroma(theme.foreground).alpha(0.05).hex(),
+		'editor.lineHighlightBackground': chroma(theme.foreground).alpha(0.05).hex(),
+		'editor.lineHighlightBorder': chroma(theme.darkBackground).alpha(0).hex(),
+		'editor.rangeHighlightBackground': theme.lightBackground,
+		'editor.rangeHighlightBorder': theme.lightBackground,
+		'editor.selectionBackground': chroma(theme.focusedForeground).alpha(0.15).hex(),
+		'editor.selectionHighlightBackground': chroma(theme.foreground).alpha(0.15).hex(),
+		'editor.selectionHighlightBorder': chroma(theme.darkBackground).alpha(0).hex(),
+		'editor.wordHighlightBackground': chroma(theme.foreground).alpha(0.15).hex(),
+		'editor.wordHighlightBorder': chroma(theme.darkBackground).alpha(0).hex(),
+		'editor.wordHighlightStrongBackground': chroma(theme.foreground).alpha(0.15).hex(),
+		'editor.wordHighlightStrongBorder': chroma(theme.darkBackground).alpha(0).hex(),
+		'editorBracketMatch.background': theme.background,
+		'editorBracketMatch.border': theme.darkForeground,
+		'editorCodeLens.foreground': theme.darkForeground,
+		'editorCursor.background': theme.background,
+		'editorCursor.foreground': theme.foreground,
+		'editorError.border': chroma(theme.darkBackground).alpha(0).hex(),
+		'editorError.foreground': theme.operator,
 
 		// Editor Groups & Tabs
 		// https://code.visualstudio.com/api/references/theme-color#editor-groups-tabs
-		'editorGroup.border': color.gray8,
-		'editorGroup.dropBackground': alpha(color.gray8, 0.75),
-		'editorGroupHeader.noTabsBackground': color.gray7,
-		'editorGroupHeader.tabsBackground': color.gray7,
-		'editorGroupHeader.tabsBorder': color.gray7,
-		'editorGroup.emptyBackground': color.gray9,
-		'editorGroupHeader.border': alpha(color.gray8, 0.4),
-		'editorGroup.focusedEmptyBorder': color.gray8,
-		'tab.activeBackground': color.gray7,
-		'tab.unfocusedActiveBackground': color.gray7,
-		'tab.activeForeground': color.yellow,
-		'tab.border': color.gray7,
-		'tab.activeBorder': color.yellow,
-		'tab.unfocusedActiveBorder': color.gray3,
-		'tab.activeBorderTop': color.gray7,
-		'tab.unfocusedActiveBorderTop': color.gray7,
-		'tab.lastPinnedBorder': color.gray6,
-		'tab.inactiveBackground': alpha(color.gray8, 0.6),
-		'tab.unfocusedInactiveBackground': alpha(color.gray8, 0.6),
-		'tab.inactiveForeground': color.gray5,
-		'tab.unfocusedActiveForeground': color.gray4,
-		'tab.unfocusedInactiveForeground': color.gray5,
-		'tab.hoverBackground': alpha(color.gray6, 0.4),
-		'tab.unfocusedHoverBackground': alpha(color.gray6, 0.4),
-		'tab.hoverForeground': color.gray3,
-		'tab.unfocusedHoverForeground': color.gray3,
-		'tab.hoverBorder': color.gray5,
-		'tab.unfocusedHoverBorder': color.gray7,
-		'tab.activeModifiedBorder': color.gray5,
-		'tab.inactiveModifiedBorder': color.gray5,
-		'tab.unfocusedActiveModifiedBorder': color.gray6,
-		'tab.unfocusedInactiveModifiedBorder': color.gray6,
-		'editorPane.background': color.gray7,
+		'editorGroup.border': theme.dimmedBackground,
+		'editorGroup.dropBackground': chroma(theme.dimmedBackground).alpha(0.75).hex(),
+		'editorGroupHeader.noTabsBackground': theme.background,
+		'editorGroupHeader.tabsBackground': theme.background,
+		'editorGroupHeader.tabsBorder': theme.background,
+		'editorGroup.emptyBackground': theme.darkBackground,
+		'editorGroupHeader.border': chroma(theme.dimmedBackground).alpha(0.4).hex(),
+		'editorGroup.focusedEmptyBorder': theme.dimmedBackground,
+		'tab.activeBackground': theme.background,
+		'tab.unfocusedActiveBackground': theme.background,
+		'tab.activeForeground': theme.strings,
+		'tab.border': theme.background,
+		'tab.activeBorder': theme.strings,
+		'tab.unfocusedActiveBorder': theme.mutedForeground,
+		'tab.activeBorderTop': theme.background,
+		'tab.unfocusedActiveBorderTop': theme.background,
+		'tab.lastPinnedBorder': theme.lightBackground,
+		'tab.inactiveBackground': chroma(theme.dimmedBackground).alpha(0.6).hex(),
+		'tab.unfocusedInactiveBackground': chroma(theme.dimmedBackground).alpha(0.6).hex(),
+		'tab.inactiveForeground': theme.gray5,
+		'tab.unfocusedActiveForeground': theme.darkForeground,
+		'tab.unfocusedInactiveForeground': theme.gray5,
+		'tab.hoverBackground': chroma(theme.lightBackground).alpha(0.4).hex(),
+		'tab.unfocusedHoverBackground': chroma(theme.lightBackground).alpha(0.4).hex(),
+		'tab.hoverForeground': theme.mutedForeground,
+		'tab.unfocusedHoverForeground': theme.mutedForeground,
+		'tab.hoverBorder': theme.gray5,
+		'tab.unfocusedHoverBorder': theme.background,
+		'tab.activeModifiedBorder': theme.gray5,
+		'tab.inactiveModifiedBorder': theme.gray5,
+		'tab.unfocusedActiveModifiedBorder': theme.lightBackground,
+		'tab.unfocusedInactiveModifiedBorder': theme.lightBackground,
+		'editorPane.background': theme.background,
 
-		'editorGutter.addedBackground': color.green,
-		'editorGutter.background': color.gray7,
-		'editorGutter.deletedBackground': color.red,
-		'editorGutter.modifiedBackground': color.orange,
+		'editorGutter.addedBackground': theme.function,
+		'editorGutter.background': theme.background,
+		'editorGutter.deletedBackground': theme.operator,
+		'editorGutter.modifiedBackground': theme.attribute,
 
-		'editorHint.border': color.gray7,
-		'editorHint.foreground': color.violet,
+		'editorHint.border': theme.background,
+		'editorHint.foreground': theme.variable,
 
-		'editorHoverWidget.background': color.gray6,
-		'editorHoverWidget.border': color.gray7,
+		'editorHoverWidget.background': theme.lightBackground,
+		'editorHoverWidget.border': theme.background,
 
-		'editorIndentGuide.background': color.gray6,
+		'editorIndentGuide.background': theme.lightBackground,
 
-		'editorInfo.border': color.gray7,
-		'editorInfo.foreground': color.blue,
+		'editorInfo.border': theme.background,
+		'editorInfo.foreground': theme.keyword,
 
-		'editorLineNumber.activeForeground': color.gray2,
-		'editorLineNumber.foreground': color.gray5,
-		'editorLink.activeForeground': color.blue,
+		'editorLineNumber.activeForeground': theme.focusedForeground,
+		'editorLineNumber.foreground': theme.gray5,
+		'editorLink.activeForeground': theme.keyword,
 
-		'editorMarkerNavigation.background': color.gray6,
-		'editorMarkerNavigationError.background': color.red,
-		'editorMarkerNavigationInfo.background': color.blue,
-		'editorMarkerNavigationWarning.background': color.orange,
+		'editorMarkerNavigation.background': theme.lightBackground,
+		'editorMarkerNavigationError.background': theme.operator,
+		'editorMarkerNavigationInfo.background': theme.keyword,
+		'editorMarkerNavigationWarning.background': theme.attribute,
 
-		'editorOverviewRuler.addedForeground': color.green,
-		'editorOverviewRuler.border': color.gray7,
-		'editorOverviewRuler.currentContentForeground': color.gray6,
-		'editorOverviewRuler.deletedForeground': color.red,
-		'editorOverviewRuler.errorForeground': color.red,
-		'editorOverviewRuler.findMatchForeground': alpha(color.gray1, 0.15),
-		'editorOverviewRuler.incomingContentForeground': color.gray6,
-		'editorOverviewRuler.infoForeground': color.blue,
-		'editorOverviewRuler.modifiedForeground': color.orange,
-		'editorOverviewRuler.rangeHighlightForeground': alpha(color.gray1, 0.15),
-		'editorOverviewRuler.selectionHighlightForeground': alpha(color.gray1, 0.15),
-		'editorOverviewRuler.warningForeground': color.orange,
-		'editorOverviewRuler.wordHighlightForeground': alpha(color.gray1, 0.15),
-		'editorOverviewRuler.wordHighlightStrongForeground': alpha(color.gray1, 0.15),
+		'editorOverviewRuler.addedForeground': theme.function,
+		'editorOverviewRuler.border': theme.background,
+		'editorOverviewRuler.currentContentForeground': theme.lightBackground,
+		'editorOverviewRuler.deletedForeground': theme.operator,
+		'editorOverviewRuler.errorForeground': theme.operator,
+		'editorOverviewRuler.findMatchForeground': chroma(theme.foreground).alpha(0.15).hex(),
+		'editorOverviewRuler.incomingContentForeground': theme.lightBackground,
+		'editorOverviewRuler.infoForeground': theme.keyword,
+		'editorOverviewRuler.modifiedForeground': theme.attribute,
+		'editorOverviewRuler.rangeHighlightForeground': chroma(theme.foreground).alpha(0.15).hex(),
+		'editorOverviewRuler.selectionHighlightForeground': chroma(theme.foreground).alpha(0.15).hex(),
+		'editorOverviewRuler.warningForeground': theme.attribute,
+		'editorOverviewRuler.wordHighlightForeground': chroma(theme.foreground).alpha(0.15).hex(),
+		'editorOverviewRuler.wordHighlightStrongForeground': chroma(theme.foreground).alpha(0.15).hex(),
 
-		'editorRuler.foreground': color.gray5,
+		'editorRuler.foreground': theme.gray5,
 
-		'editorSuggestWidget.background': color.gray6,
-		'editorSuggestWidget.border': color.gray6,
-		'editorSuggestWidget.foreground': color.gray2,
-		'editorSuggestWidget.highlightForeground': color.gray1,
-		'editorSuggestWidget.selectedBackground': color.gray4,
+		'editorSuggestWidget.background': theme.lightBackground,
+		'editorSuggestWidget.border': theme.lightBackground,
+		'editorSuggestWidget.foreground': theme.focusedForeground,
+		'editorSuggestWidget.highlightForeground': theme.foreground,
+		'editorSuggestWidget.selectedBackground': theme.darkForeground,
 
-		'editorWarning.border': alpha(color.gray9, 0),
-		'editorWarning.foreground': color.orange,
+		'editorWarning.border': chroma(theme.darkBackground).alpha(0).hex(),
+		'editorWarning.foreground': theme.attribute,
 
-		'editorWhitespace.foreground': color.gray5,
+		'editorWhitespace.foreground': theme.gray5,
 
-		'editorWidget.background': color.gray6,
-		'editorWidget.border': color.gray6,
+		'editorWidget.background': theme.lightBackground,
+		'editorWidget.border': theme.lightBackground,
 
-		'errorForeground': color.red,
+		'errorForeground': theme.operator,
 
-		'extensionButton.prominentBackground': color.gray6,
-		'extensionButton.prominentForeground': color.gray1,
-		'extensionButton.prominentHoverBackground': color.gray5,
+		'extensionButton.prominentBackground': theme.lightBackground,
+		'extensionButton.prominentForeground': theme.foreground,
+		'extensionButton.prominentHoverBackground': theme.gray5,
 
-		'focusBorder': color.gray4,
-		'foreground': color.gray1,
+		'focusBorder': theme.darkForeground,
+		'foreground': theme.foreground,
 
-		'gitDecoration.conflictingResourceForeground': color.orange,
-		'gitDecoration.deletedResourceForeground': color.red,
-		'gitDecoration.ignoredResourceForeground': color.gray5,
-		'gitDecoration.modifiedResourceForeground': color.green,
-		'gitDecoration.untrackedResourceForeground': color.orange,
+		'gitDecoration.conflictingResourceForeground': theme.attribute,
+		'gitDecoration.deletedResourceForeground': theme.operator,
+		'gitDecoration.ignoredResourceForeground': theme.gray5,
+		'gitDecoration.modifiedResourceForeground': theme.function,
+		'gitDecoration.untrackedResourceForeground': theme.attribute,
 
-		'input.background': color.gray6,
-		'input.border': color.gray6,
-		'input.foreground': color.gray1,
-		'input.placeholderForeground': color.gray4,
-		'inputOption.activeBackground': color.gray5,
-		'inputOption.activeBorder': color.gray5,
-		'inputValidation.errorBackground': color.gray6,
-		'inputValidation.errorBorder': color.red,
-		'inputValidation.errorForeground': color.red,
-		'inputValidation.infoBackground': color.gray6,
-		'inputValidation.infoBorder': color.blue,
-		'inputValidation.infoForeground': color.blue,
-		'inputValidation.warningBackground': color.gray6,
-		'inputValidation.warningBorder': color.orange,
-		'inputValidation.warningForeground': color.orange,
+		'input.background': theme.lightBackground,
+		'input.border': theme.lightBackground,
+		'input.foreground': theme.foreground,
+		'input.placeholderForeground': theme.darkForeground,
+		'inputOption.activeBackground': theme.gray5,
+		'inputOption.activeBorder': theme.gray5,
+		'inputValidation.errorBackground': theme.lightBackground,
+		'inputValidation.errorBorder': theme.operator,
+		'inputValidation.errorForeground': theme.operator,
+		'inputValidation.infoBackground': theme.lightBackground,
+		'inputValidation.infoBorder': theme.keyword,
+		'inputValidation.infoForeground': theme.keyword,
+		'inputValidation.warningBackground': theme.lightBackground,
+		'inputValidation.warningBorder': theme.attribute,
+		'inputValidation.warningForeground': theme.attribute,
 
-		'list.activeSelectionBackground': color.gray7,
-		'list.activeSelectionForeground': color.yellow,
-		'list.dropBackground': alpha(color.gray8, 0.75),
-		'list.errorForeground': color.red,
-		'list.focusBackground': color.gray7,
-		'list.focusForeground': color.gray1,
-		'list.highlightForeground': color.gray1,
-		'list.hoverBackground': color.gray8,
-		'list.hoverForeground': color.gray1,
-		'list.inactiveFocusBackground': color.gray7,
-		'list.inactiveSelectionBackground': color.gray7,
-		'list.inactiveSelectionForeground': color.yellow,
-		'list.invalidItemForeground': color.red,
-		'list.warningForeground': color.orange,
+		'list.activeSelectionBackground': theme.background,
+		'list.activeSelectionForeground': theme.strings,
+		'list.dropBackground': chroma(theme.dimmedBackground).alpha(0.75).hex(),
+		'list.errorForeground': theme.operator,
+		'list.focusBackground': theme.background,
+		'list.focusedForeground': theme.foreground,
+		'list.highlightForeground': theme.foreground,
+		'list.hoverBackground': theme.dimmedBackground,
+		'list.hoverForeground': theme.foreground,
+		'list.inactiveFocusBackground': theme.background,
+		'list.inactiveSelectionBackground': theme.background,
+		'list.inactiveSelectionForeground': theme.strings,
+		'list.invalidItemForeground': theme.operator,
+		'list.warningForeground': theme.attribute,
 
-		'listFilterWidget.background': color.gray7,
-		'listFilterWidget.noMatchesOutline': color.red,
-		'listFilterWidget.outline': color.gray7,
+		'listFilterWidget.background': theme.background,
+		'listFilterWidget.noMatchesOutline': theme.operator,
+		'listFilterWidget.outline': theme.background,
 
-		'merge.border': color.gray7,
-		'merge.commonContentBackground': alpha(color.gray1, 0.1),
-		'merge.commonHeaderBackground': alpha(color.gray1, 0.15),
-		'merge.currentContentBackground': alpha(color.red, 0.1),
-		'merge.currentHeaderBackground': alpha(color.red, 0.15),
-		'merge.incomingContentBackground': alpha(color.green, 0.1),
-		'merge.incomingHeaderBackground': alpha(color.green, 0.15),
+		'merge.border': theme.background,
+		'merge.commonContentBackground': chroma(theme.foreground).alpha(0.1).hex(),
+		'merge.commonHeaderBackground': chroma(theme.foreground).alpha(0.15).hex(),
+		'merge.currentContentBackground': chroma(theme.operator).alpha(0.1).hex(),
+		'merge.currentHeaderBackground': chroma(theme.operator).alpha(0.15).hex(),
+		'merge.incomingContentBackground': chroma(theme.function).alpha(0.1).hex(),
+		'merge.incomingHeaderBackground': chroma(theme.function).alpha(0.15).hex(),
 
-		'notificationCenter.border': color.gray6,
-		'notificationCenterHeader.background': color.gray6,
-		'notificationCenterHeader.foreground': color.gray3,
+		'notificationCenter.border': theme.lightBackground,
+		'notificationCenterHeader.background': theme.lightBackground,
+		'notificationCenterHeader.foreground': theme.mutedForeground,
 
-		'notificationLink.foreground': color.yellow,
+		'notificationLink.foreground': theme.strings,
 
-		'notificationToast.border': color.gray6,
+		'notificationToast.border': theme.lightBackground,
 
-		'notifications.background': color.gray6,
-		'notifications.border': color.gray6,
-		'notifications.foreground': color.gray2,
+		'notifications.background': theme.lightBackground,
+		'notifications.border': theme.lightBackground,
+		'notifications.foreground': theme.focusedForeground,
 
-		'panel.background': color.gray6,
-		'panel.border': color.gray7,
+		'panel.background': theme.lightBackground,
+		'panel.border': theme.background,
 
-		'panelTitle.activeBorder': color.yellow,
-		'panelTitle.activeForeground': color.yellow,
-		'panelTitle.inactiveForeground': color.gray3,
+		'panelTitle.activeBorder': theme.strings,
+		'panelTitle.activeForeground': theme.strings,
+		'panelTitle.inactiveForeground': theme.mutedForeground,
 
-		'peekView.border': color.gray7,
+		'peekView.border': theme.background,
 
-		'peekViewEditor.background': color.gray6,
-		'peekViewEditor.matchHighlightBackground': color.gray5,
+		'peekViewEditor.background': theme.lightBackground,
+		'peekViewEditor.matchHighlightBackground': theme.gray5,
 
-		'peekViewEditorGutter.background': color.gray6,
+		'peekViewEditorGutter.background': theme.lightBackground,
 
-		'peekViewResult.background': color.gray6,
-		'peekViewResult.fileForeground': color.gray3,
-		'peekViewResult.lineForeground': color.gray3,
-		'peekViewResult.matchHighlightBackground': color.gray5,
-		'peekViewResult.selectionBackground': color.gray6,
-		'peekViewResult.selectionForeground': color.gray1,
+		'peekViewResult.background': theme.lightBackground,
+		'peekViewResult.fileForeground': theme.mutedForeground,
+		'peekViewResult.lineForeground': theme.mutedForeground,
+		'peekViewResult.matchHighlightBackground': theme.gray5,
+		'peekViewResult.selectionBackground': theme.lightBackground,
+		'peekViewResult.selectionForeground': theme.foreground,
 
-		'peekViewTitle.background': color.gray6,
-		'peekViewTitleDescription.foreground': color.gray3,
+		'peekViewTitle.background': theme.lightBackground,
+		'peekViewTitleDescription.foreground': theme.mutedForeground,
 
-		'peekViewTitleLabel.foreground': color.gray1,
+		'peekViewTitleLabel.foreground': theme.foreground,
 
-		'pickerGroup.border': color.gray7,
-		'pickerGroup.foreground': color.gray5,
+		'pickerGroup.border': theme.background,
+		'pickerGroup.foreground': theme.gray5,
 
-		'progressBar.background': color.gray6,
+		'progressBar.background': theme.lightBackground,
 
-		'sash.hoverBorder': color.yellow,
+		'sash.hoverBorder': theme.strings,
 
-		'scrollbar.shadow': color.gray7,
+		'scrollbar.shadow': theme.background,
 
-		'scrollbarSlider.activeBackground': alpha(color.gray1, 0.05),
-		'scrollbarSlider.background': alpha(color.gray1, 0.05),
-		'scrollbarSlider.hoverBackground': alpha(color.gray1, 0.05),
+		'scrollbarSlider.activeBackground': chroma(theme.foreground).alpha(0.05).hex(),
+		'scrollbarSlider.background': chroma(theme.foreground).alpha(0.05).hex(),
+		'scrollbarSlider.hoverBackground': chroma(theme.foreground).alpha(0.05).hex(),
 
-		'selection.background': alpha(color.gray2, 0.15),
+		'selection.background': chroma(theme.foreground).alpha(0.15).hex(),
 
-		'settings.checkboxBackground': color.gray6,
-		'settings.checkboxBorder': color.gray6,
-		'settings.checkboxForeground': color.gray1,
-		'settings.dropdownBackground': color.gray6,
-		'settings.dropdownBorder': color.gray6,
-		'settings.dropdownForeground': color.gray1,
-		'settings.dropdownListBorder': color.gray3,
-		'settings.headerForeground': color.yellow,
-		'settings.modifiedItemIndicator': color.yellow,
-		'settings.numberInputBackground': color.gray6,
-		'settings.numberInputBorder': color.gray6,
-		'settings.numberInputForeground': color.gray1,
-		'settings.textInputBackground': color.gray6,
-		'settings.textInputBorder': color.gray6,
-		'settings.textInputForeground': color.gray1,
+		'settings.checkboxBackground': theme.lightBackground,
+		'settings.checkboxBorder': theme.lightBackground,
+		'settings.checkboxForeground': theme.foreground,
+		'settings.dropdownBackground': theme.lightBackground,
+		'settings.dropdownBorder': theme.lightBackground,
+		'settings.dropdownForeground': theme.foreground,
+		'settings.dropdownListBorder': theme.mutedForeground,
+		'settings.headerForeground': theme.strings,
+		'settings.modifiedItemIndicator': theme.strings,
+		'settings.numberInputBackground': theme.lightBackground,
+		'settings.numberInputBorder': theme.lightBackground,
+		'settings.numberInputForeground': theme.foreground,
+		'settings.textInputBackground': theme.lightBackground,
+		'settings.textInputBorder': theme.lightBackground,
+		'settings.textInputForeground': theme.foreground,
 
-		'statusBar.background': color.gray9,
-		'statusBar.border': color.gray8,
-		'statusBar.debuggingBackground': color.orange,
-		'statusBar.debuggingBorder': color.gray8,
-		'statusBar.debuggingForeground': color.gray4,
-		'statusBar.foreground': color.gray4,
-		'statusBar.noFolderBackground': color.gray8,
-		'statusBar.noFolderBorder': color.gray9,
-		'statusBar.noFolderForeground': color.gray4,
+		'statusBar.background': theme.darkBackground,
+		'statusBar.border': theme.dimmedBackground,
+		'statusBar.debuggingBackground': theme.attribute,
+		'statusBar.debuggingBorder': theme.dimmedBackground,
+		'statusBar.debuggingForeground': theme.darkForeground,
+		'statusBar.foreground': theme.mutedForeground,
+		'statusBar.noFolderBackground': theme.dimmedBackground,
+		'statusBar.noFolderBorder': theme.darkBackground,
+		'statusBar.noFolderForeground': theme.darkForeground,
 
-		'statusBarItem.activeBackground': color.gray7,
-		'statusBarItem.hoverBackground': alpha(color.gray7, 0.15),
-		'statusBarItem.prominentBackground': color.gray6,
-		'statusBarItem.prominentHoverBackground': color.gray6,
+		'statusBarItem.activeBackground': theme.background,
+		'statusBarItem.hoverBackground': chroma(theme.background).alpha(0.15).hex(),
+		'statusBarItem.prominentBackground': theme.lightBackground,
+		'statusBarItem.prominentHoverBackground': theme.lightBackground,
 
-		'terminal.ansiBlack': color.gray6,
-		'terminal.ansiBlue': color.orange,
-		'terminal.ansiBrightBlack': color.gray4,
-		'terminal.ansiBrightBlue': color.orange,
-		'terminal.ansiBrightCyan': color.blue,
-		'terminal.ansiBrightGreen': color.green,
-		'terminal.ansiBrightMagenta': color.violet,
-		'terminal.ansiBrightRed': color.red,
-		'terminal.ansiBrightWhite': color.gray1,
-		'terminal.ansiBrightYellow': color.yellow,
-		'terminal.ansiCyan': color.blue,
-		'terminal.ansiGreen': color.green,
-		'terminal.ansiMagenta': color.violet,
-		'terminal.ansiRed': color.red,
-		'terminal.ansiWhite': color.gray1,
-		'terminal.ansiYellow': color.yellow,
-		'terminal.background': color.gray6,
-		'terminal.foreground': color.gray1,
-		'terminal.selectionBackground': alpha(color.gray1, 0.15),
+		'terminal.ansiBlack': theme.lightBackground,
+		'terminal.ansiBlue': theme.attribute,
+		'terminal.ansiBrightBlack': theme.darkForeground,
+		'terminal.ansiBrightBlue': theme.attribute,
+		'terminal.ansiBrightCyan': theme.keyword,
+		'terminal.ansiBrightGreen': theme.function,
+		'terminal.ansiBrightMagenta': theme.variable,
+		'terminal.ansiBrightRed': theme.operator,
+		'terminal.ansiBrightWhite': theme.foreground,
+		'terminal.ansiBrightYellow': theme.strings,
+		'terminal.ansiCyan': theme.keyword,
+		'terminal.ansiGreen': theme.function,
+		'terminal.ansiMagenta': theme.variable,
+		'terminal.ansiRed': theme.operator,
+		'terminal.ansiWhite': theme.foreground,
+		'terminal.ansiYellow': theme.strings,
+		'terminal.background': theme.lightBackground,
+		'terminal.foreground': theme.foreground,
+		'terminal.selectionBackground': chroma(theme.foreground).alpha(0.15).hex(),
 
-		'terminalCursor.background': alpha(color.gray9, 0),
-		'terminalCursor.foreground': color.gray1,
+		'terminalCursor.background': chroma(theme.darkBackground).alpha(0).hex(),
+		'terminalCursor.foreground': theme.foreground,
 
-		'textBlockQuote.background': color.gray6,
-		'textBlockQuote.border': color.gray6,
+		'textBlockQuote.background': theme.lightBackground,
+		'textBlockQuote.border': theme.lightBackground,
 
-		'textCodeBlock.background': color.gray6,
+		'textCodeBlock.background': theme.lightBackground,
 
-		'textLink.activeForeground': color.gray1,
-		'textLink.foreground': color.yellow,
+		'textLink.activeForeground': theme.foreground,
+		'textLink.foreground': theme.strings,
 
-		'textPreformat.foreground': color.gray1,
+		'textPreformat.foreground': theme.foreground,
 
-		'textSeparator.foreground': color.gray4,
+		'textSeparator.foreground': theme.darkForeground,
 
-		'titleBar.activeBackground': color.gray8,
-		'titleBar.activeForeground': color.gray3,
-		'titleBar.border': color.gray9,
-		'titleBar.inactiveBackground': color.gray8,
-		'titleBar.inactiveForeground': color.gray5,
+		'titleBar.activeBackground': theme.dimmedBackground,
+		'titleBar.activeForeground': theme.mutedForeground,
+		'titleBar.border': theme.darkBackground,
+		'titleBar.inactiveBackground': theme.dimmedBackground,
+		'titleBar.inactiveForeground': theme.gray5,
 
-		'walkThrough.embeddedEditorBackground': color.gray8,
+		'walkThrough.embeddedEditorBackground': theme.dimmedBackground,
 
-		'welcomePage.buttonBackground': color.gray6,
-		'welcomePage.buttonHoverBackground': color.gray5,
+		'welcomePage.buttonBackground': theme.lightBackground,
+		'welcomePage.buttonHoverBackground': theme.gray5,
 
-		'widget.shadow': color.gray9,
+		'widget.shadow': theme.darkBackground,
 	},
 	tokenColors: [
 		{
@@ -491,212 +491,212 @@ export const themeBase = {
 			],
 			settings: {
 				fontStyle: 'italic',
-				foreground: color.gray4,
+				foreground: theme.darkForeground,
 			},
 		},
 		{
 			scope: ['source.php comment.block.documentation.phpdoc.php meta.other.type.phpdoc.php'],
 			settings: {
-				foreground: color.red,
+				foreground: theme.operator,
 			},
 		},
 		{
 			scope: 'comment storage.type',
 			settings: {
-				foreground: color.gray4,
+				foreground: theme.darkForeground,
 			},
 		},
 		{
 			scope: 'comment entity.name.type',
 			settings: {
-				foreground: color.gray2,
+				foreground: theme.focusedForeground,
 			},
 		},
 		{
 			scope: ['comment variable', 'comment variable.other'],
 			settings: {
-				foreground: color.gray2,
+				foreground: theme.focusedForeground,
 			},
 		},
 		{
 			scope: 'comment keyword.codetag.notation',
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
 			scope: 'comment.git-status.header.remote',
 			settings: {
-				foreground: color.red,
+				foreground: theme.operator,
 			},
 		},
 		{
 			scope: 'comment.git-status.header.local',
 			settings: {
-				foreground: color.blue,
+				foreground: theme.keyword,
 			},
 		},
 		{
 			scope: 'comment.other.git-status.head',
 			settings: {
-				foreground: color.gray1,
+				foreground: theme.foreground,
 			},
 		},
 		{
 			scope: 'constant',
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
 			scope: 'constant.other',
 			settings: {
-				foreground: color.gray1,
+				foreground: theme.foreground,
 			},
 		},
 		{
 			scope: 'constant.other.php',
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
 			scope: 'constant.other.property',
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
 			scope: 'constant.other.citation.latex',
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
 			scope: 'constant.other.color',
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
 			scope: 'constant.other.character-class.escape',
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
 			scope: 'constant.other.key',
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
 			scope: 'constant.other.symbol',
 			settings: {
-				foreground: color.orange,
+				foreground: theme.attribute,
 			},
 		},
 		{
 			scope: 'constant.numeric',
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
 			scope: 'constant.language',
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
 			scope: 'constant.character.escape',
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
 			scope: 'constant.numeric.line-number.find-in-files',
 			settings: {
-				foreground: color.gray5,
+				foreground: theme.gray5,
 			},
 		},
 		{
 			scope: 'constant.numeric.line-number.match.find-in-files',
 			settings: {
-				foreground: color.yellow,
+				foreground: theme.strings,
 			},
 		},
 		{
 			scope: 'entity.name.section',
 			settings: {
-				foreground: color.yellow,
+				foreground: theme.strings,
 			},
 		},
 		{
 			scope: ['entity.name.function', 'entity.name.function.templated'],
 			settings: {
-				foreground: color.green,
+				foreground: theme.function,
 			},
 		},
 		{
 			scope: 'entity.name.function.member.static',
 			settings: {
-				foreground: color.gray1,
+				foreground: theme.foreground,
 			},
 		},
 		{
 			scope: ['entity.name.type.class.templated', 'entity.name.type.class.generic', 'entity.name.type.namespace'],
 			settings: {
-				foreground: color.blue,
+				foreground: theme.keyword,
 			},
 		},
 		{
 			scope: 'entity.name.label',
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
 			scope: 'entity.name.function.preprocessor',
 			settings: {
-				foreground: color.blue,
+				foreground: theme.keyword,
 			},
 		},
 		{
 			scope: 'entity.name',
 			settings: {
-				foreground: color.green,
+				foreground: theme.function,
 			},
 		},
 		{
 			scope: 'entity.name.class',
 			settings: {
-				foreground: color.blue,
+				foreground: theme.keyword,
 			},
 		},
 		{
 			scope: 'entity.name.constant',
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
 			scope: 'entity.name.namespace',
 			settings: {
-				foreground: color.gray1,
+				foreground: theme.foreground,
 			},
 		},
 		{
 			scope: 'entity.other.inherited-class',
 			settings: {
 				fontStyle: 'italic',
-				foreground: color.blue,
+				foreground: theme.keyword,
 			},
 		},
 		{
 			scope: 'entity.name.function',
 			settings: {
-				foreground: color.green,
+				foreground: theme.function,
 			},
 		},
 		{
@@ -706,26 +706,26 @@ export const themeBase = {
 				'entity.name.tag support.class.component',
 			],
 			settings: {
-				foreground: color.red,
+				foreground: theme.operator,
 			},
 		},
 		{
 			scope: 'entity.name.function.operator',
 			settings: {
-				foreground: color.red,
+				foreground: theme.operator,
 			},
 		},
 		{
 			scope: ['entity.name.type', 'entity.name.type.class.reference', 'entity.name.type.class.value'],
 			settings: {
-				foreground: color.blue,
+				foreground: theme.keyword,
 			},
 		},
 		{
 			scope: 'entity.other.attribute-name',
 			settings: {
 				fontStyle: 'italic',
-				foreground: color.blue,
+				foreground: theme.keyword,
 			},
 		},
 		{
@@ -736,13 +736,13 @@ export const themeBase = {
 				'entity.other.attribute-name.css',
 			],
 			settings: {
-				foreground: color.green,
+				foreground: theme.function,
 			},
 		},
 		{
 			scope: 'entity.other.attribute-name.id.css',
 			settings: {
-				foreground: color.orange,
+				foreground: theme.attribute,
 			},
 		},
 		{
@@ -753,43 +753,43 @@ export const themeBase = {
 			],
 			settings: {
 				fontStyle: 'italic',
-				foreground: color.blue,
+				foreground: theme.keyword,
 			},
 		},
 		{
 			scope: ['entity.name.function', 'support.function'],
 			settings: {
-				foreground: color.green,
+				foreground: theme.function,
 			},
 		},
 		{
 			scope: 'entity.other.git-status.hex',
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
 			scope: 'entity.other.jinja2.delimiter',
 			settings: {
-				foreground: color.gray3,
+				foreground: theme.mutedForeground,
 			},
 		},
 		{
 			scope: 'entity.name.operator.custom-literal',
 			settings: {
-				foreground: color.gray1,
+				foreground: theme.foreground,
 			},
 		},
 		{
 			scope: 'entity.name.operator.custom-literal.string',
 			settings: {
-				foreground: color.yellow,
+				foreground: theme.strings,
 			},
 		},
 		{
 			scope: 'entity.name.operator.custom-literal.number',
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
@@ -799,31 +799,31 @@ export const themeBase = {
 		{
 			scope: 'keyword.control',
 			settings: {
-				foreground: color.red,
+				foreground: theme.operator,
 			},
 		},
 		{
 			scope: 'keyword.control.directive',
 			settings: {
-				foreground: color.red,
+				foreground: theme.operator,
 			},
 		},
 		{
 			scope: ['keyword.operator', 'keyword.operator.member', 'keyword.operator.new'],
 			settings: {
-				foreground: color.red,
+				foreground: theme.operator,
 			},
 		},
 		{
 			scope: 'keyword.other.substitution',
 			settings: {
-				foreground: color.gray3,
+				foreground: theme.mutedForeground,
 			},
 		},
 		{
 			scope: ['keyword.other.template.begin', 'keyword.other.template.end'],
 			settings: {
-				foreground: color.red,
+				foreground: theme.operator,
 			},
 		},
 		{
@@ -832,7 +832,7 @@ export const themeBase = {
 				'keyword.operator.table.row.restructuredtext keyword.operator.table.data.restructuredtext',
 			],
 			settings: {
-				foreground: color.gray3,
+				foreground: theme.mutedForeground,
 			},
 		},
 		{
@@ -850,13 +850,13 @@ export const themeBase = {
 		{
 			scope: 'markup.heading',
 			settings: {
-				foreground: color.yellow,
+				foreground: theme.strings,
 			},
 		},
 		{
 			scope: 'markup.raw',
 			settings: {
-				foreground: color.orange,
+				foreground: theme.attribute,
 			},
 		},
 		{
@@ -868,37 +868,37 @@ export const themeBase = {
 		{
 			scope: 'markup.underline.link',
 			settings: {
-				foreground: color.green,
+				foreground: theme.function,
 			},
 		},
 		{
 			scope: ['markup.inserted', 'markup.inserted punctuation.definition.inserted'],
 			settings: {
-				foreground: color.green,
+				foreground: theme.function,
 			},
 		},
 		{
 			scope: ['markup.deleted', 'markup.deleted punctuation.definition.deleted'],
 			settings: {
-				foreground: color.red,
+				foreground: theme.operator,
 			},
 		},
 		{
 			scope: ['markup.changed', 'markup.changed punctuation.definition.changed'],
 			settings: {
-				foreground: color.yellow,
+				foreground: theme.strings,
 			},
 		},
 		{
 			scope: ['markup.ignored', 'markup.ignored punctuation.definition.ignored'],
 			settings: {
-				foreground: color.gray3,
+				foreground: theme.mutedForeground,
 			},
 		},
 		{
 			scope: 'markup.untracked',
 			settings: {
-				foreground: color.gray3,
+				foreground: theme.mutedForeground,
 			},
 		},
 		{
@@ -917,37 +917,37 @@ export const themeBase = {
 				'meta.function-call.method.without-arguments.js',
 			],
 			settings: {
-				foreground: color.gray3,
+				foreground: theme.mutedForeground,
 			},
 		},
 		{
 			scope: ['meta.function-call.python', 'meta.function-call.arguments.python meta.function-call.python'],
 			settings: {
-				foreground: color.green,
+				foreground: theme.function,
 			},
 		},
 		{
 			scope: 'meta.function-call.python meta.function-call.arguments.python',
 			settings: {
-				foreground: color.gray1,
+				foreground: theme.foreground,
 			},
 		},
 		{
 			scope: 'meta.instance.constructor',
 			settings: {
-				foreground: color.green,
+				foreground: theme.function,
 			},
 		},
 		{
 			scope: ['meta.attribute-with-value.class string', 'meta.attribute.class.html string'],
 			settings: {
-				foreground: color.green,
+				foreground: theme.function,
 			},
 		},
 		{
 			scope: ['meta.attribute-with-value.id string', 'meta.attribute.id.html string'],
 			settings: {
-				foreground: color.orange,
+				foreground: theme.attribute,
 			},
 		},
 		{
@@ -986,7 +986,7 @@ export const themeBase = {
 				'source.json meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary string',
 			],
 			settings: {
-				foreground: color.gray1,
+				foreground: theme.foreground,
 			},
 		},
 		{
@@ -1009,43 +1009,43 @@ export const themeBase = {
 				'source.json meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value string',
 			],
 			settings: {
-				foreground: color.yellow,
+				foreground: theme.strings,
 			},
 		},
 		{
 			scope: ['meta.object.member', 'variable.other meta.objectliteral meta.object.member'],
 			settings: {
-				foreground: color.gray1,
+				foreground: theme.foreground,
 			},
 		},
 		{
 			scope: 'meta.object-literal.key',
 			settings: {
-				foreground: color.gray1,
+				foreground: theme.foreground,
 			},
 		},
 		{
 			scope: 'meta.property-list.css variable.other',
 			settings: {
-				foreground: color.orange,
+				foreground: theme.attribute,
 			},
 		},
 		{
 			scope: ['entity.name.constant.preprocessor', 'meta.preprocessor'],
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
 			scope: 'meta.diff.git-diff.header',
 			settings: {
-				foreground: color.yellow,
+				foreground: theme.strings,
 			},
 		},
 		{
 			scope: 'punctuation',
 			settings: {
-				foreground: color.gray3,
+				foreground: theme.mutedForeground,
 			},
 		},
 		{
@@ -1059,19 +1059,19 @@ export const themeBase = {
 				'punctuation.definition.string.end.html source.css',
 			],
 			settings: {
-				foreground: color.gray3,
+				foreground: theme.mutedForeground,
 			},
 		},
 		{
 			scope: 'punctuation.definition.group',
 			settings: {
-				foreground: color.gray1,
+				foreground: theme.foreground,
 			},
 		},
 		{
 			scope: 'punctuation.definition.comment',
 			settings: {
-				foreground: color.gray4,
+				foreground: theme.darkForeground,
 			},
 		},
 		{
@@ -1081,7 +1081,7 @@ export const themeBase = {
 				'punctuation.definition.entity.css',
 			],
 			settings: {
-				foreground: color.gray2,
+				foreground: theme.focusedForeground,
 			},
 		},
 		{
@@ -1092,7 +1092,7 @@ export const themeBase = {
 				'punctuation.section.embedded source',
 			],
 			settings: {
-				foreground: color.orange,
+				foreground: theme.attribute,
 			},
 		},
 		{
@@ -1105,73 +1105,73 @@ export const themeBase = {
 				'string.quoted.template punctuation.definition.string.end',
 			],
 			settings: {
-				foreground: color.red,
+				foreground: theme.operator,
 			},
 		},
 		{
 			scope: ['markup.inline.raw'],
 			settings: {
-				foreground: color.blue,
+				foreground: theme.keyword,
 			},
 		},
 		{
 			scope: 'region.redish',
 			settings: {
-				foreground: color.red,
+				foreground: theme.operator,
 			},
 		},
 		{
 			scope: 'region.orangish',
 			settings: {
-				foreground: color.orange,
+				foreground: theme.attribute,
 			},
 		},
 		{
 			scope: 'region.yellowish',
 			settings: {
-				foreground: color.yellow,
+				foreground: theme.strings,
 			},
 		},
 		{
 			scope: 'region.greenish',
 			settings: {
-				foreground: color.green,
+				foreground: theme.function,
 			},
 		},
 		{
 			scope: 'region.bluish',
 			settings: {
-				foreground: color.blue,
+				foreground: theme.keyword,
 			},
 		},
 		{
 			scope: 'region.purplish',
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
 			scope: 'region.pinkish',
 			settings: {
-				foreground: color.red,
+				foreground: theme.operator,
 			},
 		},
 		{
 			scope: 'region.whitish',
 			settings: {
-				foreground: color.gray1,
+				foreground: theme.foreground,
 			},
 		},
 		{
 			scope: 'source',
 			settings: {
-				foreground: color.gray1,
+				foreground: theme.foreground,
 			},
 		},
 		{
 			scope: ['source.scss', 'source.sass'],
 			settings: {
-				foreground: color.gray3,
+				foreground: theme.mutedForeground,
 			},
 		},
 		{
@@ -1189,13 +1189,13 @@ export const themeBase = {
 			],
 			settings: {
 				fontStyle: 'italic',
-				foreground: color.orange,
+				foreground: theme.attribute,
 			},
 		},
 		{
 			scope: 'source.git-show.commit.sha',
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
@@ -1207,7 +1207,7 @@ export const themeBase = {
 				'source.git-diff.command meta.diff.git-diff.header.to-file',
 			],
 			settings: {
-				foreground: color.gray3,
+				foreground: theme.mutedForeground,
 			},
 		},
 		{
@@ -1216,95 +1216,95 @@ export const themeBase = {
 				'source.git-show meta.diff.git-diff.header.extended.index.to-sha',
 			],
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
 			scope: 'source.git-show meta.diff.range.unified',
 			settings: {
-				foreground: color.orange,
+				foreground: theme.attribute,
 			},
 		},
 		{
 			scope: ['source.git-show meta.diff.header.from-file', 'source.git-show meta.diff.header.to-file'],
 			settings: {
-				foreground: color.gray3,
+				foreground: theme.mutedForeground,
 			},
 		},
 		{
 			scope: 'storage',
 			settings: {
-				foreground: color.red,
+				foreground: theme.operator,
 			},
 		},
 		{
 			scope: 'storage.type',
 			settings: {
 				fontStyle: 'italic',
-				foreground: color.blue,
+				foreground: theme.keyword,
 			},
 		},
 		{
 			scope: 'storage.type.extends',
 			settings: {
 				fontStyle: '',
-				foreground: color.red,
+				foreground: theme.operator,
 			},
 		},
 		{
 			scope: 'storage.type.function.arrow',
 			settings: {
 				fontStyle: '',
-				foreground: color.red,
+				foreground: theme.operator,
 			},
 		},
 		{
 			scope: ['storage.modifier', 'storage.type.modifier'],
 			settings: {
 				fontStyle: 'italic',
-				foreground: color.red,
+				foreground: theme.operator,
 			},
 		},
 		{
 			scope: 'storage.class.restructuredtext.ref',
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
 			scope: 'string',
 			settings: {
-				foreground: color.yellow,
+				foreground: theme.strings,
 			},
 		},
 		{
 			scope: 'string.unquoted.label',
 			settings: {
-				foreground: color.gray1,
+				foreground: theme.foreground,
 			},
 		},
 		{
 			scope: 'string source',
 			settings: {
-				foreground: color.gray1,
+				foreground: theme.foreground,
 			},
 		},
 		{
 			scope: 'string source punctuation.section.embedded',
 			settings: {
-				foreground: color.gray3,
+				foreground: theme.mutedForeground,
 			},
 		},
 		{
 			scope: ['string.other.link.title', 'string.other.link.description'],
 			settings: {
-				foreground: color.red,
+				foreground: theme.operator,
 			},
 		},
 		{
 			scope: 'string.other.link.description.title',
 			settings: {
-				foreground: color.blue,
+				foreground: theme.keyword,
 			},
 		},
 		{
@@ -1313,100 +1313,100 @@ export const themeBase = {
 				'string.regexp punctuation.definition.string.end',
 			],
 			settings: {
-				foreground: color.red,
+				foreground: theme.operator,
 			},
 		},
 		{
 			scope: ['string.other.ref', 'string.other.restructuredtext.ref'],
 			settings: {
-				foreground: color.green,
+				foreground: theme.function,
 			},
 		},
 		{
 			scope: 'string.other.git-status.help.key',
 			settings: {
-				foreground: color.gray2,
+				foreground: theme.focusedForeground,
 			},
 		},
 		{
 			scope: 'string.other.git-status.remote',
 			settings: {
-				foreground: color.red,
+				foreground: theme.operator,
 			},
 		},
 		{
 			scope: 'support.constant',
 			settings: {
-				foreground: color.blue,
+				foreground: theme.keyword,
 			},
 		},
 		{
 			scope: 'support.constant.handlebars',
 			settings: {
-				foreground: color.gray3,
+				foreground: theme.mutedForeground,
 			},
 		},
 		{
 			scope: 'support.type.vendor-prefix.css',
 			settings: {
-				foreground: color.gray2,
+				foreground: theme.focusedForeground,
 			},
 		},
 		{
 			scope: 'support.function',
 			settings: {
-				foreground: color.green,
+				foreground: theme.function,
 			},
 		},
 		{
 			scope: ['support.type', 'entity.name.type.object.console'],
 			settings: {
 				fontStyle: 'italic',
-				foreground: color.blue,
+				foreground: theme.keyword,
 			},
 		},
 		{
 			scope: 'support.variable',
 			settings: {
-				foreground: color.blue,
+				foreground: theme.keyword,
 			},
 		},
 		{
 			scope: 'support.type.property-name',
 			settings: {
 				fontStyle: '',
-				foreground: color.gray1,
+				foreground: theme.foreground,
 			},
 		},
 		{
 			scope: 'support.class',
 			settings: {
-				foreground: color.blue,
+				foreground: theme.keyword,
 			},
 		},
 		{
 			scope: 'text',
 			settings: {
-				foreground: color.gray1,
+				foreground: theme.foreground,
 			},
 		},
 		{
 			scope: 'text.find-in-files',
 			settings: {
-				foreground: color.gray1,
+				foreground: theme.foreground,
 			},
 		},
 		{
 			scope: ['variable', 'variable.other'],
 			settings: {
-				foreground: color.gray1,
+				foreground: theme.foreground,
 			},
 		},
 		{
 			scope: ['variable.parameter', 'parameters variable.function'],
 			settings: {
 				fontStyle: 'italic',
-				foreground: color.orange,
+				foreground: theme.attribute,
 			},
 		},
 		{
@@ -1417,55 +1417,55 @@ export const themeBase = {
 			],
 			settings: {
 				fontStyle: 'italic',
-				foreground: color.gray2,
+				foreground: theme.focusedForeground,
 			},
 		},
 		{
 			scope: 'variable.language.arguments',
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
 			scope: 'variable.other.class',
 			settings: {
-				foreground: color.blue,
+				foreground: theme.keyword,
 			},
 		},
 		{
 			scope: 'variable.other.constant',
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
 			scope: 'variable.other.member',
 			settings: {
-				foreground: color.gray1,
+				foreground: theme.foreground,
 			},
 		},
 		{
 			scope: 'variable.other.enummember',
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
 			scope: ['variable.other.property', 'variable.other.property.static', 'variable.other.event'],
 			settings: {
-				foreground: color.gray1,
+				foreground: theme.foreground,
 			},
 		},
 		{
 			scope: 'variable.function',
 			settings: {
-				foreground: color.green,
+				foreground: theme.function,
 			},
 		},
 		{
 			scope: 'variable.other.substitution',
 			settings: {
-				foreground: color.orange,
+				foreground: theme.attribute,
 			},
 		},
 		{
@@ -1474,37 +1474,37 @@ export const themeBase = {
 				'source.ruby variable.other.readwrite.class.ruby',
 			],
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
 			scope: 'source.jinja2 variable.other.jinja2.block',
 			settings: {
-				foreground: color.green,
+				foreground: theme.function,
 			},
 		},
 		{
 			scope: 'source.jinja2 variable.other.jinja2',
 			settings: {
-				foreground: color.orange,
+				foreground: theme.attribute,
 			},
 		},
 		{
 			scope: ['keyword.other.DML.sql', 'keyword.other.DDL.create.II.sql'],
 			settings: {
-				foreground: color.blue,
+				foreground: theme.keyword,
 			},
 		},
 		{
 			scope: ['constant.numeric.sql'],
 			settings: {
-				foreground: color.violet,
+				foreground: theme.variable,
 			},
 		},
 		{
 			scope: ['keyword.other.sql'],
 			settings: {
-				foreground: color.green,
+				foreground: theme.function,
 			},
 		},
 	],

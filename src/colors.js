@@ -1,18 +1,22 @@
-export const color = {
-	blue: '#82bffc',
-	green: '#a2e57b',
-	violet: '#b6aefa',
-	red: '#fc8f82',
-	orange: '#fcb882',
-	yellow: '#fcde82',
+import chroma from './utils/color.js'
+import gray from './palettes/cool-gray.js'
+import colors from './palettes/darker.js'
 
-	gray9: '#151718',
-	gray8: '#1e2223',
-	gray7: '#273136',
-	gray6: '#394042',
-	gray5: '#545f62',
-	gray4: '#6f7e82',
-	gray3: '#8e9a9e',
-	gray2: '#b8c0c2',
-	gray1: '#f4fafe',
+export default {
+	strings: chroma(colors.yellow[100]).hex(),
+	attribute: chroma(colors.orange[200]).hex(),
+	operator: chroma(colors.red[300]).hex(),
+	keyword: chroma(colors.cyan[200]).hex(),
+	variable: chroma(colors.blue[300]).hex(),
+	function: chroma(colors.green[200]).hex(),
+
+	foreground: chroma(gray.grayscale[100]).hex(),
+	focusedForeground: chroma(gray.grayscale[200]).hex(),
+	mutedForeground: chroma(gray.grayscale[300]).hex(),
+	darkForeground: chroma(gray.grayscale[400]).hex(),
+	midtone: chroma(gray.grayscale[500]).hex(),
+	lightBackground: chroma(gray.grayscale[600]).hex(),
+	background: chroma(gray.grayscale[700]).hex(),
+	dimmedBackground: chroma(gray.grayscale[800]).hex(),
+	darkBackground: chroma(gray.grayscale[900]).hex(),
 }
