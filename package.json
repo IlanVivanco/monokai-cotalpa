@@ -48,7 +48,7 @@
 		"publisherId": "1af87088-d596-49ae-a584-77fc8f1e066a"
 	},
 	"watch": {
-		"build": "src/*.js"
+		"build": "src/**/*.js"
 	},
 	"scripts": {
 		"build": "node ./src/buildThemes.js",
