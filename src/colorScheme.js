@@ -12,6 +12,8 @@ export default {
 	'cyan': colors.cyan[200],
 	'blue': colors.blue[300],
 	'green': colors.green[200],
+	'teal': colors.teal[300],
+	'magenta': colors.magenta[400],
 	'purple': colors.purple[300],
 	'white': colors.gray[50],
 	'gray': colors.gray[400],
