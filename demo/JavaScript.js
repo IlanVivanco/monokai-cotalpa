@@ -13,6 +13,7 @@ console.log('mc', mc)
 
 // Class.
 class vsc extends User {}
+const vsc = new vsc()
 console.log(vsc)
 
 // Const.

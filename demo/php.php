@@ -54,6 +54,8 @@ class Small {
 	}
 }
 
+$small = new Small();
+
 // SQL for the win.
 $get = "SELECT *
 			FROM `wp`.`blog`
