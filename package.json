@@ -1,57 +1,58 @@
 {
-	"name": "cotalpa",
-	"displayName": "Monokai Cotalpa",
-	"description": "🎨 Yet another Monokai color scheme for VS Code.",
-	"publisher": "ilanvivanco",
-	"version": "0.2.4",
-	"icon": "images/logo.png",
-	"license": "MIT",
-	"type": "module",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/IlanVivanco/monokai-cotalpa"
-	},
-	"galleryBanner": {
-		"color": "#273136",
-		"theme": "dark"
-	},
-	"engines": {
-		"vscode": "^1.54.0"
-	},
-	"categories": [
-		"Themes"
-	],
-	"keywords": [
-		"VSCode",
-		"Themes",
-		"Monokai"
-	],
-	"contributes": {
-		"themes": [
-			{
-				"label": "Monokai Cotalpa Dark",
-				"uiTheme": "vs-dark",
-				"path": "./themes/theme-monokai-cotalpa-dark.json"
-			}
-		]
-	},
-	"devDependencies": {
-		"chroma-js": "^2.1.2",
-		"fs-extra": "^10.0.0",
-		"npm-watch": "^0.11.0",
-		"prettier": "^2.2.1",
-		"vsce": "^1.87.0"
-	},
-	"__metadata": {
-		"id": "9fc56e4f-3620-4ee5-8b75-14b121f2c2f1",
-		"publisherDisplayName": "Ilán Vivanco",
-		"publisherId": "1af87088-d596-49ae-a584-77fc8f1e066a"
-	},
-	"watch": {
-		"build": "src/**/*.js"
-	},
-	"scripts": {
-		"build": "node ./src/buildThemes.js",
-		"watch": "npm-watch"
-	}
+  "name": "cotalpa",
+  "displayName": "Monokai Cotalpa",
+  "description": "🎨 Yet another Monokai color scheme for VS Code.",
+  "publisher": "ilanvivanco",
+  "version": "0.2.4",
+  "icon": "images/logo.png",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IlanVivanco/monokai-cotalpa"
+  },
+  "galleryBanner": {
+    "color": "#273136",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.54.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "Dark",
+    "VSCode",
+    "Themes",
+    "Monokai"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Monokai Cotalpa Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/monokai-cotalpa-dark-color-theme.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "chroma-js": "^2.1.2",
+    "fs-extra": "^10.0.0",
+    "npm-watch": "^0.11.0",
+    "prettier": "^2.2.1",
+    "vsce": "^1.87.0"
+  },
+  "__metadata": {
+    "id": "9fc56e4f-3620-4ee5-8b75-14b121f2c2f1",
+    "publisherDisplayName": "Ilán Vivanco",
+    "publisherId": "1af87088-d596-49ae-a584-77fc8f1e066a"
+  },
+  "watch": {
+    "build": "src/**/*.js"
+  },
+  "scripts": {
+    "build": "node ./src/buildThemes.js",
+    "watch": "npm-watch"
+  }
 }
