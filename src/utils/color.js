@@ -11,8 +11,11 @@ class colorUtils {
 		const currentColor = this._currentValue
 
 		switch (mode) {
-			case 'hue':
+			case 'shift':
 				this._currentValue = currentColor.set('hsl.h', currentColor.get('hsl.h') + level)
+				break
+			case 'hue':
+				this._currentValue = currentColor.set('hsl.h', level)
 				break
 			default:
 				this._currentValue = currentColor[mode](level)
@@ -39,6 +42,10 @@ class colorUtils {
 
 	desaturate(level = 1) {
 		return this.changeColor('desaturate', level)
+	}
+
+	shift(level = 1) {
+		return this.changeColor('shift', level)
 	}
 
 	hue(level = 1) {
