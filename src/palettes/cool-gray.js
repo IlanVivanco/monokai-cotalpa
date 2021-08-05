@@ -1,5 +1,5 @@
 export default {
-	grayscale: {
+	gray: {
 		50: '#f7f8f9',
 		100: '#f4fafe',
 		200: '#b8c0c2',
