@@ -1,23 +1,16 @@
-import { assignWorkbechColors, assignTokenColors, assignSemanticColors } from './utils/theme.js'
+import { assignWorkbechColors, assignTokenColors, assignSemanticColors, translateScheme } from './utils/theme.js'
 import { saveThemes } from './utils/file.js'
 import themeBase from './rules/base.js'
 import scheme from './colorScheme.js'
+import variants from './themeVariations.js'
 
 const themes = []
-const variants = [
-	{
-		name: 'Dark',
-		slug: 'dark',
-		type: 'dark',
-		semantic: true,
-		italics: true,
-	},
-]
 
-for (let { name, type, slug, semantic, italics } of variants) {
-	const translatedWorkbechColors = assignWorkbechColors(themeBase.colors, scheme)
-	const translatedTokenColors = assignTokenColors(themeBase.tokenColors, scheme, italics)
-	const translatedSemanticColors = assignSemanticColors(themeBase.semanticColors, scheme)
+for (let { name, type, slug, italics, variation } of variants) {
+	const translatedScheme = variation ? translateScheme(scheme, variation) : scheme
+	const semanticColors = assignSemanticColors(themeBase.semanticColors, translatedScheme)
+	const workbechColors = assignWorkbechColors(themeBase.colors, translatedScheme)
+	const tokenColors = assignTokenColors(themeBase.tokenColors, translatedScheme, italics)
 
 	themes.push({
 		path: `themes/monokai-cotalpa-${slug}-color-theme.json`,
@@ -26,13 +19,13 @@ for (let { name, type, slug, semantic, italics } of variants) {
 			author: 'Ilán Vivanco <ilanvivanco@gmail.com>',
 			$schema: 'vscode://schemas/color-theme',
 			colorSpaceName: 'sRGB',
-			semanticHighlighting: semantic,
+			semanticHighlighting: true,
 			type: type,
 		},
 		colors: {
-			semanticTokenColors: translatedSemanticColors,
-			colors: translatedWorkbechColors,
-			tokenColors: translatedTokenColors,
+			semanticTokenColors: semanticColors,
+			colors: workbechColors,
+			tokenColors: tokenColors,
 		},
 	})
 }

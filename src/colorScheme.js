@@ -15,6 +15,7 @@ export default {
 	'teal': colors.teal[300],
 	'magenta': colors.magenta[400],
 	'purple': colors.purple[300],
+
 	'white': colors.gray[50],
 	'gray': colors.gray[400],
 	'darkgray': colors.gray[900],
