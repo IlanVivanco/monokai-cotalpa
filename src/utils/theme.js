@@ -69,7 +69,7 @@ export function translateScheme(scheme, variant) {
 		// Loop over the color setting on the picked variant
 		for (let chosenColor in variant) {
 			// If the color is found in the setting, apply the variation
-			if (colorKey.includes(chosenColor)) {
+			if (colorKey.match(chosenColor)) {
 				const settings = variant[chosenColor]
 
 				// Aplly each setting to the color
