@@ -30,9 +30,9 @@
   "contributes": {
     "themes": [
       {
-        "label": "Monokai Cotalpa Dark",
+        "label": "Monokai Cotalpa",
         "uiTheme": "vs-dark",
-        "path": "./themes/monokai-cotalpa-dark-color-theme.json"
+        "path": "./themes/monokai-cotalpa-color-theme.json"
       }
     ]
   },

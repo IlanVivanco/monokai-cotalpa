@@ -21,8 +21,7 @@
 
 export default [
 	{
-		name: 'Dark',
-		slug: 'dark',
+		name: 'Main',
 		type: 'dark',
 		italics: false,
 		variation: {

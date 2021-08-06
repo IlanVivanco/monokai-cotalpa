@@ -13,9 +13,12 @@ for (let { name, type, slug, italics, variation } of variants) {
 	const tokenColors = assignTokenColors(themeBase.tokenColors, translatedScheme, italics)
 
 	themes.push({
-		path: `themes/monokai-cotalpa-${slug}-color-theme.json`,
+		path:
+			name !== 'Main'
+				? `themes/monokai-cotalpa-${slug}-color-theme.json`
+				: 'themes/monokai-cotalpa-color-theme.json',
 		meta: {
-			name: `Monokai Cotalpa ${name}`,
+			name: name !== 'Main' ? `Monokai Cotalpa ${name}` : 'Monokai Cotalpa',
 			author: 'Ilán Vivanco <ilanvivanco@gmail.com>',
 			$schema: 'vscode://schemas/color-theme',
 			colorSpaceName: 'sRGB',
