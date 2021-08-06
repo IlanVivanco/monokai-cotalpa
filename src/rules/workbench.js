@@ -254,7 +254,7 @@ export default {
 	'extensionButton.prominentHoverBackground': ['gray-500'],
 
 	'focusBorder': ['gray-400'],
-	'gray-100': ['gray-100'],
+	'foreground': ['gray-100'],
 
 	'gitDecoration.conflictingResourceForeground': ['orange'],
 	'gitDecoration.deletedResourceForeground': ['red'],

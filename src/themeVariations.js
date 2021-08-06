@@ -37,7 +37,6 @@ export default [
 		name: 'Golden Dark',
 		slug: 'golden-dark',
 		type: 'dark',
-		semantic: true,
 		italics: false,
 	},
 ]

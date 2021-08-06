@@ -1,4 +1,5 @@
 import chroma from './color.js'
+import cloneDeep from 'lodash.clonedeep'
 
 export function assignWorkbechColors(rules, scheme) {
 	const assignedRules = {}
@@ -19,14 +20,14 @@ export function assignWorkbechColors(rules, scheme) {
 
 export function assignTokenColors(rules, scheme, italics = false) {
 	const assignedRules = []
+	const clonedRules = cloneDeep(rules)
 
-	for (let rule of rules) {
+	for (let rule of clonedRules) {
 		const colorRule = rule?.settings?.foreground
 
 		// Ignore empty
 		if (colorRule && typeof colorRule !== 'string') {
 			const [color, opacity] = colorRule
-			rule.settings.foreground = scheme[color]
 			rule.settings.foreground = chroma(scheme[color])
 				.alpha(opacity ? opacity : 1)
 				.hex()

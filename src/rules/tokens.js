@@ -69,7 +69,6 @@ export default [
 		scope: 'entity.name.tag',
 		settings: {
 			foreground: ['red'],
-			fontStyle: 'normal',
 		},
 	},
 	{
@@ -207,7 +206,6 @@ export default [
 		scope: 'storage',
 		settings: {
 			foreground: ['red'],
-			fontStyle: 'normal',
 		},
 	},
 	{
@@ -360,7 +358,6 @@ export default [
 		scope: 'punctuation.definition.tag',
 		settings: {
 			foreground: ['gray-300'],
-			fontStyle: 'normal',
 		},
 	},
 	{
