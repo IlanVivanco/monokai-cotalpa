@@ -99,9 +99,15 @@ export function translateScheme(scheme, variant) {
 					}
 				}
 			}
+
 			translatedScheme[colorKey] = newColor.hex()
 		}
 	}
 
-	return translatedScheme
+	// If no new translatedScheme colors, return the original scheme
+	if (Object.keys(translatedScheme).length === 0) {
+		return scheme
+	} else {
+		return translatedScheme
+	}
 }
