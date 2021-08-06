@@ -54,5 +54,8 @@
   "scripts": {
     "build": "node ./src/buildThemes.js",
     "watch": "npm-watch"
+  },
+  "dependencies": {
+    "lodash.clonedeep": "^4.5.0"
   }
 }
