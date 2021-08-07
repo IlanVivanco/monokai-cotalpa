@@ -11,10 +11,8 @@
  *
  * Available settings:
  * - 'alpha': sets the opacity of the color (float value).
- * - 'darkness': makes the color darker (float value).
- * - 'lightness': makes the color lighter (float value).
- * - 'saturation': makes the color more saturated (float value).
- * - 'saturation': makes the color less saturated (float value).
+ * - 'brightness': makes the color lighter or darker (float value).
+ * - 'saturation': makes the color more or less saturated (float value).
  * - 'hue': sets the hue of the color (int 0-360).
  * - 'shift': shifts the hue of the color (ind positive or negative).
  */
@@ -23,19 +21,19 @@ export default [
 	{
 		name: 'Main',
 		type: 'dark',
-		italics: false,
-		variation: {
-			gray: {
-				hue: 40,
-				darkness: 0.2,
+	},
+	{
+		name: 'Italic',
+		slug: 'italic',
+		type: 'dark',
+		italics: true,
+		variations: {
+			'gray': {
+				// brightness: .5,
+			},
+			'(yellow|blue|green|orange|red|cyan)': {
+				// saturation: 1.3,
 			},
 		},
-	},
-
-	{
-		name: 'Golden Dark',
-		slug: 'golden-dark',
-		type: 'dark',
-		italics: false,
 	},
 ]
