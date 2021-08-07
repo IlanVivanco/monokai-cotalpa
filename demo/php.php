@@ -34,7 +34,7 @@ get_footer();
  *
  * @since 1.0.0
  */
-class Small {
+class Small extends Size {
 	/**
 	 * Name.
 	 *
@@ -54,7 +54,7 @@ class Small {
 	}
 }
 
-$small = new Small();
+$small = new Small( '400x400' );
 
 // SQL for the win.
 $get = "SELECT *

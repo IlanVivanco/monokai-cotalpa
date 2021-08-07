@@ -1,6 +1,8 @@
 /**
- * Checkout this CSS File.
+ * Checkout this SCSS File.
  */
+
+$color: '#affeef';
 
 .table {
 	--color: '#affeef';
@@ -21,26 +23,27 @@
 a {
 	text-decoration: none;
 	opacity: 0.8;
-}
+	color: $color;
 
-a:hover {
-	opacity: 1;
-}
+	&:hover {
+		opacity: 1;
+	}
 
-a[href$='.pdf'] {
-	text-decoration: underline;
+	&[href$='.pdf'] {
+		text-decoration: underline;
+	}
 }
 
 ul {
 	list-style: none;
-}
 
-li:last-of-type {
-	margin: 0;
-}
+	li:last-of-type {
+		margin: 0;
+	}
 
-li:nth-last-child(2n) {
-	margin-left: 10px;
+	li:nth-last-child(2n) {
+		margin-left: 10px;
+	}
 }
 
 .css-class {
