@@ -28,20 +28,12 @@ class colorUtils {
 		return this.changeColor('alpha', level)
 	}
 
-	darken(level = 1) {
-		return this.changeColor('darken', level)
-	}
-
 	brighten(level = 1) {
 		return this.changeColor('brighten', level)
 	}
 
 	saturate(level = 1) {
 		return this.changeColor('saturate', level)
-	}
-
-	desaturate(level = 1) {
-		return this.changeColor('desaturate', level)
 	}
 
 	shift(level = 1) {

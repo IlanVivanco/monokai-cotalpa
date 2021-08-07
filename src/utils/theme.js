@@ -84,12 +84,6 @@ export function translateScheme(scheme, variant) {
 						case 'saturation':
 							newColor.saturate(settings[setting])
 							break
-						case 'desaturation':
-							newColor.desaturate(settings[setting])
-							break
-						case 'darkness':
-							newColor.darken(settings[setting])
-							break
 						case 'brightness':
 							newColor.brighten(settings[setting])
 							break
