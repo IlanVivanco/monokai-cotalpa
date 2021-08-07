@@ -33,6 +33,11 @@
         "label": "Monokai Cotalpa",
         "uiTheme": "vs-dark",
         "path": "./themes/monokai-cotalpa-color-theme.json"
+      },
+      {
+        "label": "Monokai Cotalpa Italic",
+        "uiTheme": "vs-dark",
+        "path": "./themes/monokai-cotalpa-italic-color-theme.json"
       }
     ]
   },

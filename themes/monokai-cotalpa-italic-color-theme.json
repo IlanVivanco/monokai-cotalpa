@@ -1,5 +1,5 @@
 {
-  "name": "Monokai Cotalpa",
+  "name": "Monokai Cotalpa Italic",
   "author": "Ilán Vivanco <ilanvivanco@gmail.com>",
   "$schema": "vscode://schemas/color-theme",
   "colorSpaceName": "sRGB",
@@ -326,7 +326,7 @@
         "comment.block.documentation.phpdoc.php"
       ],
       "settings": {
-        "fontStyle": "",
+        "fontStyle": "italic",
         "foreground": "#6f7e82"
       }
     },
@@ -380,7 +380,7 @@
         "variable.other.liquid"
       ],
       "settings": {
-        "fontStyle": "",
+        "fontStyle": "italic",
         "foreground": "#66d6fb"
       }
     },
@@ -412,7 +412,7 @@
       "name": "Tag attributes",
       "scope": "entity.other.attribute-name",
       "settings": {
-        "fontStyle": "",
+        "fontStyle": "italic",
         "foreground": "#66d6fb"
       }
     },
@@ -430,7 +430,7 @@
         "entity.other.attribute-name.pseudo-class"
       ],
       "settings": {
-        "fontStyle": "",
+        "fontStyle": "italic",
         "foreground": "#99d874"
       }
     },
@@ -479,7 +479,7 @@
       "scope": "markup.quote",
       "settings": {
         "foreground": "#8e9a9e",
-        "fontStyle": ""
+        "fontStyle": "italic"
       }
     },
     {
@@ -537,7 +537,7 @@
         "markup.underline.link"
       ],
       "settings": {
-        "fontStyle": "",
+        "fontStyle": "italic",
         "foreground": "#99d874"
       }
     },
@@ -548,7 +548,7 @@
         "markup.inserted punctuation.definition.inserted"
       ],
       "settings": {
-        "fontStyle": "",
+        "fontStyle": "italic",
         "foreground": "#fc988d"
       }
     },
@@ -567,7 +567,7 @@
         "keyword.other.DML"
       ],
       "settings": {
-        "fontStyle": "",
+        "fontStyle": "italic",
         "foreground": "#66d6fb"
       }
     },
@@ -599,7 +599,7 @@
       "name": "Markup link descriptions",
       "scope": "string.other.link",
       "settings": {
-        "fontStyle": "",
+        "fontStyle": "italic",
         "foreground": "#fcbb86"
       }
     },
@@ -651,7 +651,7 @@
         "source.less variable.declaration.less"
       ],
       "settings": {
-        "fontStyle": "",
+        "fontStyle": "italic",
         "foreground": "#fcbb86"
       }
     },
@@ -710,7 +710,7 @@
       "scope": "variable.parameter",
       "settings": {
         "foreground": "#fcbb86",
-        "fontStyle": ""
+        "fontStyle": "italic"
       }
     },
     {
