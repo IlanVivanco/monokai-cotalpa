@@ -54,4 +54,16 @@ https://code.visualstudio.com/docs/getstarted/theme-color-reference
 | ![#8e9a9e](https://via.placeholder.com/13/8e9a9e/000000?text=+) `Gray 3` | `#8e9a9e` | `142, 154, 158` |
 | ![#b8c0c2](https://via.placeholder.com/13/b8c0c2/000000?text=+) `Gray 2` | `#b8c0c2` | `184, 192, 194` |
 | ![#f4fafe](https://via.placeholder.com/13/f4fafe/000000?text=+) `Gray 1` | `#f4fafe` | `244, 250, 254` |
-|                                                                          |           |                 |
+
+## Font style
+I recommend using a monospaced font containing ligatures like [Cascadia Code](https://github.com/microsoft/cascadia-code) or [Fira Code](https://github.com/tonsky/FiraCode).
+
+```json
+"editor.fontFamily": "'Cascadia Code', 'Fira Code', 'Inconsolata Regular', Consolas, 'Courier New', monospace",
+```
+
+Also, if you want to enable the Cursive form of the italic just remember to also add this:
+
+```json
+"editor.fontLigatures": "'ss01', 'calt'",
+```
