@@ -12,13 +12,13 @@ export default {
 	'cyan': colors.cyan[200],
 	'blue': colors.blue[300],
 	'green': colors.green[200],
-	'teal': colors.teal[300],
+	'teal': colors.teal[200],
 	'magenta': colors.magenta[400],
 	'purple': colors.purple[300],
 
 	'white': colors.gray[50],
-	'gray': colors.gray[400],
-	'darkgray': colors.gray[900],
+	'gray': colors.gray[300],
+	'darkgray': colors.gray[700],
 	'black': colors.gray[1000],
 
 	'gray-100': colors.gray[100],

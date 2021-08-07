@@ -37,30 +37,29 @@ https://code.visualstudio.com/docs/getstarted/theme-color-reference
 
 ## Color reference
 
-| Color                                                                    |    HEX    |      RGBA       |
-| :----------------------------------------------------------------------- | :-------: | :-------------: |
-| ![#82bffc](https://via.placeholder.com/13/82bffc/000000?text=+) `Blue`   | `#82bffc` | `130, 191, 252` |
-| ![#a2e57b](https://via.placeholder.com/13/a2e57b/000000?text=+) `Green`  | `#a2e57b` | `162, 229, 123` |
-| ![#b6aefa](https://via.placeholder.com/13/b6aefa/000000?text=+) `Violet` | `#b6aefa` | `182, 174, 250` |
-| ![#fc8f82](https://via.placeholder.com/13/fc8f82/000000?text=+) `Red`    | `#fc8f82` | `252, 143, 130` |
-| ![#fcb882](https://via.placeholder.com/13/fcb882/000000?text=+) `Orange` | `#fcb882` | `252, 184, 130` |
-| ![#fcde82](https://via.placeholder.com/13/fcde82/000000?text=+) `Yellow` | `#fcde82` | `252, 222, 130` |
-| ![#151718](https://via.placeholder.com/13/151718/000000?text=+) `Gray 9` | `#151718` |  `21, 23, 24`   |
-| ![#1e2223](https://via.placeholder.com/13/1e2223/000000?text=+) `Gray 8` | `#1e2223` |  `30, 34, 35`   |
-| ![#273136](https://via.placeholder.com/13/273136/000000?text=+) `Gray 7` | `#273136` |  `39, 49, 54`   |
-| ![#394042](https://via.placeholder.com/13/394042/000000?text=+) `Gray 6` | `#394042` |  `57, 64, 66`   |
-| ![#545f62](https://via.placeholder.com/13/545f62/000000?text=+) `Gray 5` | `#545f62` |  `84, 95, 98`   |
-| ![#6f7e82](https://via.placeholder.com/13/6f7e82/000000?text=+) `Gray 4` | `#6f7e82` | `111, 126, 130` |
-| ![#8e9a9e](https://via.placeholder.com/13/8e9a9e/000000?text=+) `Gray 3` | `#8e9a9e` | `142, 154, 158` |
-| ![#b8c0c2](https://via.placeholder.com/13/b8c0c2/000000?text=+) `Gray 2` | `#b8c0c2` | `184, 192, 194` |
-| ![#f4fafe](https://via.placeholder.com/13/f4fafe/000000?text=+) `Gray 1` | `#f4fafe` | `244, 250, 254` |
+| Color         |                                    HEX                                    |         HSL          |
+| :------------ | :-----------------------------------------------------------------------: | :------------------: |
+| **Red**       | ![#fc988d](https://via.placeholder.com/13/fc988d/000000?text=+) _#fc988d_ |  _hsl(6, 95%, 77%)_  |
+| **Orange**    | ![#fcbb86](https://via.placeholder.com/13/fcbb86/000000?text=+) _#fcbb86_ | _hsl(27, 95%, 76%)_  |
+| **Yellow**    | ![#fcdc7d](https://via.placeholder.com/13/fcdc7d/000000?text=+) _#fcdc7d_ | _hsl(45, 95%, 74%)_  |
+| **Green**     | ![#99d874](https://via.placeholder.com/13/99d874/000000?text=+) _#99d874_ | _hsl(98, 56%, 65%)_  |
+| **Teal**      | ![#2cca98](https://via.placeholder.com/13/2cca98/000000?text=+) _#63ddb6_ | _hsl(161, 64%, 63%_) |
+| **Cyan**      | ![#66d6fb](https://via.placeholder.com/13/66d6fb/000000?text=+) _#66d6fb_ | _hsl(195, 95%, 69%_) |
+| **Blue**      | ![#74b8fc](https://via.placeholder.com/13/74b8fc/000000?text=+) _#74b8fc_ | _hsl(210, 96%, 72%_) |
+| **Purple**    | ![#b2aafa](https://via.placeholder.com/13/b2aafa/000000?text=+) _#b2aafa_ | _hsl(246, 89%, 82%_) |
+| **Magenta**   | ![#e27fb1](https://via.placeholder.com/13/e27fb1/000000?text=+) _#e27fb1_ | _hsl(330, 63%, 69%_) |
+|               |                                                                           |                      |
+| **Black**     | ![#060809](https://via.placeholder.com/13/060809/000000?text=+) _#060809_ | _hsl(200, 20%, 3%)_  |
+| **Dark gray** | ![#273136](https://via.placeholder.com/13/273136/000000?text=+) _#273136_ | _hsl(200, 16%, 18%_) |
+| **Gray**      | ![#8e9a9e](https://via.placeholder.com/13/8e9a9e/000000?text=+) _#8e9a9e_ | _hsl(195, 8%, 59%)_  |
+| **White**     | ![#fffff](https://via.placeholder.com/13/ffffff/000000?text=+) _#f7f8f9_  | _hsl(210, 14%, 97%_) |
 
 ## Font style
 
 I recommend using a monospaced font containing ligatures like [Cascadia Code](https://github.com/microsoft/cascadia-code) or [Fira Code](https://github.com/tonsky/FiraCode).
 
 ```json
-"editor.fontFamily": "'Cascadia Code', 'Fira Code', 'Inconsolata Regular', Consolas, 'Courier New', monospace",
+"editor.fontFamily": "'Cascadia Code', 'Fira Code', Consolas, monospace",
 ```
 
 Also, if you want to enable the Cursive form of the italic just remember to also add this:
