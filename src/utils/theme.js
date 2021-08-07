@@ -24,6 +24,7 @@ export function assignTokenColors(rules, scheme, italics = false) {
 
 	for (let rule of clonedRules) {
 		const colorRule = rule?.settings?.foreground
+		const styleRule = rule?.settings?.fontStyle
 
 		// Ignore empty
 		if (colorRule && typeof colorRule !== 'string') {
@@ -31,9 +32,13 @@ export function assignTokenColors(rules, scheme, italics = false) {
 			rule.settings.foreground = chroma(scheme[color])
 				.alpha(opacity ? opacity : 1)
 				.hex()
-
-			assignedRules.push(rule)
 		}
+
+		if (styleRule && styleRule === 'config') {
+			rule.settings.fontStyle = italics ? 'italic' : ''
+		}
+
+		assignedRules.push(rule)
 	}
 
 	return assignedRules
