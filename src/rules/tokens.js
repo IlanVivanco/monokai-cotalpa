@@ -3,7 +3,7 @@ export default [
 		name: 'Comments',
 		scope: ['comment', 'comment.block.documentation.phpdoc.php'],
 		settings: {
-			fontStyle: 'italic',
+			fontStyle: 'config',
 			foreground: ['gray-400'],
 		},
 	},
@@ -53,7 +53,7 @@ export default [
 			'variable.other.liquid',
 		],
 		settings: {
-			fontStyle: 'italic',
+			fontStyle: 'config',
 			foreground: ['cyan'],
 		},
 	},
@@ -82,7 +82,7 @@ export default [
 		name: 'Tag attributes',
 		scope: 'entity.other.attribute-name',
 		settings: {
-			fontStyle: 'italic',
+			fontStyle: 'config',
 			foreground: ['cyan'],
 		},
 	},
@@ -97,7 +97,7 @@ export default [
 		name: 'Pseudo CSS',
 		scope: ['entity.other.attribute-name.pseudo-element', 'entity.other.attribute-name.pseudo-class'],
 		settings: {
-			fontStyle: 'italic',
+			fontStyle: 'config',
 			foreground: ['green'],
 		},
 	},
@@ -140,13 +140,14 @@ export default [
 		scope: 'markup.quote',
 		settings: {
 			foreground: ['gray-300'],
-			fontStyle: 'italic',
+			fontStyle: 'config',
 		},
 	},
 	{
 		name: 'Markup headings',
 		scope: ['markup.heading', 'entity.name.section'],
 		settings: {
+			fontStyle: 'bold',
 			foreground: ['yellow'],
 		},
 	},
@@ -189,7 +190,7 @@ export default [
 		name: 'Markup links',
 		scope: ['markup.underline.link'],
 		settings: {
-			fontStyle: 'italic',
+			fontStyle: 'config',
 			foreground: ['green'],
 		},
 	},
@@ -197,7 +198,7 @@ export default [
 		name: 'Markup images',
 		scope: ['markup.inserted', 'markup.inserted punctuation.definition.inserted'],
 		settings: {
-			fontStyle: 'italic',
+			fontStyle: 'config',
 			foreground: ['red'],
 		},
 	},
@@ -212,7 +213,7 @@ export default [
 		name: 'Storage type & keyowrds',
 		scope: ['storage.type', 'keyword.other.phpdoc.php', 'keyword.other.DML'],
 		settings: {
-			fontStyle: 'italic',
+			fontStyle: 'config',
 			foreground: ['cyan'],
 		},
 	},
@@ -220,7 +221,6 @@ export default [
 		name: 'JS arrow function',
 		scope: 'storage.type.function.arrow',
 		settings: {
-			fontStyle: '',
 			foreground: ['red'],
 		},
 	},
@@ -242,7 +242,7 @@ export default [
 		name: 'Markup link descriptions',
 		scope: 'string.other.link',
 		settings: {
-			fontStyle: 'italic',
+			fontStyle: 'config',
 			foreground: ['red'],
 		},
 	},
@@ -288,7 +288,7 @@ export default [
 			'source.less variable.declaration.less',
 		],
 		settings: {
-			fontStyle: 'italic',
+			fontStyle: 'config',
 			foreground: ['orange'],
 		},
 	},
@@ -296,7 +296,6 @@ export default [
 		name: 'Language variables',
 		scope: ['variable.language'],
 		settings: {
-			fontStyle: 'italic',
 			foreground: ['gray-200'],
 		},
 	},
@@ -343,7 +342,7 @@ export default [
 		scope: 'variable.parameter',
 		settings: {
 			foreground: ['orange'],
-			fontStyle: 'italic',
+			fontStyle: 'config',
 		},
 	},
 	{
