@@ -377,7 +377,7 @@ export default {
 	'statusBar.border': ['gray-800'],
 	'statusBar.debuggingBackground': ['orange'],
 	'statusBar.debuggingBorder': ['gray-800'],
-	'statusBar.debuggingForeground': ['gray-400'],
+	'statusBar.debuggingForeground': ['gray-700'],
 	'statusBar.foreground': ['gray-300'],
 	'statusBar.noFolderBackground': ['gray-800'],
 	'statusBar.noFolderBorder': ['gray-900'],
