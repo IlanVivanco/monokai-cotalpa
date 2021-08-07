@@ -243,7 +243,7 @@ export default [
 		scope: 'string.other.link',
 		settings: {
 			fontStyle: 'config',
-			foreground: ['red'],
+			foreground: ['orange'],
 		},
 	},
 	{
