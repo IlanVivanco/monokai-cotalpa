@@ -87,6 +87,13 @@ export default [
 		},
 	},
 	{
+		name: 'CSS Class selectors',
+		scope: 'entity.other.attribute-name.class',
+		settings: {
+			foreground: ['green'],
+		},
+	},
+	{
 		name: 'CSS ID selectors',
 		scope: 'entity.other.attribute-name.id',
 		settings: {
@@ -98,7 +105,7 @@ export default [
 		scope: ['entity.other.attribute-name.pseudo-element', 'entity.other.attribute-name.pseudo-class'],
 		settings: {
 			fontStyle: 'config',
-			foreground: ['green'],
+			foreground: ['cyan'],
 		},
 	},
 	{
@@ -132,7 +139,7 @@ export default [
 		name: 'Units',
 		scope: 'keyword.other.unit',
 		settings: {
-			foreground: ['purple'],
+			foreground: ['orange'],
 		},
 	},
 	{
