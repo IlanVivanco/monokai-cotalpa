@@ -32,7 +32,7 @@ export default [
 		name: 'Escape characters',
 		scope: 'constant.character.escape',
 		settings: {
-			foreground: ['blue'],
+			foreground: ['orange'],
 		},
 	},
 	{
