@@ -17,9 +17,15 @@ export default {
 	'purple': colors.purple[300],
 
 	'white': colors.gray[50],
+	'lightgray': colors.gray[200],
 	'gray': colors.gray[300],
 	'darkgray': colors.gray[700],
 	'black': colors.gray[1000],
+
+	'success': colors.green[200],
+	'warning': colors.orange[200],
+	'info': colors.blue[300],
+	'error': colors.red[300],
 
 	'gray-100': colors.gray[100],
 	'gray-200': colors.gray[200],
