@@ -11,16 +11,15 @@
 
 .table::after {
 	color: var(--color);
+	background: #000;
 	content: 'Monokai Cotalpa';
 	display: block;
 	width: 10px;
-	height: 10px;
-	background: red;
 }
 
 a {
 	text-decoration: none;
-	opacity: 0.8;
+	opacity: 1;
 }
 
 a:hover {
