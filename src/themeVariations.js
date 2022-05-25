@@ -1,11 +1,16 @@
 /**
  * Each object will create a new theme.
  *
- * You can set color variations (see ./src/colorScheme.js). e.g.:
- * variation: {
- * 	"color":{
- * 		"setting": value,
- * 		"another-setting": anotherValue,
+ * You can also apply changes to the current theme by setting variations —see ./src/themeVariations.js—.
+ * You can define a regex rule and then as many variations as you want for that particular match.
+ * e.g.:
+ * {
+ *		...,
+ * 	variations: {
+ * 		"(yellow)":{
+ * 			alpha: 0.8,
+ * 			hue: 220,
+ * 		}
  * 	}
  * }
  *
@@ -14,7 +19,13 @@
  * - 'brightness': makes the color lighter or darker (float value).
  * - 'saturation': makes the color more or less saturated (float value).
  * - 'hue': sets the hue of the color (int 0-360).
- * - 'shift': shifts the hue of the color (ind positive or negative).
+ * - 'shift': shifts the hue of the color (int value).
+ *
+ * Some useful regex examples:
+ * yellow: Only yellow
+ * (yellow|red|blue): Yellow, red or blue
+ * .*: All colors
+ * ^(?!gray): All colors but gray
  */
 
 export default [
