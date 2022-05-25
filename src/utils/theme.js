@@ -103,10 +103,6 @@ export function translateScheme(scheme, variant) {
 		}
 	}
 
-	// If no new translatedScheme colors, return the original scheme
-	if (Object.keys(translatedScheme).length === 0) {
-		return scheme
-	} else {
-		return translatedScheme
-	}
+	// Return the new translatedScheme or the original scheme if empty
+	return Object.keys(translatedScheme).length > 0 ? translatedScheme : scheme
 }

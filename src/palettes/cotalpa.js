@@ -1,6 +1,20 @@
-// Grayscale Design palette: https://grayscale.design/app?lums=92.72,73.45,58.07,45.22,34.54,25.69,18.42,12.47,7.65,3.78&palettes=%23fcde82,%23fcb882,%23fc8f82,%23e383b3,%23b6aefa,%2382DDFC,%2375b8fc,%2351d9ae,%237acf49&filters=0%7C0,0%7C0,0%7C0,0%7C0,0%7C0,0%7C0,0%7C0,0%7C0,0%7C0&names=yellow,orange,red,magenta,purple,cyan,blue,teal,green&labels=,,,,,,,,
-
 export default {
+	// This scale has been adapted manually.
+	gray: {
+		50: '#f7f8f9',
+		100: '#f4fafe',
+		200: '#b8c0c2',
+		300: '#8e9a9e',
+		400: '#6f7e82',
+		500: '#545f62',
+		600: '#394042',
+		700: '#273136',
+		800: '#1e2223',
+		900: '#151718',
+		1000: '#060809',
+	},
+
+	// Palette design: https://grayscale.design/app?lums=92.72,73.45,58.07,45.22,34.54,25.69,18.42,12.47,7.65,3.78&palettes=%23fcde82,%23fcb882,%23fc8f82,%23e383b3,%23b6aefa,%2382DDFC,%2375b8fc,%2351d9ae,%237acf49&filters=0%7C0,0%7C0,0%7C0,0%7C0,0%7C0,0%7C0,0%7C0,0%7C0,0%7C0&names=yellow,orange,red,magenta,purple,cyan,blue,teal,green&labels=,,,,,,,,
 	grayscale: {
 		50: '#f7f7f7',
 		100: '#dfdfdf',

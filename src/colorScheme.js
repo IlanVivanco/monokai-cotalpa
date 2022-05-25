@@ -1,39 +1,35 @@
-import chroma from './utils/color.js'
-import palette from './palettes/darker.js'
-import gray from './palettes/cool-gray.js'
-
-const colors = { ...gray, ...palette }
+import color from './palettes/cotalpa.js'
 
 export default {
-	'transparent': colors.gray[900],
-	'yellow': colors.yellow[100],
-	'orange': colors.orange[200],
-	'red': colors.red[300],
-	'cyan': colors.cyan[200],
-	'blue': colors.blue[300],
-	'green': colors.green[200],
-	'teal': colors.teal[200],
-	'magenta': colors.magenta[400],
-	'purple': colors.purple[300],
+	'transparent': color.gray[900],
+	'yellow': color.yellow[100],
+	'orange': color.orange[200],
+	'red': color.red[300],
+	'cyan': color.cyan[200],
+	'blue': color.blue[300],
+	'green': color.green[200],
+	'teal': color.teal[200],
+	'magenta': color.magenta[400],
+	'purple': color.purple[300],
 
-	'white': colors.gray[50],
-	'lightgray': colors.gray[200],
-	'gray': colors.gray[300],
-	'darkgray': colors.gray[700],
-	'black': colors.gray[1000],
+	'white': color.gray[50],
+	'lightgray': color.gray[200],
+	'gray': color.gray[300],
+	'darkgray': color.gray[700],
+	'black': color.gray[1000],
 
-	'success': colors.green[200],
-	'warning': colors.orange[200],
-	'info': colors.blue[300],
-	'error': colors.red[300],
+	'success': color.green[200],
+	'warning': color.orange[200],
+	'info': color.blue[300],
+	'error': color.red[300],
 
-	'gray-100': colors.gray[100],
-	'gray-200': colors.gray[200],
-	'gray-300': colors.gray[300],
-	'gray-400': colors.gray[400],
-	'gray-500': colors.gray[500],
-	'gray-600': colors.gray[600],
-	'gray-700': colors.gray[700],
-	'gray-800': colors.gray[800],
-	'gray-900': colors.gray[900],
+	'gray-100': color.gray[100],
+	'gray-200': color.gray[200],
+	'gray-300': color.gray[300],
+	'gray-400': color.gray[400],
+	'gray-500': color.gray[500],
+	'gray-600': color.gray[600],
+	'gray-700': color.gray[700],
+	'gray-800': color.gray[800],
+	'gray-900': color.gray[900],
 }
