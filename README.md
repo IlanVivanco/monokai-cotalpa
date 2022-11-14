@@ -55,7 +55,7 @@ Also, if you want to enable the Cursive form of the italic just remember to also
 "editor.fontLigatures": "'ss01', 'calt'",
 ```
 
-![Italic style](https://raw.githubusercontent.com/IlanVivanco/monokai-cotalpa/master/images/italic.jpg)
+![Italic style](https://raw.githubusercontent.com/IlanVivanco/monokai-cotalpa/dynamic-theme/images/italic.jpg)
 
 ## Extras
 
