@@ -24,8 +24,8 @@ https://code.visualstudio.com/docs/getstarted/theme-color-reference
 
 ## Color reference
 
-| Color         |                                    HEX                                    |         HSL          |
-| :------------ | :-----------------------------------------------------------------------: | :------------------: |
+| Color         |                                  HEX                                   |         HSL          |
+| :------------ | :--------------------------------------------------------------------: | :------------------: |
 | **Red**       | ![#fc988d](https://via.placeholder.com/15/fc988d/fc988d.png) `#fc988d` |  _hsl(6, 95%, 77%)_  |
 | **Orange**    | ![#fcbb86](https://via.placeholder.com/15/fcbb86/fcbb86.png) `#fcbb86` | _hsl(27, 95%, 76%)_  |
 | **Yellow**    | ![#fcdc7d](https://via.placeholder.com/15/fcdc7d/fcdc7d.png) `#fcdc7d` | _hsl(45, 95%, 74%)_  |
@@ -35,7 +35,7 @@ https://code.visualstudio.com/docs/getstarted/theme-color-reference
 | **Blue**      | ![#74b8fc](https://via.placeholder.com/15/74b8fc/74b8fc.png) `#74b8fc` | _hsl(210, 96%, 72%_) |
 | **Purple**    | ![#b2aafa](https://via.placeholder.com/15/b2aafa/b2aafa.png) `#b2aafa` | _hsl(246, 89%, 82%_) |
 | **Magenta**   | ![#e27fb1](https://via.placeholder.com/15/e27fb1/e27fb1.png) `#e27fb1` | _hsl(330, 63%, 69%_) |
-|               |                                                                           |                      |
+|               |                                                                        |                      |
 | **Black**     | ![#060809](https://via.placeholder.com/15/060809/060809.png) `#060809` | _hsl(200, 20%, 3%)_  |
 | **Dark gray** | ![#273136](https://via.placeholder.com/15/273136/273136.png) `#273136` | _hsl(200, 16%, 18%_) |
 | **Gray**      | ![#8e9a9e](https://via.placeholder.com/15/8e9a9e/8e9a9e.png) `#8e9a9e` | _hsl(195, 8%, 59%)_  |
@@ -59,13 +59,4 @@ Also, if you want to enable the Cursive form of the italic just remember to also
 
 ## Extras
 
-If you happen to use the [Bracket Pair Colorizer 2](https://github.com/CoenraadS/Bracket-Pair-Colorizer-2) plugin, you can add these to your `settings.json` to match the theme.
-
-```
-    "bracket-pair-colorizer-2.highlightActiveScope" : true,
-    "bracket-pair-colorizer-2.colors" : [
-        "#d3ad35",
-        "#4269db",
-        "#41ed56",
-    ]
-```
+You can enable the VS Code native [Bracket pair colorization](https://code.visualstudio.com/blogs/2021/09/29/bracket-pair-colorization) option.

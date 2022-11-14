@@ -93,6 +93,14 @@ export default {
 	'searchEditor.findMatchBorder': null,
 	'searchEditor.textInputBorder': null,
 
+	'editorBracketHighlight.foreground1': ['yellow', 0.8],
+	'editorBracketHighlight.foreground2': ['magenta', 0.8],
+	'editorBracketHighlight.foreground3': ['cyan', 0.8],
+	'editorBracketHighlight.foreground4': ['orange', 0.8],
+	'editorBracketHighlight.foreground5': ['purple', 0.8],
+	'editorBracketHighlight.foreground6': ['blue', 0.8],
+	'editorBracketHighlight.unexpectedBracket.foreground': ['red', 0.8],
+
 	'editor.hoverHighlightBackground': ['gray-100', 0.05],
 	'editor.lineHighlightBackground': ['gray-100', 0.05],
 	'editor.lineHighlightBorder': null,
