@@ -1,13 +1,13 @@
 import chroma from './color.js'
 import cloneDeep from 'lodash.clonedeep'
 
-export function assignWorkbechColors(rules, scheme) {
+export function assignWorkbechColors(rules, scheme, mode = 'dark') {
 	const assignedRules = {}
 
 	for (let rule in rules) {
 		// Ignore empty rules
 		if (rules[rule] !== null) {
-			const [color, opacity] = rules[rule]
+			const [color, opacity] = getColor(rules[rule], mode)
 
 			assignedRules[rule] = chroma(scheme[color])
 				.alpha(opacity ? opacity : 1)
@@ -18,7 +18,7 @@ export function assignWorkbechColors(rules, scheme) {
 	return assignedRules
 }
 
-export function assignTokenColors(rules, scheme, italics = false) {
+export function assignTokenColors(rules, scheme, italics = false, mode = 'dark') {
 	const assignedRules = []
 	const clonedRules = cloneDeep(rules)
 
@@ -28,7 +28,7 @@ export function assignTokenColors(rules, scheme, italics = false) {
 
 		// Ignore empty
 		if (colorRule && typeof colorRule !== 'string') {
-			const [color, opacity] = colorRule
+			const [color, opacity] = getColor(colorRule, mode)
 			rule.settings.foreground = chroma(scheme[color])
 				.alpha(opacity ? opacity : 1)
 				.hex()
@@ -44,13 +44,15 @@ export function assignTokenColors(rules, scheme, italics = false) {
 	return assignedRules
 }
 
-export function assignSemanticColors(rules, scheme) {
+export function assignSemanticColors(rules, scheme, mode = 'dark') {
 	const assignedRules = {}
 
 	for (let rule in rules) {
 		// Ignore empty rules
 		if (rules[rule] !== null) {
-			const [color, opacity] = rules[rule].foreground
+			console.log(typeof rules[rule].foreground, rules[rule].foreground)
+
+			const [color, opacity] = getColor(rules[rule].foreground, mode)
 
 			assignedRules[rule] = chroma(scheme[color])
 				.alpha(opacity ? opacity : 1)
@@ -59,6 +61,10 @@ export function assignSemanticColors(rules, scheme) {
 	}
 
 	return assignedRules
+}
+
+function getColor(color, mode) {
+	return color.hasOwnProperty(mode) ? color[mode] : color
 }
 
 export function translateScheme(scheme, variant) {

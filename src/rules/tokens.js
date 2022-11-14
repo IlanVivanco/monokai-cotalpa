@@ -4,42 +4,42 @@ export default [
 		scope: ['comment', 'comment.block.documentation.phpdoc.php'],
 		settings: {
 			fontStyle: 'config',
-			foreground: ['gray-400'],
+			foreground: { dark: ['gray-400'], light: ['gray-600'] },
 		},
 	},
 	{
 		name: 'Comments special token',
 		scope: ['comment entity.name.type', 'comment variable', 'comment variable.other'],
 		settings: {
-			foreground: ['gray-200'],
+			foreground: { dark: ['gray-200'], light: ['gray-200'] },
 		},
 	},
 	{
 		name: 'Constants',
 		scope: 'constant',
 		settings: {
-			foreground: ['blue'],
+			foreground: { dark: ['blue'], light: ['blue'] },
 		},
 	},
 	{
 		name: 'Constants objects',
 		scope: 'constant.object',
 		settings: {
-			foreground: ['green'],
+			foreground: { dark: ['green'], light: ['green'] },
 		},
 	},
 	{
 		name: 'Escape characters',
 		scope: 'constant.character.escape',
 		settings: {
-			foreground: ['orange'],
+			foreground: { dark: ['orange'], light: ['orange'] },
 		},
 	},
 	{
 		name: 'Named entities',
 		scope: 'entity.name',
 		settings: {
-			foreground: ['cyan'],
+			foreground: { dark: ['cyan'], light: ['cyan'] },
 		},
 	},
 	{
@@ -54,28 +54,28 @@ export default [
 		],
 		settings: {
 			fontStyle: 'config',
-			foreground: ['cyan'],
+			foreground: { dark: ['cyan'], light: ['cyan'] },
 		},
 	},
 	{
 		name: 'Function names',
 		scope: 'entity.name.function',
 		settings: {
-			foreground: ['green'],
+			foreground: { dark: ['green'], light: ['green'] },
 		},
 	},
 	{
 		name: 'Tags',
 		scope: 'entity.name.tag',
 		settings: {
-			foreground: ['red'],
+			foreground: { dark: ['red'], light: ['red'] },
 		},
 	},
 	{
 		name: 'Static types',
 		scope: ['entity.name.type', 'storage.type.cs'],
 		settings: {
-			foreground: ['cyan'],
+			foreground: { dark: ['cyan'], light: ['cyan'] },
 		},
 	},
 	{
@@ -83,21 +83,21 @@ export default [
 		scope: 'entity.other.attribute-name',
 		settings: {
 			fontStyle: 'config',
-			foreground: ['cyan'],
+			foreground: { dark: ['cyan'], light: ['cyan'] },
 		},
 	},
 	{
 		name: 'CSS Class selectors',
 		scope: 'entity.other.attribute-name.class',
 		settings: {
-			foreground: ['green'],
+			foreground: { dark: ['green'], light: ['green'] },
 		},
 	},
 	{
 		name: 'CSS ID selectors',
 		scope: 'entity.other.attribute-name.id',
 		settings: {
-			foreground: ['orange'],
+			foreground: { dark: ['orange'], light: ['orange'] },
 		},
 	},
 	{
@@ -105,21 +105,21 @@ export default [
 		scope: ['entity.other.attribute-name.pseudo-element', 'entity.other.attribute-name.pseudo-class'],
 		settings: {
 			fontStyle: 'config',
-			foreground: ['cyan'],
+			foreground: { dark: ['cyan'], light: ['cyan'] },
 		},
 	},
 	{
 		name: 'Variable names',
 		scope: ['entity.name.variable', 'variable'],
 		settings: {
-			foreground: ['blue'],
+			foreground: { dark: ['blue'], light: ['blue'] },
 		},
 	},
 	{
 		name: 'Operators',
 		scope: ['keyword.operator', 'keyword.control'],
 		settings: {
-			foreground: ['red'],
+			foreground: { dark: ['red'], light: ['red'] },
 		},
 	},
 	{
@@ -132,21 +132,21 @@ export default [
 			'punctuation.definition.string.template',
 		],
 		settings: {
-			foreground: ['red'],
+			foreground: { dark: ['red'], light: ['red'] },
 		},
 	},
 	{
 		name: 'Units',
 		scope: 'keyword.other.unit',
 		settings: {
-			foreground: ['orange'],
+			foreground: { dark: ['orange'], light: ['orange'] },
 		},
 	},
 	{
 		name: 'Markup quotes',
 		scope: 'markup.quote',
 		settings: {
-			foreground: ['gray-300'],
+			foreground: { dark: ['gray-300'], light: ['gray-300'] },
 			fontStyle: 'config',
 		},
 	},
@@ -155,13 +155,13 @@ export default [
 		scope: ['markup.heading', 'entity.name.section'],
 		settings: {
 			fontStyle: 'bold',
-			foreground: ['yellow'],
+			foreground: { dark: ['yellow'], light: ['yellow'] },
 		},
 	},
 	{
 		scope: 'markup.raw',
 		settings: {
-			foreground: ['orange'],
+			foreground: { dark: ['orange'], light: ['orange'] },
 		},
 	},
 	{
@@ -174,7 +174,7 @@ export default [
 		name: 'Markup bold',
 		scope: 'markup.bold',
 		settings: {
-			foreground: ['blue'],
+			foreground: { dark: ['blue'], light: ['blue'] },
 			fontStyle: 'bold',
 		},
 	},
@@ -182,7 +182,7 @@ export default [
 		name: 'Markup italics',
 		scope: 'markup.italic',
 		settings: {
-			foreground: ['cyan'],
+			foreground: { dark: ['cyan'], light: ['cyan'] },
 			fontStyle: 'italic',
 		},
 	},
@@ -190,7 +190,7 @@ export default [
 		name: 'Markup code',
 		scope: ['markup.inline.raw', 'markup.fenced_code.block'],
 		settings: {
-			foreground: ['cyan'],
+			foreground: { dark: ['cyan'], light: ['cyan'] },
 		},
 	},
 	{
@@ -198,7 +198,7 @@ export default [
 		scope: ['markup.underline.link'],
 		settings: {
 			fontStyle: 'config',
-			foreground: ['green'],
+			foreground: { dark: ['green'], light: ['green'] },
 		},
 	},
 	{
@@ -206,6 +206,7 @@ export default [
 		scope: ['markup.inserted', 'markup.inserted punctuation.definition.inserted'],
 		settings: {
 			fontStyle: 'config',
+			foreground: { dark: ['red'], light: ['red'] },
 		},
 	},
 	{
@@ -220,7 +221,7 @@ export default [
 		name: 'Storage keywords',
 		scope: 'storage',
 		settings: {
-			foreground: ['red'],
+			foreground: { dark: ['red'], light: ['red'] },
 		},
 	},
 	{
@@ -228,28 +229,28 @@ export default [
 		scope: ['storage.type', 'keyword.other.phpdoc.php', 'keyword.other.DML'],
 		settings: {
 			fontStyle: 'config',
-			foreground: ['cyan'],
+			foreground: { dark: ['cyan'], light: ['cyan'] },
 		},
 	},
 	{
 		name: 'JS arrow function',
 		scope: 'storage.type.function.arrow',
 		settings: {
-			foreground: ['red'],
+			foreground: { dark: ['red'], light: ['red'] },
 		},
 	},
 	{
 		name: 'Strings',
 		scope: ['string.quoted', 'string.template'],
 		settings: {
-			foreground: ['yellow'],
+			foreground: { dark: ['yellow'], light: ['yellow'] },
 		},
 	},
 	{
 		name: 'Regex',
 		scope: 'string.regexp',
 		settings: {
-			foreground: ['red'],
+			foreground: { dark: ['red'], light: ['red'] },
 		},
 	},
 	{
@@ -257,35 +258,35 @@ export default [
 		scope: 'string.other.link',
 		settings: {
 			fontStyle: 'config',
-			foreground: ['orange'],
+			foreground: { dark: ['orange'], light: ['orange'] },
 		},
 	},
 	{
 		name: 'Provided functions',
 		scope: ['support.function', 'keyword.other.sql'],
 		settings: {
-			foreground: ['green'],
+			foreground: { dark: ['green'], light: ['green'] },
 		},
 	},
 	{
 		name: 'Provieded variables',
 		scope: 'support.variable',
 		settings: {
-			foreground: ['cyan'],
+			foreground: { dark: ['cyan'], light: ['cyan'] },
 		},
 	},
 	{
 		name: 'Object/JSON property names',
 		scope: ['support.type.property-name', 'meta.object-literal.key'],
 		settings: {
-			foreground: ['gray-100'],
+			foreground: { dark: ['gray-100'], light: ['gray-100'] },
 		},
 	},
 	{
 		name: 'CSS property names',
 		scope: 'support.type.property-name.css',
 		settings: {
-			foreground: ['gray-100'],
+			foreground: { dark: ['gray-100'], light: ['gray-100'] },
 		},
 	},
 	{
@@ -303,14 +304,14 @@ export default [
 		],
 		settings: {
 			fontStyle: 'config',
-			foreground: ['orange'],
+			foreground: { dark: ['orange'], light: ['orange'] },
 		},
 	},
 	{
 		name: 'Language variables',
 		scope: ['variable.language'],
 		settings: {
-			foreground: ['gray-200'],
+			foreground: { dark: ['gray-200'], light: ['gray-200'] },
 		},
 	},
 	{
@@ -327,35 +328,35 @@ export default [
 			'source.sql.embedded',
 		],
 		settings: {
-			foreground: ['gray-100'],
+			foreground: { dark: ['gray-100'], light: ['gray-100'] },
 		},
 	},
 	{
 		name: 'Language constants',
 		scope: 'support.constant',
 		settings: {
-			foreground: ['cyan'],
+			foreground: { dark: ['cyan'], light: ['cyan'] },
 		},
 	},
 	{
 		name: 'Other constants',
 		scope: 'constant.other',
 		settings: {
-			foreground: ['gray-100'],
+			foreground: { dark: ['gray-100'], light: ['gray-100'] },
 		},
 	},
 	{
 		name: 'PHP constants',
 		scope: ['constant.other.php', 'constant.other.property'],
 		settings: {
-			foreground: ['blue'],
+			foreground: { dark: ['blue'], light: ['blue'] },
 		},
 	},
 	{
 		name: 'Parameters',
 		scope: 'variable.parameter',
 		settings: {
-			foreground: ['orange'],
+			foreground: { dark: ['orange'], light: ['orange'] },
 			fontStyle: 'config',
 		},
 	},
@@ -363,28 +364,28 @@ export default [
 		name: 'Embedded template punctuation',
 		scope: ['string.template meta.embedded', 'meta.other.type.phpdoc.php'],
 		settings: {
-			foreground: ['gray-200'],
+			foreground: { dark: ['gray-200'], light: ['gray-200'] },
 		},
 	},
 	{
 		name: 'Tag brackets',
 		scope: 'punctuation.definition.tag',
 		settings: {
-			foreground: ['gray-300'],
+			foreground: { dark: ['gray-300'], light: ['gray-300'] },
 		},
 	},
 	{
 		name: 'Key/value separators',
 		scope: ['punctuation.separator', 'punctuation.definition.template-expression'],
 		settings: {
-			foreground: ['gray-300'],
+			foreground: { dark: ['gray-300'], light: ['gray-300'] },
 		},
 	},
 	{
 		name: 'Embedded section punctuation',
 		scope: 'punctuation.section.embedded',
 		settings: {
-			foreground: ['orange'],
+			foreground: { dark: ['orange'], light: ['orange'] },
 		},
 	},
 ]

@@ -30,21 +30,37 @@
 
 export default [
 	{
-		name: 'Main',
+		name: 'Dark',
+		slug: 'main-dark',
 		type: 'dark',
+		variations: {
+			'^(?!gray)': {
+				// shift: -25,
+			},
+		},
+	},
+	{
+		name: 'Light',
+		slug: 'main-light',
+		type: 'light',
+		variations: {
+			'^(?!gray)': {
+				// shift: -25,
+			},
+		},
 	},
 	{
 		name: 'Italic',
-		slug: 'italic',
+		slug: 'main-italic',
 		type: 'dark',
 		italics: true,
 		variations: {
-			'gray': {
-				// brightness: .5,
-			},
-			'(yellow|blue|green|orange|red|cyan)': {
-				// saturation: 1.3,
-			},
+			// 'gray': {
+			// brightness: .5,
+			// },
+			// '(yellow|blue|green|orange|red|cyan)': {
+			// saturation: 1.3,
+			// },
 		},
 	},
 ]

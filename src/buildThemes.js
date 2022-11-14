@@ -9,9 +9,9 @@ const themes = []
 for (let { name, type, slug, italics, variations } of variants) {
 	const translatedScheme = variations ? translateScheme(scheme, variations) : scheme
 
-	const semanticColors = assignSemanticColors(themeBase.semanticColors, translatedScheme)
-	const workbechColors = assignWorkbechColors(themeBase.colors, translatedScheme)
-	const tokenColors = assignTokenColors(themeBase.tokenColors, translatedScheme, italics)
+	const semanticColors = assignSemanticColors(themeBase.semanticColors, translatedScheme, type)
+	const workbechColors = assignWorkbechColors(themeBase.colors, translatedScheme, type)
+	const tokenColors = assignTokenColors(themeBase.tokenColors, translatedScheme, italics, type)
 
 	themes.push({
 		path:
