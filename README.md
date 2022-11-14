@@ -15,19 +15,6 @@
 5. Code > Preferences > Color Theme > **Monokai Cotalpa**
 6. Enjoy
 
-## Extras
-
-If you happen to use the [Bracket Pair Colorizer 2](https://github.com/CoenraadS/Bracket-Pair-Colorizer-2) plugin, you can add these to your `settings.json` to match the theme.
-
-```
-    "bracket-pair-colorizer-2.highlightActiveScope" : true,
-    "bracket-pair-colorizer-2.colors" : [
-        "#d3ad35",
-        "#4269db",
-        "#41ed56",
-    ]
-```
-
 ## If you don't like something
 
 First, this theme is new so if something is funky, please open an issue.
@@ -39,20 +26,20 @@ https://code.visualstudio.com/docs/getstarted/theme-color-reference
 
 | Color         |                                    HEX                                    |         HSL          |
 | :------------ | :-----------------------------------------------------------------------: | :------------------: |
-| **Red**       | ![#fc988d](https://via.placeholder.com/13/fc988d/000000?text=+) _#fc988d_ |  _hsl(6, 95%, 77%)_  |
-| **Orange**    | ![#fcbb86](https://via.placeholder.com/13/fcbb86/000000?text=+) _#fcbb86_ | _hsl(27, 95%, 76%)_  |
-| **Yellow**    | ![#fcdc7d](https://via.placeholder.com/13/fcdc7d/000000?text=+) _#fcdc7d_ | _hsl(45, 95%, 74%)_  |
-| **Green**     | ![#99d874](https://via.placeholder.com/13/99d874/000000?text=+) _#99d874_ | _hsl(98, 56%, 65%)_  |
-| **Teal**      | ![#2cca98](https://via.placeholder.com/13/2cca98/000000?text=+) _#63ddb6_ | _hsl(161, 64%, 63%_) |
-| **Cyan**      | ![#66d6fb](https://via.placeholder.com/13/66d6fb/000000?text=+) _#66d6fb_ | _hsl(195, 95%, 69%_) |
-| **Blue**      | ![#74b8fc](https://via.placeholder.com/13/74b8fc/000000?text=+) _#74b8fc_ | _hsl(210, 96%, 72%_) |
-| **Purple**    | ![#b2aafa](https://via.placeholder.com/13/b2aafa/000000?text=+) _#b2aafa_ | _hsl(246, 89%, 82%_) |
-| **Magenta**   | ![#e27fb1](https://via.placeholder.com/13/e27fb1/000000?text=+) _#e27fb1_ | _hsl(330, 63%, 69%_) |
+| **Red**       | ![#fc988d](https://via.placeholder.com/15/fc988d/fc988d.png) `#fc988d` |  _hsl(6, 95%, 77%)_  |
+| **Orange**    | ![#fcbb86](https://via.placeholder.com/15/fcbb86/fcbb86.png) `#fcbb86` | _hsl(27, 95%, 76%)_  |
+| **Yellow**    | ![#fcdc7d](https://via.placeholder.com/15/fcdc7d/fcdc7d.png) `#fcdc7d` | _hsl(45, 95%, 74%)_  |
+| **Green**     | ![#99d874](https://via.placeholder.com/15/99d874/99d874.png) `#99d874` | _hsl(98, 56%, 65%)_  |
+| **Teal**      | ![#2cca98](https://via.placeholder.com/15/2cca98/2cca98.png) `#63ddb6` | _hsl(161, 64%, 63%_) |
+| **Cyan**      | ![#66d6fb](https://via.placeholder.com/15/66d6fb/66d6fb.png) `#66d6fb` | _hsl(195, 95%, 69%_) |
+| **Blue**      | ![#74b8fc](https://via.placeholder.com/15/74b8fc/74b8fc.png) `#74b8fc` | _hsl(210, 96%, 72%_) |
+| **Purple**    | ![#b2aafa](https://via.placeholder.com/15/b2aafa/b2aafa.png) `#b2aafa` | _hsl(246, 89%, 82%_) |
+| **Magenta**   | ![#e27fb1](https://via.placeholder.com/15/e27fb1/e27fb1.png) `#e27fb1` | _hsl(330, 63%, 69%_) |
 |               |                                                                           |                      |
-| **Black**     | ![#060809](https://via.placeholder.com/13/060809/000000?text=+) _#060809_ | _hsl(200, 20%, 3%)_  |
-| **Dark gray** | ![#273136](https://via.placeholder.com/13/273136/000000?text=+) _#273136_ | _hsl(200, 16%, 18%_) |
-| **Gray**      | ![#8e9a9e](https://via.placeholder.com/13/8e9a9e/000000?text=+) _#8e9a9e_ | _hsl(195, 8%, 59%)_  |
-| **White**     | ![#fffff](https://via.placeholder.com/13/ffffff/000000?text=+) _#f7f8f9_  | _hsl(210, 14%, 97%_) |
+| **Black**     | ![#060809](https://via.placeholder.com/15/060809/060809.png) `#060809` | _hsl(200, 20%, 3%)_  |
+| **Dark gray** | ![#273136](https://via.placeholder.com/15/273136/273136.png) `#273136` | _hsl(200, 16%, 18%_) |
+| **Gray**      | ![#8e9a9e](https://via.placeholder.com/15/8e9a9e/8e9a9e.png) `#8e9a9e` | _hsl(195, 8%, 59%)_  |
+| **White**     | ![#fffff](https://via.placeholder.com/15/ffffff/ffffff.png) `#f7f8f9`  | _hsl(210, 14%, 97%_) |
 
 ## Font style
 
@@ -69,3 +56,16 @@ Also, if you want to enable the Cursive form of the italic just remember to also
 ```
 
 ![Italic style](https://raw.githubusercontent.com/IlanVivanco/monokai-cotalpa/master/images/italic.jpg)
+
+## Extras
+
+If you happen to use the [Bracket Pair Colorizer 2](https://github.com/CoenraadS/Bracket-Pair-Colorizer-2) plugin, you can add these to your `settings.json` to match the theme.
+
+```
+    "bracket-pair-colorizer-2.highlightActiveScope" : true,
+    "bracket-pair-colorizer-2.colors" : [
+        "#d3ad35",
+        "#4269db",
+        "#41ed56",
+    ]
+```
