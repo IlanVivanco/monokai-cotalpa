@@ -206,7 +206,14 @@ export default [
 		scope: ['markup.inserted', 'markup.inserted punctuation.definition.inserted'],
 		settings: {
 			fontStyle: 'config',
-			foreground: ['red'],
+		},
+	},
+	{
+		name: 'Markup deprecated',
+		scope: 'invalid.deprecated',
+		settings: {
+			fontStyle: 'config',
+			foreground: { dark: ['orange'], light: ['orange'] },
 		},
 	},
 	{
