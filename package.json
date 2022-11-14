@@ -36,7 +36,7 @@
 	},
 	"devDependencies": {
 		"prettier": "^2.2.1",
-		"vsce": "^1.87.0"
+		"vsce": "^2.14.0"
 	},
 	"__metadata": {
 		"id": "9fc56e4f-3620-4ee5-8b75-14b121f2c2f1",
