@@ -51,11 +51,11 @@
 		]
 	},
 	"devDependencies": {
-		"chroma-js": "^2.1.2",
-		"fs-extra": "^10.0.0",
+		"chroma-js": "^2.4.2",
+		"fs-extra": "^11.1.1",
 		"npm-watch": "^0.11.0",
-		"prettier": "^2.2.1",
-		"vsce": "^1.87.0"
+		"prettier": "^2.8.8",
+		"vsce": "^2.15.0"
 	},
 	"badges": [
 		{
