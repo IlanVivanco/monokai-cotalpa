@@ -50,8 +50,6 @@ export function assignSemanticColors(rules, scheme, mode = 'dark') {
 	for (let rule in rules) {
 		// Ignore empty rules
 		if (rules[rule] !== null) {
-			console.log(typeof rules[rule].foreground, rules[rule].foreground)
-
 			const [color, opacity] = getColor(rules[rule].foreground, mode)
 
 			assignedRules[rule] = chroma(scheme[color])

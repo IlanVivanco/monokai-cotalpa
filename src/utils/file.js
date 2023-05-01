@@ -28,7 +28,6 @@ export function saveThemes(themes) {
 			path: `./${theme.path}`,
 		})
 
-		console.log(`Building ${themeData.name} theme...`)
 		writeJSON(theme.path, themeData)
 	}
 
