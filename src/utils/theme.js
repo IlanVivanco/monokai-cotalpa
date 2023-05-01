@@ -67,43 +67,20 @@ function getColor(color, mode) {
 	return color.hasOwnProperty(mode) ? color[mode] : color
 }
 
-export function translateScheme(scheme, variant) {
+export function translateScheme(scheme, variantions) {
 	const translatedScheme = {}
 
-	// If variant is not found, return the original scheme
-	if (!variant) return scheme
+	// If variantions is not found, return the original scheme
+	if (!variantions) return scheme
 
 	// Check if there is a variation for every color in the scheme
 	for (let colorKey in scheme) {
 		const newColor = chroma(scheme[colorKey])
 
-		// Loop over the color setting on the picked variant
-		for (let colorName in variant) {
-			// If the color is found in the setting, apply the variation
-			if (colorKey.match(colorName)) {
-				const settings = variant[colorName]
-
-				// Aplly each setting to the color
-				for (let setting in settings) {
-					switch (setting) {
-						case 'hue':
-							newColor.hue(settings[setting])
-							break
-						case 'shift':
-							newColor.shift(settings[setting])
-							break
-						case 'saturation':
-							newColor.saturate(settings[setting])
-							break
-						case 'brightness':
-							newColor.brighten(settings[setting])
-							break
-						case 'alpha':
-							newColor.alpha(settings[setting])
-							break
-					}
-				}
-			}
+		// Loop over the color setting on the picked variantions
+		for (let colorName in variantions) {
+			// If the color is found in the settings, apply the variation
+			if (colorKey.match(colorName)) modifyColor(newColor, variantions[colorName])
 
 			translatedScheme[colorKey] = newColor.hex()
 		}
@@ -111,4 +88,29 @@ export function translateScheme(scheme, variant) {
 
 	// Return the new translatedScheme or the original scheme if empty
 	return Object.keys(translatedScheme).length > 0 ? translatedScheme : scheme
+}
+
+function modifyColor(color, settings = {}) {
+	// Aplly each setting to the color
+	for (let setting in settings) {
+		switch (setting) {
+			case 'hue':
+				color.hue(settings[setting])
+				break
+			case 'shift':
+				color.shift(settings[setting])
+				break
+			case 'saturation':
+				color.saturate(settings[setting])
+				break
+			case 'brightness':
+				color.brighten(settings[setting])
+				break
+			case 'alpha':
+				color.alpha(settings[setting])
+				break
+		}
+	}
+
+	return color
 }
