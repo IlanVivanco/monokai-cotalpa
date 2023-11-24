@@ -1,66 +1,81 @@
 {
-	"name": "cotalpa",
-	"displayName": "Monokai Cotalpa",
-	"description": "🎨 Yet another Monokai color scheme for VS Code.",
-	"publisher": "ilanvivanco",
-	"version": "2.0.1",
-	"icon": "images/logo.png",
-	"license": "MIT",
-	"type": "module",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/IlanVivanco/monokai-cotalpa"
-	},
-	"bugs": {
-		"url": "https://github.com/IlanVivanco/monokai-cotalpa/issues",
-		"email": "ilanvivanco@gmail.com"
-	},
-	"galleryBanner": {
-		"color": "#273136",
-		"theme": "dark"
-	},
-	"engines": {
-		"vscode": "^1.54.0"
-	},
-	"categories": [
-		"Themes"
-	],
-	"keywords": [
-		"Dark",
-		"Light",
-		"Italic",
-		"Monokai"
-	],
-	"contributes": {
-		"themes": [
-			{
-				"label": "Monokai Cotalpa Dark",
-				"uiTheme": "vs-dark",
-				"path": "./themes/monokai-cotalpa-main-dark-color-theme.json"
-			},
-			{
-				"label": "Monokai Cotalpa Italic",
-				"uiTheme": "vs-dark",
-				"path": "./themes/monokai-cotalpa-main-italic-color-theme.json"
-			}
-		]
-	},
-	"devDependencies": {
-		"chroma-js": "^2.4.2",
-		"fs-extra": "^11.1.1",
-		"npm-watch": "^0.11.0",
-		"prettier": "^3.1.0",
-		"vsce": "^2.15.0"
-	},
-	"badges": [],
-	"watch": {
-		"build": "src/**/*.js"
-	},
-	"scripts": {
-		"build": "node ./src/buildThemes.js",
-		"watch": "npm-watch"
-	},
-	"dependencies": {
-		"lodash.clonedeep": "^4.5.0"
-	}
+  "name": "cotalpa",
+  "displayName": "Monokai Cotalpa",
+  "description": "🎨 Yet another Monokai color scheme for VS Code.",
+  "publisher": "ilanvivanco",
+  "version": "2.0.1",
+  "icon": "images/logo.png",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IlanVivanco/monokai-cotalpa"
+  },
+  "bugs": {
+    "url": "https://github.com/IlanVivanco/monokai-cotalpa/issues",
+    "email": "ilanvivanco@gmail.com"
+  },
+  "galleryBanner": {
+    "color": "#273136",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.54.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "Dark",
+    "Light",
+    "Italic",
+    "Monokai"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Monokai Cotalpa",
+        "uiTheme": "vs-dark",
+        "path": "./themes/monokai-cotalpa-color-theme.json"
+      },
+      {
+        "label": "Monokai Cotalpa Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/monokai-cotalpa-main-dark-color-theme.json"
+      },
+      {
+        "label": "Monokai Cotalpa Italic",
+        "uiTheme": "vs-dark",
+        "path": "./themes/monokai-cotalpa-main-italic-color-theme.json"
+      },
+      {
+        "label": "Monokai Cotalpa Coffee",
+        "uiTheme": "vs-dark",
+        "path": "./themes/monokai-cotalpa-coffee-dark-color-theme.json"
+      },
+      {
+        "label": "Monokai Cotalpa Coffee Italic",
+        "uiTheme": "vs-dark",
+        "path": "./themes/monokai-cotalpa-coffee-italic-color-theme.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "chroma-js": "^2.4.2",
+    "fs-extra": "^11.1.1",
+    "npm-watch": "^0.11.0",
+    "prettier": "^3.1.0",
+    "vsce": "^2.15.0"
+  },
+  "badges": [],
+  "watch": {
+    "build": "src/**/*.js"
+  },
+  "scripts": {
+    "build": "node ./src/buildThemes.js",
+    "watch": "npm-watch"
+  },
+  "dependencies": {
+    "lodash.clonedeep": "^4.5.0"
+  }
 }

@@ -30,6 +30,11 @@
 
 export default [
 	{
+		name: 'Main',
+		slug: 'main',
+		type: 'dark',
+	},
+	{
 		name: 'Dark',
 		slug: 'main-dark',
 		type: 'dark',
@@ -44,13 +49,38 @@ export default [
 		slug: 'main-italic',
 		type: 'dark',
 		italics: true,
+	},
+	{
+		name: 'Coffee',
+		slug: 'coffee-dark',
+		type: 'dark',
 		variations: {
-			// 'gray': {
-			// brightness: .5,
-			// },
-			// '(yellow|blue|green|orange|red|cyan)': {
-			// saturation: 1.3,
-			// },
+			'(gray)': {
+				hue: 30,
+				saturation: -0.5,
+				brightness: -0.1,
+			},
+			'^(?!gray)': {
+				saturation: 0.1,
+				brightness: 0.2,
+			},
+		},
+	},
+	{
+		name: 'Coffee Italic',
+		slug: 'coffee-italic',
+		type: 'dark',
+		italics: true,
+		variations: {
+			'(gray)': {
+				hue: 30,
+				saturation: -0.5,
+				brightness: -0.1,
+			},
+			'^(?!gray)': {
+				saturation: 0.1,
+				brightness: 0.2,
+			},
 		},
 	},
 ]
