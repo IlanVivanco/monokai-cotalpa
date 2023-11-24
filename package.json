@@ -1,87 +1,87 @@
 {
-	"name": "cotalpa",
-	"displayName": "Monokai Cotalpa",
-	"description": "🎨 Yet another Monokai color scheme for VS Code.",
-	"publisher": "ilanvivanco",
-	"version": "0.2.4",
-	"icon": "images/logo.png",
-	"license": "MIT",
-	"type": "module",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/IlanVivanco/monokai-cotalpa"
-	},
-	"bugs": {
-		"url": "https://github.com/IlanVivanco/monokai-cotalpa/issues",
-		"email": "ilanvivanco@gmail.com"
-	},
-	"galleryBanner": {
-		"color": "#273136",
-		"theme": "dark"
-	},
-	"engines": {
-		"vscode": "^1.54.0"
-	},
-	"categories": [
-		"Themes"
-	],
-	"keywords": [
-		"Dark",
-		"Light",
-		"Italic",
-		"Monokai"
-	],
-	"contributes": {
-		"themes": [
-			{
-				"label": "Monokai Cotalpa Dark",
-				"uiTheme": "vs-dark",
-				"path": "./themes/monokai-cotalpa-main-dark-color-theme.json"
-			},
-			{
-				"label": "Monokai Cotalpa Light",
-				"uiTheme": "vs",
-				"path": "./themes/monokai-cotalpa-main-light-color-theme.json"
-			},
-			{
-				"label": "Monokai Cotalpa Italic",
-				"uiTheme": "vs-dark",
-				"path": "./themes/monokai-cotalpa-main-italic-color-theme.json"
-			}
-		]
-	},
-	"devDependencies": {
-		"chroma-js": "^2.4.2",
-		"fs-extra": "^11.1.1",
-		"npm-watch": "^0.11.0",
-		"prettier": "^2.8.8",
-		"vsce": "^2.15.0"
-	},
-	"badges": [
-		{
-			"url": "https://vsmarketplacebadge.apphb.com/version/ilanvivanco.cotalpa.svg",
-			"href": "https://marketplace.visualstudio.com/items/ilanvivanco.cotalpa",
-			"description": "Extension version"
-		},
-		{
-			"url": "https://vsmarketplacebadge.apphb.com/installs/ilanvivanco.cotalpa.svg",
-			"href": "https://marketplace.visualstudio.com/items/ilanvivanco.cotalpa",
-			"description": "Extension installs"
-		}
-	],
-	"__metadata": {
-		"id": "9fc56e4f-3620-4ee5-8b75-14b121f2c2f1",
-		"publisherDisplayName": "Ilán Vivanco",
-		"publisherId": "1af87088-d596-49ae-a584-77fc8f1e066a"
-	},
-	"watch": {
-		"build": "src/**/*.js"
-	},
-	"scripts": {
-		"build": "node ./src/buildThemes.js",
-		"watch": "npm-watch"
-	},
-	"dependencies": {
-		"lodash.clonedeep": "^4.5.0"
-	}
+  "name": "cotalpa",
+  "displayName": "Monokai Cotalpa",
+  "description": "🎨 Yet another Monokai color scheme for VS Code.",
+  "publisher": "ilanvivanco",
+  "version": "0.2.4",
+  "icon": "images/logo.png",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IlanVivanco/monokai-cotalpa"
+  },
+  "bugs": {
+    "url": "https://github.com/IlanVivanco/monokai-cotalpa/issues",
+    "email": "ilanvivanco@gmail.com"
+  },
+  "galleryBanner": {
+    "color": "#273136",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.54.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "Dark",
+    "Light",
+    "Italic",
+    "Monokai"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Monokai Cotalpa Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/monokai-cotalpa-main-dark-color-theme.json"
+      },
+      {
+        "label": "Monokai Cotalpa Light",
+        "uiTheme": "vs",
+        "path": "./themes/monokai-cotalpa-main-light-color-theme.json"
+      },
+      {
+        "label": "Monokai Cotalpa Italic",
+        "uiTheme": "vs-dark",
+        "path": "./themes/monokai-cotalpa-main-italic-color-theme.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "chroma-js": "^2.4.2",
+    "fs-extra": "^11.1.1",
+    "npm-watch": "^0.11.0",
+    "prettier": "^2.8.8",
+    "vsce": "^2.15.0"
+  },
+  "badges": [
+    {
+      "url": "https://vsmarketplacebadge.apphb.com/version/ilanvivanco.cotalpa.svg",
+      "href": "https://marketplace.visualstudio.com/items/ilanvivanco.cotalpa",
+      "description": "Extension version"
+    },
+    {
+      "url": "https://vsmarketplacebadge.apphb.com/installs/ilanvivanco.cotalpa.svg",
+      "href": "https://marketplace.visualstudio.com/items/ilanvivanco.cotalpa",
+      "description": "Extension installs"
+    }
+  ],
+  "__metadata": {
+    "id": "9fc56e4f-3620-4ee5-8b75-14b121f2c2f1",
+    "publisherDisplayName": "Ilán Vivanco",
+    "publisherId": "1af87088-d596-49ae-a584-77fc8f1e066a"
+  },
+  "watch": {
+    "build": "src/**/*.js"
+  },
+  "scripts": {
+    "build": "node ./src/buildThemes.js",
+    "watch": "npm-watch"
+  },
+  "dependencies": {
+    "lodash.clonedeep": "^4.5.0"
+  }
 }
