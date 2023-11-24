@@ -51,6 +51,7 @@ export default [
 			'entity.name.type.namespace',
 			'support.class',
 			'variable.other.liquid',
+			'keyword.other.type.php',
 		],
 		settings: {
 			fontStyle: 'config',
@@ -225,11 +226,19 @@ export default [
 		},
 	},
 	{
-		name: 'Storage type & keyowrds',
-		scope: ['storage.type', 'keyword.other.phpdoc.php', 'keyword.other.DML'],
+		name: 'Storage type',
+		scope: ['storage.type'],
 		settings: {
 			fontStyle: 'config',
 			foreground: { dark: ['cyan'], light: ['cyan'] },
+		},
+	},
+	{
+		name: 'Keywords',
+		scope: ['keyword.other.phpdoc.php', 'keyword.other.DML'],
+		settings: {
+			fontStyle: 'config',
+			foreground: { dark: ['blue'], light: ['blue'] },
 		},
 	},
 	{
