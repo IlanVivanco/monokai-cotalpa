@@ -15,19 +15,6 @@
 5. Code > Preferences > Color Theme > **Monokai Cotalpa**
 6. Enjoy
 
-## Extras
-
-If you happen to use the [Bracket Pair Colorizer 2](https://github.com/CoenraadS/Bracket-Pair-Colorizer-2) plugin, you can add these to your `settings.json` to match the theme.
-
-```
-    "bracket-pair-colorizer-2.highlightActiveScope" : true,
-    "bracket-pair-colorizer-2.colors" : [
-        "#d3ad35",
-        "#4269db",
-        "#41ed56",
-    ]
-```
-
 ## If you don't like something
 
 First, this theme is new so if something is funky, please open an issue.
@@ -37,24 +24,39 @@ https://code.visualstudio.com/docs/getstarted/theme-color-reference
 
 ## Color reference
 
-| Color                                                                         |    HEX    |      RGBA       |
-| :---------------------------------------------------------------------------- | :-------: | :-------------: |
-| ![#82bffc](https://via.placeholder.com/13/82bffc/000000?text=+) `Blue`        | `#82bffc` | `130, 191, 252` |
-| ![#a2e57b](https://via.placeholder.com/13/a2e57b/000000?text=+) `Green`       | `#a2e57b` | `162, 229, 123` |
-| ![#b6aefa](https://via.placeholder.com/13/b6aefa/000000?text=+) `Violet`      | `#b6aefa` | `182, 174, 250` |
-| ![#fc8f82](https://via.placeholder.com/13/fc8f82/000000?text=+) `Red`         | `#fc8f82` | `252, 143, 130` |
-| ![#fcb882](https://via.placeholder.com/13/fcb882/000000?text=+) `Orange`      | `#fcb882` | `252, 184, 130` |
-| ![#fcde82](https://via.placeholder.com/13/fcde82/000000?text=+) `Yellow`      | `#fcde82` | `252, 222, 130` |
-| ![#151718](https://via.placeholder.com/13/151718/000000?text=+) `Grayscale 9` | `#151718` |  `21, 23, 24`   |
-| ![#1e2223](https://via.placeholder.com/13/1e2223/000000?text=+) `Grayscale 8` | `#1e2223` |  `30, 34, 35`   |
-| ![#273136](https://via.placeholder.com/13/273136/000000?text=+) `Grayscale 7` | `#273136` |  `39, 49, 54`   |
-| ![#394042](https://via.placeholder.com/13/394042/000000?text=+) `Grayscale 6` | `#394042` |  `57, 64, 66`   |
-| ![#545f62](https://via.placeholder.com/13/545f62/000000?text=+) `Grayscale 5` | `#545f62` |  `84, 95, 98`   |
-| ![#6f7e82](https://via.placeholder.com/13/6f7e82/000000?text=+) `Grayscale 4` | `#6f7e82` | `111, 126, 130` |
-| ![#8e9a9e](https://via.placeholder.com/13/8e9a9e/000000?text=+) `Grayscale 3` | `#8e9a9e` | `142, 154, 158` |
-| ![#b8c0c2](https://via.placeholder.com/13/b8c0c2/000000?text=+) `Grayscale 2` | `#b8c0c2` | `184, 192, 194` |
-| ![#f4fafe](https://via.placeholder.com/13/f4fafe/000000?text=+) `Grayscale 1` | `#f4fafe` | `244, 250, 254` |
-| ![#fa4c37](https://via.placeholder.com/13/fa4c37/000000?text=+) `Error`       | `#fa4c37` |  `250, 76, 55`  |
-| ![#c99805](https://via.placeholder.com/13/c99805/000000?text=+) `Warn`        | `#c99805` |  `201, 152, 5`  |
-| ![#82a0fc](https://via.placeholder.com/13/82a0fc/000000?text=+) `Info`        | `#82a0fc` | `130, 160, 252` |
-|                                                                               |           |                 |
+| Color         |                                  HEX                                   |         HSL          |
+| :------------ | :--------------------------------------------------------------------: | :------------------: |
+| **Red**       | ![#fc988d](https://via.placeholder.com/15/fc988d/fc988d.png) `#fc988d` |  _hsl(6, 95%, 77%)_  |
+| **Orange**    | ![#fcbb86](https://via.placeholder.com/15/fcbb86/fcbb86.png) `#fcbb86` | _hsl(27, 95%, 76%)_  |
+| **Yellow**    | ![#fcdc7d](https://via.placeholder.com/15/fcdc7d/fcdc7d.png) `#fcdc7d` | _hsl(45, 95%, 74%)_  |
+| **Green**     | ![#99d874](https://via.placeholder.com/15/99d874/99d874.png) `#99d874` | _hsl(98, 56%, 65%)_  |
+| **Teal**      | ![#2cca98](https://via.placeholder.com/15/2cca98/2cca98.png) `#63ddb6` | _hsl(161, 64%, 63%_) |
+| **Cyan**      | ![#66d6fb](https://via.placeholder.com/15/66d6fb/66d6fb.png) `#66d6fb` | _hsl(195, 95%, 69%_) |
+| **Blue**      | ![#74b8fc](https://via.placeholder.com/15/74b8fc/74b8fc.png) `#74b8fc` | _hsl(210, 96%, 72%_) |
+| **Purple**    | ![#b2aafa](https://via.placeholder.com/15/b2aafa/b2aafa.png) `#b2aafa` | _hsl(246, 89%, 82%_) |
+| **Magenta**   | ![#e27fb1](https://via.placeholder.com/15/e27fb1/e27fb1.png) `#e27fb1` | _hsl(330, 63%, 69%_) |
+|               |                                                                        |                      |
+| **Black**     | ![#060809](https://via.placeholder.com/15/060809/060809.png) `#060809` | _hsl(200, 20%, 3%)_  |
+| **Dark gray** | ![#273136](https://via.placeholder.com/15/273136/273136.png) `#273136` | _hsl(200, 16%, 18%_) |
+| **Gray**      | ![#8e9a9e](https://via.placeholder.com/15/8e9a9e/8e9a9e.png) `#8e9a9e` | _hsl(195, 8%, 59%)_  |
+| **White**     | ![#fffff](https://via.placeholder.com/15/ffffff/ffffff.png) `#f7f8f9`  | _hsl(210, 14%, 97%_) |
+
+## Font style
+
+I recommend using a monospaced font containing ligatures like [Cascadia Code](https://github.com/microsoft/cascadia-code) or [Fira Code](https://github.com/tonsky/FiraCode).
+
+```json
+"editor.fontFamily": "'Cascadia Code', 'Fira Code', Consolas, monospace",
+```
+
+Also, if you want to enable the Cursive form of the italic just remember to also add this:
+
+```json
+"editor.fontLigatures": "'ss01', 'calt'",
+```
+
+![Italic style](https://raw.githubusercontent.com/IlanVivanco/monokai-cotalpa/dynamic-theme/images/italic.jpg)
+
+## Extras
+
+You can enable the VS Code native [Bracket pair colorization](https://code.visualstudio.com/blogs/2021/09/29/bracket-pair-colorization) option.

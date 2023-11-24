@@ -13,6 +13,7 @@ console.log('mc', mc)
 
 // Class.
 class vsc extends User {}
+const vsc = new vsc()
 console.log(vsc)
 
 // Const.
@@ -22,7 +23,7 @@ function ilan() {
 ilan()
 
 // Let.
-let theme = () => 'Monokai Cotalpa'
+let theme = (i) => 'Monokai Cotalpa'
 console.log(theme)
 
 /**
@@ -31,6 +32,7 @@ console.log(theme)
  * @param String name
  */
 function gise(name) {
+	const assigned = test == 0 ? 'empty' : 'full'
 	return name
 }
 
