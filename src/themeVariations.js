@@ -40,16 +40,6 @@ export default [
 		},
 	},
 	{
-		name: 'Light',
-		slug: 'main-light',
-		type: 'light',
-		variations: {
-			'^(?!gray)': {
-				// shift: -25,
-			},
-		},
-	},
-	{
 		name: 'Italic',
 		slug: 'main-italic',
 		type: 'dark',

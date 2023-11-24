@@ -39,11 +39,6 @@
         "path": "./themes/monokai-cotalpa-main-dark-color-theme.json"
       },
       {
-        "label": "Monokai Cotalpa Light",
-        "uiTheme": "vs",
-        "path": "./themes/monokai-cotalpa-main-light-color-theme.json"
-      },
-      {
         "label": "Monokai Cotalpa Italic",
         "uiTheme": "vs-dark",
         "path": "./themes/monokai-cotalpa-main-italic-color-theme.json"
