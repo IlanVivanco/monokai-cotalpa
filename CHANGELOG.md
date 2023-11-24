@@ -1,6 +1,6 @@
 All notable changes to the "Monokai Cotalpa" extension will be documented in this file.
 
-## [1.0.0] - 2023-11-24
+## [2.0.0] - 2023-11-24
 
 -  Complete revamp of the theme builder: A total overhaul of the theme with improved aesthetics, performance and tools.
 -  Added dynamic theme creator: Introduced a new feature that allows to create and customize the themes dynamically.
