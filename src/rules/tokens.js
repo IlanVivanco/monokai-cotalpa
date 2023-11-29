@@ -50,6 +50,7 @@ export default [
 			'entity.other.inherited-class',
 			'entity.name.type.namespace',
 			'support.class',
+			'support.type.primitive',
 			'variable.other.liquid',
 			'keyword.other.type.php',
 		],
@@ -114,6 +115,14 @@ export default [
 		scope: ['entity.name.variable', 'variable'],
 		settings: {
 			foreground: { dark: ['blue'], light: ['blue'] },
+		},
+	},
+	{
+		name: 'Variable this',
+		scope: ['variable.language.this'],
+		settings: {
+			fontStyle: 'config',
+			foreground: { dark: ['gray-300'], light: ['gray-500'] },
 		},
 	},
 	{
@@ -384,10 +393,10 @@ export default [
 		},
 	},
 	{
-		name: 'Key/value separators',
-		scope: ['punctuation.separator', 'punctuation.definition.template-expression'],
+		name: 'Punctuation separators',
+		scope: ['punctuation.separator', 'punctuation.definition.template-expression', 'punctuation.terminator'],
 		settings: {
-			foreground: { dark: ['gray-300'], light: ['gray-300'] },
+			foreground: { dark: ['gray-300'], light: ['gray-500'] },
 		},
 	},
 	{
