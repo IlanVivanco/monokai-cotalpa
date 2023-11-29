@@ -58,9 +58,15 @@ export default {
 	'descriptionForeground': ['gray-300'],
 
 	'diffEditor.insertedTextBackground': ['green', 0.1],
-	'diffEditor.insertedTextBorder': ['gray-900', 0],
 	'diffEditor.removedTextBackground': ['red', 0.1],
-	'diffEditor.removedTextBorder': ['gray-900', 0],
+	'diffEditor.insertedTextBorder': null,
+	'diffEditor.removedTextBorder': null,
+	'diffEditor.border': ['gray-900', 0.5],
+	'diffEditor.diagonalFill': ['gray-500', 0.5],
+	'diffEditor.insertedLineBackground': ['green', 0.08],
+	'diffEditor.removedLineBackground': ['red', 0.08],
+	'diffEditorGutter.insertedLineBackground': ['green', 0.05],
+	'diffEditorGutter.removedLineBackground': ['red', 0.05],
 
 	'dropdown.background': ['gray-700'],
 	'dropdown.border': ['gray-700'],
