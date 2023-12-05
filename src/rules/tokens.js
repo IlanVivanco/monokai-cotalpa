@@ -48,11 +48,12 @@ export default [
 			'entity.name.type.class',
 			'entity.name.type.class.generic',
 			'entity.other.inherited-class',
-			'entity.name.type.namespace',
 			'support.class',
 			'support.type.primitive',
 			'variable.other.liquid',
 			'keyword.other.type.php',
+			'keyword.other.namespace',
+			'keyword.other.use',
 		],
 		settings: {
 			fontStyle: 'config',
@@ -60,8 +61,31 @@ export default [
 		},
 	},
 	{
-		name: 'Function names',
-		scope: 'entity.name.function',
+		name: 'Inherited classes & namespaces',
+		scope: [
+			'support.type.primitive',
+			'variable.other.liquid',
+			'keyword.other.type.php',
+			'keyword.other.namespace',
+			'keyword.other.use',
+		],
+		settings: {
+			fontStyle: 'config',
+			foreground: { dark: ['red'], light: ['red'] },
+		},
+	},
+	{
+		name: 'Function names & classes',
+		scope: [
+			'entity.name.function',
+			'entity.name.type.namespace',
+			'entity.name.type.class',
+			'entity.name.type.class.generic',
+			'entity.other.inherited-class',
+			'support.class',
+			'support.function',
+			'keyword.other.sql',
+		],
 		settings: {
 			foreground: { dark: ['green'], light: ['green'] },
 		},
@@ -135,6 +159,7 @@ export default [
 	{
 		name: 'Special operators',
 		scope: [
+			'keyword.other.new',
 			'keyword.operator.new',
 			'keyword.operator.expression',
 			'keyword.operator.logical',
@@ -277,13 +302,6 @@ export default [
 		settings: {
 			fontStyle: 'config',
 			foreground: { dark: ['orange'], light: ['orange'] },
-		},
-	},
-	{
-		name: 'Provided functions',
-		scope: ['support.function', 'keyword.other.sql'],
-		settings: {
-			foreground: { dark: ['green'], light: ['green'] },
 		},
 	},
 	{
