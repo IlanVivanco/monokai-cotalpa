@@ -6,7 +6,7 @@ export default {
 		foreground: ['green'],
 	},
 	'variable': {
-		foreground: ['gray-200'],
+		foreground: ['white'],
 	},
 	'variable.declaration': {
 		foreground: ['blue'],
@@ -18,7 +18,10 @@ export default {
 		foreground: ['yellow'],
 	},
 	'property': {
-		foreground: ['gray-100'],
+		foreground: ['gray-200'],
+	},
+	'comment': {
+		foreground: ['gray-400'],
 	},
 	'namespace': {
 		foreground: ['cyan'],

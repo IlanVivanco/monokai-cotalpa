@@ -363,7 +363,7 @@ export default [
 			'source.sql.embedded',
 		],
 		settings: {
-			foreground: { dark: ['gray-100'], light: ['gray-100'] },
+			foreground: { dark: ['gray-200'], light: ['gray-100'] },
 		},
 	},
 	{
@@ -377,7 +377,7 @@ export default [
 		name: 'JS variables',
 		scope: ['variable.other.readwrite.js'],
 		settings: {
-			foreground: { dark: ['gray-100'], light: ['gray-100'] },
+			foreground: { dark: ['white'], light: ['white'] },
 		},
 	},
 	{
@@ -411,7 +411,11 @@ export default [
 	},
 	{
 		name: 'Embedded template punctuation',
-		scope: ['string.template meta.embedded', 'meta.other.type.phpdoc.php'],
+		scope: [
+			'string.template meta.embedded',
+			'meta.other.type.phpdoc.php',
+			'punctuation.definition.template-expression',
+		],
 		settings: {
 			foreground: { dark: ['gray-200'], light: ['gray-200'] },
 		},
@@ -425,12 +429,7 @@ export default [
 	},
 	{
 		name: 'Punctuation separators',
-		scope: [
-			'punctuation.separator',
-			'punctuation.definition.template-expression',
-			'punctuation.terminator',
-			'punctuation.accessor',
-		],
+		scope: ['punctuation.separator', 'punctuation.terminator', 'punctuation.accessor'],
 		settings: {
 			foreground: { dark: ['gray-300'], light: ['gray-500'] },
 		},
