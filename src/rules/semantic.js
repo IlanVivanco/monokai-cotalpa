@@ -1,27 +1,33 @@
 export default {
-	function: {
+	'function': {
 		foreground: ['green'],
 	},
-	method: {
+	'method': {
 		foreground: ['green'],
 	},
-	variable: {
+	'variable': {
+		foreground: ['gray-200'],
+	},
+	'variable.declaration': {
 		foreground: ['blue'],
 	},
-	parameter: {
+	'parameter': {
 		foreground: ['orange'],
 	},
-	string: {
+	'string': {
 		foreground: ['yellow'],
 	},
-	property: {
+	'property': {
 		foreground: ['gray-100'],
 	},
-	interface: {
+	'namespace': {
+		foreground: ['cyan'],
+	},
+	'interface': {
 		foreground: ['cyan'],
 		italic: true,
 	},
-	type: {
+	'type': {
 		foreground: ['cyan'],
 		italic: true,
 	},

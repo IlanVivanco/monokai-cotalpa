@@ -306,7 +306,7 @@ export default [
 	},
 	{
 		name: 'Provieded variables',
-		scope: 'support.variable',
+		scope: 'variable.other',
 		settings: {
 			foreground: { dark: ['cyan'], light: ['cyan'] },
 		},
@@ -351,11 +351,10 @@ export default [
 		},
 	},
 	{
-		name: 'Other varialbes',
+		name: 'Other variables',
 		scope: [
 			'variable.other',
 			'variable.other.readwrite.alias.js',
-			'variable.other.readwrite.js',
 			'variable.other.property',
 			'variable.other.property.static',
 			'variable.other.event',
@@ -365,6 +364,28 @@ export default [
 		],
 		settings: {
 			foreground: { dark: ['gray-100'], light: ['gray-100'] },
+		},
+	},
+	{
+		name: 'JS variables',
+		scope: ['variable.other.constant.js'],
+		settings: {
+			foreground: { dark: ['blue'], light: ['blue'] },
+		},
+	},
+	{
+		name: 'JS variables',
+		scope: ['variable.other.readwrite.js'],
+		settings: {
+			foreground: { dark: ['gray-100'], light: ['gray-100'] },
+		},
+	},
+	{
+		name: 'Parameters',
+		scope: 'variable.parameter',
+		settings: {
+			foreground: { dark: ['orange'], light: ['orange'] },
+			fontStyle: 'config',
 		},
 	},
 	{
@@ -389,14 +410,6 @@ export default [
 		},
 	},
 	{
-		name: 'Parameters',
-		scope: 'variable.parameter',
-		settings: {
-			foreground: { dark: ['orange'], light: ['orange'] },
-			fontStyle: 'config',
-		},
-	},
-	{
 		name: 'Embedded template punctuation',
 		scope: ['string.template meta.embedded', 'meta.other.type.phpdoc.php'],
 		settings: {
@@ -412,7 +425,12 @@ export default [
 	},
 	{
 		name: 'Punctuation separators',
-		scope: ['punctuation.separator', 'punctuation.definition.template-expression', 'punctuation.terminator'],
+		scope: [
+			'punctuation.separator',
+			'punctuation.definition.template-expression',
+			'punctuation.terminator',
+			'punctuation.accessor',
+		],
 		settings: {
 			foreground: { dark: ['gray-300'], light: ['gray-500'] },
 		},
