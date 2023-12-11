@@ -20,6 +20,9 @@ export default {
 	'property': {
 		foreground: ['gray-200'],
 	},
+	'property.declaration': {
+		foreground: ['gray-100'],
+	},
 	'comment': {
 		foreground: ['gray-400'],
 	},

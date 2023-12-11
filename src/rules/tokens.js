@@ -363,7 +363,7 @@ export default [
 			'source.sql.embedded',
 		],
 		settings: {
-			foreground: { dark: ['gray-200'], light: ['gray-100'] },
+			foreground: { dark: ['gray-100'], light: ['gray-500'] },
 		},
 	},
 	{

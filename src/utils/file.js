@@ -3,7 +3,7 @@ import path from 'path'
 
 function writeJSON(filePath, data) {
 	const resolvedPath = path.resolve('.', filePath)
-	fs.outputFileSync(resolvedPath, JSON.stringify(data, null, 2) + '\r\n')
+	fs.outputFileSync(resolvedPath, JSON.stringify(data, null, 2) + '\n')
 }
 
 async function addThemesToPackage(data = {}) {
