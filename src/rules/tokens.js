@@ -43,60 +43,6 @@ export default [
 		},
 	},
 	{
-		name: 'Function names & classes',
-		scope: [
-			'entity.name.function',
-			'entity.name.type.namespace',
-			'entity.name.type.class',
-			'entity.name.type.class.generic',
-			'entity.other.inherited-class',
-			'variable.other.function.ts',
-			// 'variable.other.property.ts',
-			'support.class',
-			'support.function',
-			'keyword.other.sql',
-		],
-		settings: {
-			foreground: { dark: ['green'], light: ['green'] },
-		},
-	},
-	{
-		scope: [
-			'source.sass variable.other',
-			'source.sass variable.sass',
-			'source.scss variable.other',
-			'source.scss variable.scss',
-			'source.scss variable.sass',
-			'source.css variable.other',
-			'source.css variable.scss',
-			'source.less variable.other',
-			'source.less variable.other.less',
-			'source.less variable.declaration.less',
-			// 'variable.other.object.ts',
-			'source.ts variable.other.readwrite.ts variable.other',
-			'source.ts meta.var.expr.ts variable.other',
-			'meta.parameters.ts entity.name.function',
-		],
-		settings: {
-			fontStyle: 'config',
-			foreground: { dark: ['orange'], light: ['orange'] },
-		},
-	},
-	{
-		name: 'Named entities',
-		scope: ['entity.name.ts', 'meta.method.declaration.ts', 'meta.var.expr.ts variable.other.property.ts'],
-		settings: {
-			foreground: { dark: ['green'], light: ['green'] },
-		},
-	},
-	{
-		name: 'Other variables',
-		scope: ['variable.other.object.property.ts', 'variable.other.property.ts'],
-		settings: {
-			foreground: { dark: ['gray-200'], light: ['gray-500'] },
-		},
-	},
-	{
 		name: 'Inherited classes & namespaces',
 		scope: [
 			'entity.name.type.class',
@@ -126,6 +72,22 @@ export default [
 		settings: {
 			fontStyle: 'config',
 			foreground: { dark: ['red'], light: ['red'] },
+		},
+	},
+	{
+		name: 'Function names & classes',
+		scope: [
+			'entity.name.function',
+			'entity.name.type.namespace',
+			'entity.name.type.class',
+			'entity.name.type.class.generic',
+			'entity.other.inherited-class',
+			'support.class',
+			'support.function',
+			'keyword.other.sql',
+		],
+		settings: {
+			foreground: { dark: ['green'], light: ['green'] },
 		},
 	},
 	{
@@ -350,10 +312,35 @@ export default [
 		},
 	},
 	{
-		name: 'Property names',
-		scope: ['support.type.property-name', 'meta.object-literal.key', 'support.type.property-name.css'],
+		name: 'Object/JSON property names',
+		scope: ['support.type.property-name', 'meta.object-literal.key'],
 		settings: {
-			foreground: { dark: ['gray-200'], light: ['gray-200'] },
+			foreground: { dark: ['gray-100'], light: ['gray-100'] },
+		},
+	},
+	{
+		name: 'CSS property names',
+		scope: 'support.type.property-name.css',
+		settings: {
+			foreground: { dark: ['gray-100'], light: ['gray-100'] },
+		},
+	},
+	{
+		scope: [
+			'source.sass variable.other',
+			'source.sass variable.sass',
+			'source.scss variable.other',
+			'source.scss variable.scss',
+			'source.scss variable.sass',
+			'source.css variable.other',
+			'source.css variable.scss',
+			'source.less variable.other',
+			'source.less variable.other.less',
+			'source.less variable.declaration.less',
+		],
+		settings: {
+			fontStyle: 'config',
+			foreground: { dark: ['orange'], light: ['orange'] },
 		},
 	},
 	{
@@ -368,7 +355,6 @@ export default [
 		scope: [
 			'variable.other',
 			'variable.other.readwrite.alias.js',
-			'meta.array.literal.ts',
 			'variable.other.property',
 			'variable.other.property.static',
 			'variable.other.event',
@@ -382,21 +368,21 @@ export default [
 	},
 	{
 		name: 'JS variables',
-		scope: ['variable.other.constant.js', 'variable.other.constant.ts'],
+		scope: ['variable.other.constant.js'],
 		settings: {
 			foreground: { dark: ['blue'], light: ['blue'] },
 		},
 	},
 	{
 		name: 'JS variables',
-		scope: ['variable.other.readwrite.js', 'variable.object.property.ts'],
+		scope: ['variable.other.readwrite.js'],
 		settings: {
 			foreground: { dark: ['white'], light: ['white'] },
 		},
 	},
 	{
 		name: 'Parameters',
-		scope: ['variable.parameter', 'meta.var.expr.ts'],
+		scope: 'variable.parameter',
 		settings: {
 			foreground: { dark: ['orange'], light: ['orange'] },
 			fontStyle: 'config',
