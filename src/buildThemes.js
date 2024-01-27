@@ -22,7 +22,7 @@ for (let { name, type, slug, italics, variations } of variants) {
 			author: 'Ilán Vivanco <ilanvivanco@gmail.com>',
 			$schema: 'vscode://schemas/color-theme',
 			colorSpaceName: 'sRGB',
-			semanticHighlighting: true,
+			// semanticHighlighting: true,
 			type: type,
 		},
 		colors: {
