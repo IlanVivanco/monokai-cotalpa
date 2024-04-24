@@ -62,13 +62,7 @@ export default [
 	},
 	{
 		name: 'Inherited classes & namespaces',
-		scope: [
-			'support.type.primitive',
-			'variable.other.liquid',
-			'keyword.other.type.php',
-			'keyword.other.namespace',
-			'keyword.other.use',
-		],
+		scope: ['support.type.primitive', 'variable.other.liquid', 'keyword.other.namespace', 'keyword.other.use'],
 		settings: {
 			fontStyle: 'config',
 			foreground: { dark: ['red'], light: ['red'] },
@@ -83,6 +77,7 @@ export default [
 			'entity.name.type.class.generic',
 			'entity.other.inherited-class',
 			'support.class',
+			'comment.block.documentation.phpdoc.php keyword.other.type.php',
 			'support.function',
 			'keyword.other.sql',
 		],
