@@ -1,4 +1,8 @@
+import chroma from 'chroma-js'
 import color from './palettes/cotalpa.js'
+
+// Lighter version of a color, for the bright ANSI colors in the terminal.
+const bright = (hex) => chroma.mix(hex, '#ffffff', 0.3, 'rgb').hex()
 
 export default {
 	'transparent': color.gray[900],
@@ -11,6 +15,13 @@ export default {
 	'teal': color.teal[200],
 	'magenta': color.magenta[400],
 	'purple': color.purple[300],
+
+	'bright-yellow': bright(color.yellow[100]),
+	'bright-red': bright(color.red[300]),
+	'bright-cyan': bright(color.cyan[200]),
+	'bright-blue': bright(color.blue[300]),
+	'bright-green': bright(color.green[200]),
+	'bright-magenta': bright(color.magenta[400]),
 
 	'white': color.gray[50],
 	'lightgray': color.gray[200],
