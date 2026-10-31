@@ -441,8 +441,8 @@ export default {
 
 	'walkThrough.embeddedEditorBackground': ['gray-800'],
 
-	'welcomePage.buttonBackground': ['gray-600'],
-	'welcomePage.buttonHoverBackground': ['gray-500'],
+	'welcomePage.tileBackground': ['gray-600'],
+	'welcomePage.tileHoverBackground': ['gray-500'],
 
 	'widget.shadow': ['gray-800', 0.3],
 	'widget.border': ['gray-600', 0.1],
