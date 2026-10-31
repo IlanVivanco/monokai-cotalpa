@@ -535,7 +535,6 @@ export default {
 	'widget.shadow': ['gray-800', 0.3],
 	'widget.border': ['gray-600', 0.1],
 
-
 	// Chat
 	// https://code.visualstudio.com/api/references/theme-color#chat-colors
 	'chat.requestBubbleBackground': ['gray-600'],
@@ -561,7 +560,6 @@ export default {
 	'inlineChatDiff.removed': ['red', 0.1],
 	'editorOverviewRuler.inlineChatInserted': ['success', 0.3],
 	'editorOverviewRuler.inlineChatRemoved': ['error', 0.3],
-
 
 	// Symbol icons (outline, breadcrumbs and suggestions), matching the syntax colors
 	// https://code.visualstudio.com/api/references/theme-color#symbol-icons-colors
@@ -598,7 +596,6 @@ export default {
 	'symbolIcon.typeParameterForeground': ['cyan'],
 	'symbolIcon.unitForeground': ['orange'],
 	'symbolIcon.variableForeground': ['blue'],
-
 
 	// Testing & debugging
 	'testing.iconPassed': ['success'],
