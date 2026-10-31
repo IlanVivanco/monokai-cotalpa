@@ -108,7 +108,7 @@ export default {
 	'diffEditor.border': ['gray-900', 0.5],
 	'diffEditor.diagonalFill': ['gray-500', 0.5],
 	'diffEditor.insertedLineBackground': ['green', 0.08],
-	'diffEditor.removedLineBackground': ['red', 0.08],
+	'diffEditor.removedLineBackground': ['red', 0.12],
 	'diffEditorGutter.insertedLineBackground': ['green', 0.05],
 	'diffEditorGutter.removedLineBackground': ['red', 0.05],
 	'diffEditorOverview.insertedForeground': ['success', 0.3],
