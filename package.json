@@ -66,11 +66,11 @@
     ]
   },
   "devDependencies": {
+    "@vscode/vsce": "^4.1.0",
     "chroma-js": "^2.4.2",
     "fs-extra": "^11.1.1",
     "npm-watch": "^0.11.0",
-    "prettier": "^3.1.0",
-    "vsce": "^2.15.0"
+    "prettier": "^3.1.0"
   },
   "badges": [],
   "watch": {
@@ -79,6 +79,7 @@
   "scripts": {
     "build": "node ./src/buildThemes.js",
     "watch": "npm-watch",
-    "validate": "node ./scripts/validateThemes.js"
+    "validate": "node ./scripts/validateThemes.js",
+    "package": "vsce package"
   }
 }
