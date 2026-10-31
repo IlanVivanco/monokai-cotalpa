@@ -1,7 +1,8 @@
 // Takes screenshots of the themes in a real VS Code, to review changes visually.
 //
 // Usage: npm run screenshots -- [label] [--themes=main,dark,...|all] [--scenes=main,scm,...|all] [--scale=2]
-//        npm run screenshots -- [label] --files=demo/go.go,demo/java.java (one screenshot per file)
+//        npm run screenshots -- [label] --files=demo/go.go,demo/java.java:40 (one per file, optionally scrolled
+//        so that line is at the top)
 //
 // Screenshots are saved in screenshots/<NN>-<label>/, numbered so rounds can be compared.
 // By default, the main theme gets every scene and the other themes get the main scene.
@@ -128,7 +129,7 @@ async function takeScreenshot({ executable, vsix, workspace, theme, scene, file 
 		scene === 'diff'
 			? ['--diff', path.join(tmp, 'typescript.before.ts'), path.join(workspace, 'demo/typescript.ts')]
 			: scene.startsWith('file:')
-				? [path.join(workspace, scene.slice(5))]
+				? [path.join(workspace, scene.slice(5).replace(/:\d+$/, ''))]
 				: (files[scene] ?? []).map((file) => path.join(workspace, file))
 
 	const app = await _electron.launch({
@@ -160,6 +161,16 @@ async function takeScreenshot({ executable, vsix, workspace, theme, scene, file 
 			await keyboard.type("PS1='$ '; clear; git -c color.ui=always status --short; bash ../ansi.sh")
 			await keyboard.press('Enter')
 			await wait(1500)
+		}
+		const line = Number(scene.match(/^file:.*:(\d+)$/)?.[1] ?? 1)
+		if (line > 1) {
+			// Scrolls like a user would, so sticky scroll and scroll shadows show up
+			await window.mouse.move(WIDTH * 0.6, HEIGHT * 0.4)
+			for (let step = 0; step < 100 && (await firstVisibleLine(window)) < line; step++) {
+				await window.mouse.wheel(0, 40)
+				await wait(50)
+			}
+			await wait(1000)
 		}
 		if (scene === 'scm') {
 			await keyboard.press('Control+Shift+G')
@@ -226,6 +237,14 @@ function pick(value, available, fallback) {
 	if (!value) return fallback
 	if (value === 'all') return available
 	return value.split(',')
+}
+
+// First line number shown in the editor, ignoring the sticky scroll lines
+function firstVisibleLine(window) {
+	return window.evaluate(() => {
+		const numbers = [...document.querySelectorAll('.margin-view-overlays .line-numbers')]
+		return Math.min(...numbers.map((element) => Number(element.textContent) || Infinity))
+	})
 }
 
 function hasCommand(command) {
