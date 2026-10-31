@@ -156,7 +156,8 @@ async function takeScreenshot({ executable, vsix, workspace, theme, scene, file 
 		if (scene === 'main' || scene === 'overview') {
 			await keyboard.press('Control+Backquote')
 			await wait(2500)
-			await keyboard.type('clear; bash ../ansi.sh; ls --color=always demo')
+			// A neutral prompt keeps the user and machine names out of the screenshots
+			await keyboard.type("PS1='$ '; clear; git -c color.ui=always status --short; bash ../ansi.sh")
 			await keyboard.press('Enter')
 			await wait(1500)
 		}
