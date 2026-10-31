@@ -1,24 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Monokai Cotalpa</title>
+		<link rel="stylesheet" href="css.css" />
+		<style>
+			:root {
+				--accent: #fcdc7d;
+			}
+
+			.card:hover > h2::after {
+				content: ' →';
+				color: var(--accent);
+			}
+		</style>
 	</head>
-	<body>
-		<div class="css-class"></div>
-		<div id="css-id"></div>
-		<a href="https://ilanvivanco.com/">Ilán Vivanco</a>
-
-
+	<body class="theme theme--dark" data-variant="coffee">
 		<!-- Comment info here -->
-		<p>Monokai cotalpa theme.</p>
-		<font>Deprecated tag</font>
+		<header id="top">
+			<nav aria-label="Main">
+				<a href="https://ilanvivanco.com/" target="_blank" rel="noopener">Ilán Vivanco</a>
+			</nav>
+		</header>
 
-		<script>
+		<main>
+			<article class="card">
+				<h2>Monokai Cotalpa theme</h2>
+				<p>Yet another <strong>Monokai</strong> color scheme for <em>VS Code</em>. &copy; 2026 &amp; beyond.</p>
+				<img src="images/logo.png" alt="Logo" width="64" height="64" loading="lazy" />
+			</article>
+
+			<form action="/subscribe" method="post">
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" placeholder="you@example.com" required />
+				<select name="variant">
+					<option value="main" selected>Main</option>
+					<option value="coffee">Coffee</option>
+				</select>
+				<button type="submit" disabled>Subscribe</button>
+			</form>
+
+			<font>Deprecated tag</font>
+		</main>
+
+		<script type="module">
 			// Sum functions.
-			const sum = (x, y) => x + y;
+			const sum = (x, y) => x + y
+			document.querySelector('#top')?.addEventListener('click', () => console.log(sum(1, 2)))
 		</script>
 	</body>
 </html>
