@@ -20,7 +20,7 @@ export default {
 
 	'success': color.green[200],
 	'warning': color.orange[200],
-	'info': color.blue[300],
+	'info': color.cyan[200],
 	'error': color.red[300],
 
 	'gray-100': color.gray[100],
