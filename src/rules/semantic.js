@@ -31,10 +31,10 @@ export default {
 	},
 	'interface': {
 		foreground: ['cyan'],
-		italic: true,
+		fontStyle: 'config',
 	},
 	'type': {
 		foreground: ['cyan'],
-		italic: true,
+		fontStyle: 'config',
 	},
 }
