@@ -1,14 +1,48 @@
-theme: Monokai Cotalpa
-language: node_js
-node_js:
-  - "6"
-install:
-  - npm install
-script:
-  - npm test
-after_script:
-  - npm run coveralls
-notifications:
-  email:
-    on_success: never
-    on_failure: always
+# GitHub Actions workflow, to try the theme with YAML.
+name: Build themes
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+env:
+  THEME: Monokai Cotalpa
+  NODE_VERSION: 24
+  STRICT: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        variant: [main, dark, coffee]
+        italic: [true, false]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      - name: Build and validate
+        run: |
+          npm run build
+          npm run validate
+      - name: Package
+        if: github.event_name == 'push'
+        run: npx vsce package --out "cotalpa-${{ matrix.variant }}.vsix"
+
+defaults: &defaults
+  retries: 3
+  delay: 1.5
+  notify: ~
+
+release:
+  <<: *defaults
+  description: >
+    Folded text keeps
+    a single line.
+  changelog: 'CHANGELOG.md'

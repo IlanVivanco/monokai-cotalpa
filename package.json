@@ -3,7 +3,7 @@
   "displayName": "Monokai Cotalpa",
   "description": "🎨 Yet another Monokai color scheme for VS Code.",
   "publisher": "ilanvivanco",
-  "version": "2.1.7",
+  "version": "2.2.0",
   "icon": "images/logo.png",
   "license": "MIT",
   "type": "module",
@@ -39,14 +39,19 @@
         "path": "./themes/monokai-cotalpa-color-theme.json"
       },
       {
+        "label": "Monokai Cotalpa Italic",
+        "uiTheme": "vs-dark",
+        "path": "./themes/monokai-cotalpa-main-italic-color-theme.json"
+      },
+      {
         "label": "Monokai Cotalpa Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/monokai-cotalpa-main-dark-color-theme.json"
       },
       {
-        "label": "Monokai Cotalpa Italic",
+        "label": "Monokai Cotalpa Dark Italic",
         "uiTheme": "vs-dark",
-        "path": "./themes/monokai-cotalpa-main-italic-color-theme.json"
+        "path": "./themes/monokai-cotalpa-main-dark-italic-color-theme.json"
       },
       {
         "label": "Monokai Cotalpa Coffee",
@@ -56,16 +61,18 @@
       {
         "label": "Monokai Cotalpa Coffee Italic",
         "uiTheme": "vs-dark",
-        "path": "./themes/monokai-cotalpa-coffee-italic-color-theme.json"
+        "path": "./themes/monokai-cotalpa-coffee-dark-italic-color-theme.json"
       }
     ]
   },
   "devDependencies": {
-    "chroma-js": "^2.4.2",
-    "fs-extra": "^11.1.1",
-    "npm-watch": "^0.11.0",
-    "prettier": "^3.1.0",
-    "vsce": "^2.15.0"
+    "@vscode/test-electron": "^3.1.0",
+    "@vscode/vsce": "^4.1.0",
+    "chroma-js": "^3.2.0",
+    "fs-extra": "^11.4.1",
+    "npm-watch": "^0.13.0",
+    "playwright-core": "^1.64.1",
+    "prettier": "^3.9.10"
   },
   "badges": [],
   "watch": {
@@ -73,9 +80,10 @@
   },
   "scripts": {
     "build": "node ./src/buildThemes.js",
-    "watch": "npm-watch"
-  },
-  "dependencies": {
-    "lodash.clonedeep": "^4.5.0"
+    "watch": "npm-watch",
+    "validate": "node ./scripts/validateThemes.js",
+    "package": "vsce package",
+    "screenshots": "node ./scripts/screenshots.js",
+    "vscode:prepublish": "npm run build"
   }
 }

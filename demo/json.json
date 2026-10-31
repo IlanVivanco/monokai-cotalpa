@@ -1,17 +1,25 @@
 {
+	"$schema": "https://json.schemastore.org/eslintrc",
+	"root": true,
 	"env": {
-		"es6": true,
-		"mocha": true,
+		"es2024": true,
 		"node": true
 	},
 	"theme": {
-		"name": "Monokai Cotalpa"
+		"name": "Monokai Cotalpa",
+		"variants": ["main", "dark", "coffee"],
+		"italic": false,
+		"alpha": 0.85,
+		"count": 6,
+		"parent": null
 	},
 	"extends": "eslint:recommended",
 	"rules": {
-		"indent": ["error", 2],
+		"indent": ["error", "tab"],
 		"linebreak-style": ["error", "unix"],
-		"quotes": ["error", "single"],
-		"semi": ["error", "always"]
+		"quotes": ["error", "single", { "avoidEscape": true }],
+		"no-console": ["warn", { "allow": ["info", "error"] }],
+		"semi": ["error", "never"],
+		"escaped": "Line\nbreak and \"quotes\" ✓"
 	}
 }

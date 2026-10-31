@@ -1,9 +1,33 @@
+# Netlify config, to try the theme with TOML. VS Code needs a TOML extension to highlight it.
+title = "Monokai Cotalpa"
+version = "2.2.0"
+published = 2026-10-31T12:00:00Z
+
 [build]
-  theme = "Monokai Cotalpa"
   publish = "public/"
   command = "npm run build"
+  ignore = 'git diff --quiet HEAD^ HEAD -- src/'
+
+[build.environment]
+  NODE_VERSION = "24"
+  ITALIC = true
+  MAX_ALPHA = 1.0
+  RETRIES = 3
 
 [[redirects]]
-  from = "/sop"
-  to = "https://ilanvivanco.com"
+  from = "/themes/*"
+  to = "https://marketplace.visualstudio.com/items?itemName=ilanvivanco.cotalpa"
   status = 301
+  force = false
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    Cache-Control = """
+      public,
+      max-age=31536000"""
+
+[palette]
+colors = ["#fcdc7d", "#fc988d", "#99d874"]
+inline = { name = "yellow", hex = "#fcdc7d", tags = ["warning"] }

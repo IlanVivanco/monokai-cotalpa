@@ -43,25 +43,28 @@ export default [
 		},
 	},
 	{
-		name: 'Inherited classes & namespaces',
+		name: 'Classes',
 		scope: [
 			'entity.name.type.class',
 			'entity.name.type.class.generic',
 			'entity.other.inherited-class',
 			'support.class',
-			'support.type.primitive',
-			'variable.other.liquid',
-			'keyword.other.type.php',
-			'keyword.other.namespace',
-			'keyword.other.use',
 		],
+		settings: {
+			fontStyle: 'config',
+			foreground: { dark: ['green'], light: ['green'] },
+		},
+	},
+	{
+		name: 'PHP types',
+		scope: 'keyword.other.type.php',
 		settings: {
 			fontStyle: 'config',
 			foreground: { dark: ['cyan'], light: ['cyan'] },
 		},
 	},
 	{
-		name: 'Inherited classes & namespaces',
+		name: 'Primitive types & namespace keywords',
 		scope: ['support.type.primitive', 'variable.other.liquid', 'keyword.other.namespace', 'keyword.other.use'],
 		settings: {
 			fontStyle: 'config',
@@ -69,14 +72,10 @@ export default [
 		},
 	},
 	{
-		name: 'Function names & classes',
+		name: 'Function names & namespaces',
 		scope: [
 			'entity.name.function',
 			'entity.name.type.namespace',
-			'entity.name.type.class',
-			'entity.name.type.class.generic',
-			'entity.other.inherited-class',
-			'support.class',
 			'comment.block.documentation.phpdoc.php keyword.other.type.php',
 			'support.function',
 			'keyword.other.sql',
@@ -232,11 +231,45 @@ export default [
 		},
 	},
 	{
-		name: 'Markup images',
+		name: 'Diff inserted',
 		scope: ['markup.inserted', 'markup.inserted punctuation.definition.inserted'],
 		settings: {
-			fontStyle: 'config',
+			foreground: { dark: ['green'], light: ['green'] },
+		},
+	},
+	{
+		name: 'Diff deleted',
+		scope: ['markup.deleted', 'markup.deleted punctuation.definition.deleted'],
+		settings: {
 			foreground: { dark: ['red'], light: ['red'] },
+		},
+	},
+	{
+		name: 'Diff changed',
+		scope: ['markup.changed', 'markup.changed punctuation.definition.changed'],
+		settings: {
+			foreground: { dark: ['orange'], light: ['orange'] },
+		},
+	},
+	{
+		name: 'Markup strikethrough',
+		scope: 'markup.strikethrough',
+		settings: {
+			fontStyle: 'strikethrough',
+		},
+	},
+	{
+		name: 'Markup list bullets',
+		scope: 'punctuation.definition.list.begin.markdown',
+		settings: {
+			foreground: { dark: ['red'], light: ['red'] },
+		},
+	},
+	{
+		name: 'Invalid',
+		scope: 'invalid.illegal',
+		settings: {
+			foreground: { dark: ['error'], light: ['error'] },
 		},
 	},
 	{
@@ -285,6 +318,13 @@ export default [
 		},
 	},
 	{
+		name: 'YAML unquoted strings',
+		scope: ['string.unquoted.plain.out.yaml', 'string.unquoted.plain.in.yaml'],
+		settings: {
+			foreground: { dark: ['yellow'], light: ['yellow'] },
+		},
+	},
+	{
 		name: 'Regex',
 		scope: 'string.regexp',
 		settings: {
@@ -297,13 +337,6 @@ export default [
 		settings: {
 			fontStyle: 'config',
 			foreground: { dark: ['orange'], light: ['orange'] },
-		},
-	},
-	{
-		name: 'Provieded variables',
-		scope: 'variable.other',
-		settings: {
-			foreground: { dark: ['cyan'], light: ['cyan'] },
 		},
 	},
 	{
@@ -362,8 +395,8 @@ export default [
 		},
 	},
 	{
-		name: 'JS variables',
-		scope: ['variable.other.constant.js'],
+		name: 'Constant variables',
+		scope: ['variable.other.constant'],
 		settings: {
 			foreground: { dark: ['blue'], light: ['blue'] },
 		},

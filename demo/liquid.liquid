@@ -1,0 +1,36 @@
+{%- comment -%} Shopify section, to try the theme with Liquid. VS Code needs a Liquid extension to highlight it. {%- endcomment -%}
+{%- assign theme_name = 'Monokai Cotalpa' | upcase -%}
+{%- capture greeting -%}Hello, {{ customer.first_name | default: 'friend' }}!{%- endcapture -%}
+
+<section class="featured" id="section-{{ section.id }}">
+	<h2>{{ section.settings.title | escape }}</h2>
+	<p>{{ greeting }} Welcome to {{ theme_name }}.</p>
+
+	{% if collection.products.size > 0 %}
+		<ul class="grid">
+			{% for product in collection.products limit: 4 offset: 1 %}
+				<li class="{% cycle 'odd', 'even' %}">
+					<a href="{{ product.url }}">{{ product.title | truncate: 30 }}</a>
+					<span>{{ product.price | money_with_currency }}</span>
+					{% unless product.available %}<em>Sold out</em>{% endunless %}
+				</li>
+			{% endfor %}
+		</ul>
+	{% elsif collection.handle == 'empty' and forloop.first != true %}
+		{% render 'empty-state', message: 'Nothing here yet' %}
+	{% else %}
+		<p>{{ 'general.not_found' | t }}</p>
+	{% endif %}
+
+	{% case section.settings.layout %}
+		{% when 'wide' %}{% assign columns = 4 %}
+		{% else %}{% assign columns = 2 %}
+	{% endcase %}
+</section>
+
+{% schema %}
+{
+	"name": "Featured collection",
+	"settings": [{ "type": "text", "id": "title", "default": "Monokai Cotalpa" }]
+}
+{% endschema %}

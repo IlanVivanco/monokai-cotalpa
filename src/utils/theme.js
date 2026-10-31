@@ -1,5 +1,4 @@
 import chroma from './color.js'
-import cloneDeep from 'lodash.clonedeep'
 
 export function assignWorkbechColors(rules, scheme, mode = 'dark') {
 	const assignedRules = {}
@@ -10,7 +9,7 @@ export function assignWorkbechColors(rules, scheme, mode = 'dark') {
 			const [color, opacity] = getColor(rules[rule], mode)
 
 			assignedRules[rule] = chroma(scheme[color])
-				.alpha(opacity ? opacity : 1)
+				.alpha(opacity ?? 1)
 				.hex()
 		}
 	}
@@ -20,7 +19,7 @@ export function assignWorkbechColors(rules, scheme, mode = 'dark') {
 
 export function assignTokenColors(rules, scheme, italics = false, mode = 'dark') {
 	const assignedRules = []
-	const clonedRules = cloneDeep(rules)
+	const clonedRules = structuredClone(rules)
 
 	for (let rule of clonedRules) {
 		const colorRule = rule?.settings?.foreground
@@ -30,7 +29,7 @@ export function assignTokenColors(rules, scheme, italics = false, mode = 'dark')
 		if (colorRule && typeof colorRule !== 'string') {
 			const [color, opacity] = getColor(colorRule, mode)
 			rule.settings.foreground = chroma(scheme[color])
-				.alpha(opacity ? opacity : 1)
+				.alpha(opacity ?? 1)
 				.hex()
 		}
 
@@ -44,18 +43,30 @@ export function assignTokenColors(rules, scheme, italics = false, mode = 'dark')
 	return assignedRules
 }
 
-export function assignSemanticColors(rules, scheme, mode = 'dark') {
+export function assignSemanticColors(rules, scheme, italics = false, mode = 'dark') {
 	const assignedRules = {}
 
 	for (let rule in rules) {
 		// Ignore empty rules
-		if (rules[rule] !== null) {
-			const [color, opacity] = getColor(rules[rule].foreground, mode)
+		if (rules[rule] === null) continue
 
-			assignedRules[rule] = chroma(scheme[color])
-				.alpha(opacity ? opacity : 1)
+		const { foreground, fontStyle, ...styles } = rules[rule]
+		const assignedRule = { ...styles }
+
+		if (foreground) {
+			const [color, opacity] = getColor(foreground, mode)
+			assignedRule.foreground = chroma(scheme[color])
+				.alpha(opacity ?? 1)
 				.hex()
 		}
+
+		if (fontStyle !== undefined) {
+			assignedRule.fontStyle = fontStyle === 'config' ? (italics ? 'italic' : '') : fontStyle
+		}
+
+		// Use the short form when the rule only sets a color
+		const keys = Object.keys(assignedRule)
+		assignedRules[rule] = keys.length === 1 && keys[0] === 'foreground' ? assignedRule.foreground : assignedRule
 	}
 
 	return assignedRules

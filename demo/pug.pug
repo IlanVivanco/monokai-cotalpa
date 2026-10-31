@@ -1,10 +1,30 @@
-<!DOCTYPE html>
+//- Pug template, to try the theme with Pug.
+doctype html
 html(lang="en")
 	head
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
-		meta(http-equiv="X-UA-Compatible", content="ie=edge")
-		title
-			| Monokai Cotalpa theme.
-	body
+		title Monokai Cotalpa
+		link(rel="stylesheet", href="css.css")
+	body.theme(data-variant=variant)
+		- const variants = ['main', 'dark', 'coffee']
 		h1 🎨 Yet another Monokai color scheme for VS Code.
+
+		ul#variants
+			each name, index in variants
+				li(class={ active: index === 0 })= name
+			else
+				li No variants
+
+		if user && user.isAdmin
+			p Welcome back, #{user.name}!
+		else
+			a.button(href="/login") Log in
+
+		mixin color(name, hex)
+			span.swatch(style=`background: ${hex}`)= name
+
+		+color('yellow', '#fcdc7d')
+
+		script.
+			console.log('Monokai Cotalpa')

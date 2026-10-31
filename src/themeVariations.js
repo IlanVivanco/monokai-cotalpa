@@ -1,5 +1,5 @@
 /**
- * Each object will create a new theme.
+ * Each object will create a new theme, plus its italic version.
  *
  * You can also apply changes to the current theme by setting variations —see ./src/themeVariations.js—.
  * You can define a regex rule and then as many variations as you want for that particular match.
@@ -21,12 +21,33 @@
  * - 'hue': sets the hue of the color (int 0-360).
  * - 'shift': shifts the hue of the color (int value).
  *
+ * Regexes are matched against the keys of ./src/colorScheme.js. Anchor them (^...$),
+ * otherwise 'gray' also matches 'lightgray' or 'darkgray'.
  * Some useful regex examples:
- * yellow: Only yellow
- * (yellow|red|blue): Yellow, red or blue
+ * ^yellow$: Only yellow
+ * ^(yellow|red|blue)$: Yellow, red or blue
  * .*: All colors
- * ^(?!gray): All colors but gray
  */
+
+// Neutral colors: every gray, including the named ones.
+const NEUTRALS = '^(transparent|white|black|(light|dark)?gray|gray-\\d+)$'
+
+// Accent colors: everything that is not a neutral.
+const ACCENTS = `^(?!${NEUTRALS.slice(1, -1)}$)`
+
+// Neutral colors used as backgrounds.
+const BACKGROUNDS = '^(transparent|black|darkgray|gray-[6-9]00)$'
+
+const coffee = {
+	[NEUTRALS]: {
+		hue: 30,
+		brightness: -0.1,
+	},
+	[ACCENTS]: {
+		saturation: 0.1,
+		brightness: 0.2,
+	},
+}
 
 export default [
 	{
@@ -39,48 +60,15 @@ export default [
 		slug: 'main-dark',
 		type: 'dark',
 		variations: {
-			'^(?!gray)': {
-				// shift: -25,
+			[BACKGROUNDS]: {
+				brightness: -0.3,
 			},
 		},
-	},
-	{
-		name: 'Italic',
-		slug: 'main-italic',
-		type: 'dark',
-		italics: true,
 	},
 	{
 		name: 'Coffee',
 		slug: 'coffee-dark',
 		type: 'dark',
-		variations: {
-			'(gray)': {
-				hue: 30,
-				saturation: -0.5,
-				brightness: -0.1,
-			},
-			'^(?!gray)': {
-				saturation: 0.1,
-				brightness: 0.2,
-			},
-		},
-	},
-	{
-		name: 'Coffee Italic',
-		slug: 'coffee-italic',
-		type: 'dark',
-		italics: true,
-		variations: {
-			'(gray)': {
-				hue: 30,
-				saturation: -0.5,
-				brightness: -0.1,
-			},
-			'^(?!gray)': {
-				saturation: 0.1,
-				brightness: 0.2,
-			},
-		},
+		variations: coffee,
 	},
 ]

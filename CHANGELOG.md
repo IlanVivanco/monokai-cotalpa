@@ -1,5 +1,52 @@
 All notable changes to the "Monokai Cotalpa" extension will be documented in this file.
 
+## [2.2.0] - 2026-10-31
+
+-  Added Monokai Cotalpa Dark Italic: every theme now has an italic version.
+-  Changed Monokai Cotalpa Dark: it was identical to the main theme; it now has darker backgrounds.
+-  Changed Monokai Cotalpa Coffee: grays now have the intended warm, coffee tone instead of a neutral gray.
+-  Added semantic highlighting: it uses the same colors as the syntax rules.
+-  Added colors for newer VS Code features: modern UI, chat, inline chat and the agent sessions window, multi-cursor, inlay hints, ghost text, source control graph, diff editor, terminal search, status bar items, menus, symbol icons, testing, breakpoints, Markdown alerts and charts.
+-  Added token scopes: YAML unquoted strings, Markdown strikethrough and list bullets, invalid code.
+-  Changed status colors: errors, warnings, info and git decorations now share one consistent set of colors.
+-  Changed the modern UI panel border to a lower contrast.
+-  Changed low-contrast UI text to be more readable: placeholders, side bar titles, section headers and inactive tabs.
+-  Changed bright terminal colors to be lighter than the normal ones, and made black text visible in the terminal.
+-  Made removed lines easier to spot in diffs.
+-  Changed the sticky scroll shadow, which blurred the code below it, to a thin border.
+-  Fixed diff markup: added lines were red.
+-  Fixed terminal colors: blue showed as orange and magenta as blue.
+-  Fixed TypeScript constants not using the constant color.
+-  Fixed the terminal cursor background, the sixth bracket color and deprecated welcome page colors.
+-  Fixed rules that silently overrode each other.
+-  Fixed class colors in PHP.
+
+## [2.1.7] - 2024-01-27
+
+-  Disabled semantic colors, which overrode the syntax colors in TypeScript and PHP.
+
+## [2.1.6] - 2024-01-27
+
+-  Adjusted semantic colors on TypeScript.
+
+## [2.1.3] - [2.1.5] - 2023-12-11
+
+-  Updated semantic and syntax rules for PHP and JavaScript.
+-  Fixed line breaks in the generated theme files.
+
+## [2.1.2] - 2023-12-05
+
+-  Updated syntax rules for classes, namespaces and keywords.
+
+## [2.1.1] - 2023-11-29
+
+-  Added more git colors.
+-  Changed status bar colors and fixed some token styles.
+
+## [2.1.0] - 2023-11-24
+
+-  Added the main theme back and the new Coffee style.
+
 ## [2.0.0] - 2023-11-24
 
 -  Complete revamp of the theme builder: A total overhaul of the theme with improved aesthetics, performance and tools.

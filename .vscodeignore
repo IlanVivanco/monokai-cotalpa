@@ -1,3 +1,9 @@
 .vscode/**
 .vscode-test/**
 .git*
+demo/**
+src/**
+scripts/**
+images/**
+!images/logo.png
+screenshots/**

@@ -6,31 +6,32 @@ import variants from './themeVariations.js'
 
 const themes = []
 
-for (let { name, type, slug, italics, variations } of variants) {
+for (let { name, type, slug, variations } of variants) {
 	const translatedScheme = variations ? translateScheme(scheme, variations) : scheme
-	const semanticColors = assignSemanticColors(themeBase.semanticColors, translatedScheme, type)
 	const workbechColors = assignWorkbechColors(themeBase.colors, translatedScheme, type)
-	const tokenColors = assignTokenColors(themeBase.tokenColors, translatedScheme, italics, type)
 
-	themes.push({
-		path:
-			name !== 'Main'
-				? `themes/monokai-cotalpa-${slug}-color-theme.json`
-				: 'themes/monokai-cotalpa-color-theme.json',
-		meta: {
-			name: name !== 'Main' ? `Monokai Cotalpa ${name}` : 'Monokai Cotalpa',
-			author: 'Ilán Vivanco <ilanvivanco@gmail.com>',
-			$schema: 'vscode://schemas/color-theme',
-			colorSpaceName: 'sRGB',
-			// semanticHighlighting: true,
-			type: type,
-		},
-		colors: {
-			semanticTokenColors: semanticColors,
-			colors: workbechColors,
-			tokenColors: tokenColors,
-		},
-	})
+	// Every theme also gets an italic version.
+	for (let italics of [false, true]) {
+		const label = [name !== 'Main' ? name : '', italics ? 'Italic' : ''].filter(Boolean).join(' ')
+		const file = slug === 'main' && !italics ? '' : `-${slug}${italics ? '-italic' : ''}`
+
+		themes.push({
+			path: `themes/monokai-cotalpa${file}-color-theme.json`,
+			meta: {
+				name: label ? `Monokai Cotalpa ${label}` : 'Monokai Cotalpa',
+				author: 'Ilán Vivanco <ilanvivanco@gmail.com>',
+				$schema: 'vscode://schemas/color-theme',
+				colorSpaceName: 'sRGB',
+				semanticHighlighting: true,
+				type: type,
+			},
+			colors: {
+				semanticTokenColors: assignSemanticColors(themeBase.semanticColors, translatedScheme, italics, type),
+				colors: workbechColors,
+				tokenColors: assignTokenColors(themeBase.tokenColors, translatedScheme, italics, type),
+			},
+		})
+	}
 }
 
-saveThemes(themes)
+await saveThemes(themes)

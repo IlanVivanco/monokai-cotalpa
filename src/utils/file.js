@@ -13,8 +13,11 @@ async function addThemesToPackage(data = {}) {
 	writeJSON('./package.json', packageData)
 }
 
-export function saveThemes(themes) {
+export async function saveThemes(themes) {
 	const metaForPackage = []
+
+	// Start clean so removed or renamed themes don't linger
+	fs.emptyDirSync(path.resolve('.', 'themes'))
 
 	for (let theme of themes) {
 		const themeData = {
@@ -32,5 +35,5 @@ export function saveThemes(themes) {
 	}
 
 	// Save data to package.json
-	addThemesToPackage(metaForPackage)
+	await addThemesToPackage(metaForPackage)
 }

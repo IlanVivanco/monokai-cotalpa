@@ -1,0 +1,22 @@
+diff --git a/src/rules/tokens.js b/src/rules/tokens.js
+index 516d9f2..f06902b 100644
+--- a/src/rules/tokens.js
++++ b/src/rules/tokens.js
+@@ -233,9 +233,23 @@ export default [
+ 	{
+-		name: 'Markup images',
++		name: 'Diff inserted',
+ 		scope: ['markup.inserted', 'markup.inserted punctuation.definition.inserted'],
+ 		settings: {
+-			fontStyle: 'config',
+-			foreground: { dark: ['red'], light: ['red'] },
++			foreground: { dark: ['green'], light: ['green'] },
+ 		},
+ 	},
++	{
++		name: 'Diff deleted',
++		scope: ['markup.deleted', 'markup.deleted punctuation.definition.deleted'],
++		settings: {
++			foreground: { dark: ['red'], light: ['red'] },
++		},
++	},

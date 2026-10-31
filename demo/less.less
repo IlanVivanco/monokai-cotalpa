@@ -1,0 +1,41 @@
+// Less stylesheet, to try the theme with Less.
+@import (reference) 'variables.less';
+
+@yellow: #fcdc7d;
+@red: #fc988d;
+@radius: 4px;
+@selector: ~'.card';
+@breakpoints: { mobile: 480px; desktop: 1024px; };
+
+.rounded(@size: @radius) {
+	border-radius: @size;
+}
+
+.theme(@variant) when (@variant = dark) {
+	background-color: darken(#273136, 5%);
+}
+
+@{selector} {
+	.rounded(6px);
+	.theme(dark);
+	color: fade(@yellow, 80%);
+	padding: (@radius * 2) @radius;
+
+	&:hover,
+	&.is-active {
+		border-color: @red !important;
+	}
+
+	&__title {
+		font: 600 1.25rem/1.4 'Cascadia Code', monospace;
+	}
+
+	@media (min-width: @breakpoints[desktop]) {
+		width: calc(~'100% - @{radius}');
+	}
+}
+
+#header > .nav a[href^='http']::after {
+	content: '\2197';
+	transition: opacity 0.2s ease-in-out;
+}
