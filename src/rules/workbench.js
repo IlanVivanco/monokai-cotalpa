@@ -106,6 +106,16 @@ export default {
 
 	'editorStickyScroll.background': ['gray-700'],
 	'editorStickyScrollHover.background': ['blue', 0.05],
+	'editorStickyScroll.shadow': ['gray-900', 0.6],
+
+	'editorMultiCursor.primary.foreground': ['yellow'],
+	'editorMultiCursor.secondary.foreground': ['gray-300'],
+	'editor.placeholder.foreground': ['gray-500'],
+	'editorGhostText.foreground': ['gray-400'],
+	'editorInlayHint.background': ['gray-600', 0.5],
+	'editorInlayHint.foreground': ['gray-400'],
+	'editor.stackFrameHighlightBackground': ['yellow', 0.1],
+	'editor.focusedStackFrameHighlightBackground': ['green', 0.1],
 
 	'searchEditor.findMatchBackground': null,
 	'searchEditor.findMatchBorder': null,
@@ -148,8 +158,6 @@ export default {
 	'editor.symbolHighlightBackground': null,
 	'editor.symbolHighlightBorder': null,
 	'editorWhitespace.foreground': ['gray-500'],
-	'editorInlayHint.background': null,
-	'editorInlayHint.foreground': null,
 	'editorRuler.foreground': ['gray-500'],
 	'editor.linkedEditingBackground': null,
 
