@@ -367,8 +367,8 @@ export default [
 		},
 	},
 	{
-		name: 'JS variables',
-		scope: ['variable.other.constant.js'],
+		name: 'Constant variables',
+		scope: ['variable.other.constant'],
 		settings: {
 			foreground: { dark: ['blue'], light: ['blue'] },
 		},
