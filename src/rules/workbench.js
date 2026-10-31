@@ -132,7 +132,7 @@ export default {
 	'editorBracketHighlight.foreground3': ['magenta', 0.7],
 	'editorBracketHighlight.foreground4': ['purple', 0.7],
 	'editorBracketHighlight.foreground5': ['cyan', 0.7],
-	'editorBracketHighlight.foreground5': ['blue', 0.7],
+	'editorBracketHighlight.foreground6': ['blue', 0.7],
 	'editorBracketHighlight.unexpectedBracket.foreground': ['error'],
 
 	'editor.hoverHighlightBackground': ['gray-400', 0.1],
