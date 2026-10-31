@@ -478,7 +478,7 @@ export default {
 	'statusBarItem.warningForeground': ['warning'],
 	'statusBarItem.focusBorder': ['yellow', 0.5],
 
-	'terminal.ansiBlack': ['gray-600'],
+	'terminal.ansiBlack': ['gray-500'],
 	'terminal.ansiBlue': ['blue'],
 	'terminal.ansiBrightBlack': ['gray-400'],
 	'terminal.ansiBrightBlue': ['blue'],
