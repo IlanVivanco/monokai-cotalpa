@@ -10,7 +10,7 @@ export function assignWorkbechColors(rules, scheme, mode = 'dark') {
 			const [color, opacity] = getColor(rules[rule], mode)
 
 			assignedRules[rule] = chroma(scheme[color])
-				.alpha(opacity ? opacity : 1)
+				.alpha(opacity ?? 1)
 				.hex()
 		}
 	}
@@ -30,7 +30,7 @@ export function assignTokenColors(rules, scheme, italics = false, mode = 'dark')
 		if (colorRule && typeof colorRule !== 'string') {
 			const [color, opacity] = getColor(colorRule, mode)
 			rule.settings.foreground = chroma(scheme[color])
-				.alpha(opacity ? opacity : 1)
+				.alpha(opacity ?? 1)
 				.hex()
 		}
 
@@ -53,7 +53,7 @@ export function assignSemanticColors(rules, scheme, mode = 'dark') {
 			const [color, opacity] = getColor(rules[rule].foreground, mode)
 
 			assignedRules[rule] = chroma(scheme[color])
-				.alpha(opacity ? opacity : 1)
+				.alpha(opacity ?? 1)
 				.hex()
 		}
 	}
