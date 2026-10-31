@@ -252,6 +252,27 @@ export default [
 		},
 	},
 	{
+		name: 'Markup strikethrough',
+		scope: 'markup.strikethrough',
+		settings: {
+			fontStyle: 'strikethrough',
+		},
+	},
+	{
+		name: 'Markup list bullets',
+		scope: 'punctuation.definition.list.begin.markdown',
+		settings: {
+			foreground: { dark: ['red'], light: ['red'] },
+		},
+	},
+	{
+		name: 'Invalid',
+		scope: 'invalid.illegal',
+		settings: {
+			foreground: { dark: ['error'], light: ['error'] },
+		},
+	},
+	{
 		name: 'Markup deprecated',
 		scope: 'invalid.deprecated',
 		settings: {
@@ -292,6 +313,13 @@ export default [
 	{
 		name: 'Strings',
 		scope: ['string.quoted', 'string.template'],
+		settings: {
+			foreground: { dark: ['yellow'], light: ['yellow'] },
+		},
+	},
+	{
+		name: 'YAML unquoted strings',
+		scope: ['string.unquoted.plain.out.yaml', 'string.unquoted.plain.in.yaml'],
 		settings: {
 			foreground: { dark: ['yellow'], light: ['yellow'] },
 		},
