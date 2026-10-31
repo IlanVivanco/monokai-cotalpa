@@ -6,3 +6,4 @@ src/**
 scripts/**
 images/**
 !images/logo.png
+screenshots/**
