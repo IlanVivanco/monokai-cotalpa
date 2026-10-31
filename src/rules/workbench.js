@@ -22,6 +22,7 @@ export default {
 	// Modern UI
 	// https://code.visualstudio.com/api/references/theme-color#modern-ui-colors
 	'surface.border': ['gray-700'],
+	'modernSash.gripForeground': ['gray-500', 0.6],
 
 	// Sidebar
 	// https://code.visualstudio.com/api/references/theme-color#side-bar
@@ -431,9 +432,9 @@ export default {
 
 	'scrollbar.shadow': ['gray-700'],
 
-	'scrollbarSlider.activeBackground': ['gray-100', 0.05],
+	'scrollbarSlider.activeBackground': ['gray-100', 0.15],
 	'scrollbarSlider.background': ['gray-100', 0.05],
-	'scrollbarSlider.hoverBackground': ['gray-100', 0.05],
+	'scrollbarSlider.hoverBackground': ['gray-100', 0.1],
 
 	'selection.background': ['gray-100', 0.15],
 
