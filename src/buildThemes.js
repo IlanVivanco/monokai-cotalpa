@@ -34,4 +34,4 @@ for (let { name, type, slug, variations } of variants) {
 	}
 }
 
-saveThemes(themes)
+await saveThemes(themes)
