@@ -14,6 +14,10 @@ export default {
 	'activityBar.activeBorder': ['yellow'],
 	'activityBar.activeBackground': ['yellow', 0.1],
 	'activityBar.activeFocusBorder': ['yellow'],
+	'activityBarTop.foreground': ['gray-200'],
+	'activityBarTop.inactiveForeground': ['gray-500'],
+	'activityBarTop.activeBorder': ['yellow'],
+	'activityBarTop.dropBorder': ['yellow', 0.5],
 
 	// Modern UI
 	// https://code.visualstudio.com/api/references/theme-color#modern-ui-colors
@@ -55,6 +59,41 @@ export default {
 	'button.background': ['gray-600'],
 	'button.foreground': ['gray-300'],
 	'button.hoverBackground': ['gray-700'],
+	'button.secondaryBackground': ['gray-700'],
+	'button.secondaryForeground': ['gray-300'],
+	'button.secondaryHoverBackground': ['gray-600'],
+	'button.separator': ['gray-300', 0.4],
+
+	'checkbox.background': ['gray-600'],
+	'checkbox.border': ['gray-600'],
+	'checkbox.foreground': ['gray-100'],
+
+	'toolbar.hoverBackground': ['gray-500', 0.3],
+	'toolbar.activeBackground': ['gray-500', 0.5],
+
+	'menu.background': ['gray-600'],
+	'menu.foreground': ['gray-200'],
+	'menu.border': ['gray-700'],
+	'menu.selectionBackground': ['gray-500'],
+	'menu.selectionForeground': ['yellow'],
+	'menu.separatorBackground': ['gray-500'],
+	'menubar.selectionBackground': ['gray-500', 0.3],
+
+	'keybindingLabel.background': ['gray-500', 0.3],
+	'keybindingLabel.foreground': ['gray-200'],
+	'keybindingLabel.border': ['gray-500', 0.5],
+	'keybindingLabel.bottomBorder': ['gray-500', 0.5],
+
+	'commandCenter.background': ['gray-700'],
+	'commandCenter.foreground': ['gray-300'],
+	'commandCenter.border': ['gray-600'],
+	'commandCenter.activeBackground': ['gray-600'],
+	'commandCenter.activeForeground': ['gray-100'],
+	'commandCenter.inactiveForeground': ['gray-500'],
+
+	'banner.background': ['gray-600'],
+	'banner.foreground': ['gray-200'],
+	'banner.iconForeground': ['info'],
 
 	'debugExceptionWidget.background': ['gray-600'],
 	'debugExceptionWidget.border': ['gray-700'],
