@@ -1,6 +1,7 @@
 // Takes screenshots of the themes in a real VS Code, to review changes visually.
 //
 // Usage: npm run screenshots -- [label] [--themes=main,dark,...|all] [--scenes=main,scm,...|all]
+//        npm run screenshots -- [label] --files=demo/go.go,demo/java.java (one screenshot per file)
 //
 // Screenshots are saved in screenshots/<NN>-<label>/, numbered so rounds can be compared.
 // By default, the main theme gets every scene and the other themes get the main scene.
@@ -46,7 +47,8 @@ const pickedThemes = pick(
 	themes.map((theme) => theme.slug),
 	['main']
 )
-const pickedScenes = pick(option('scenes'), SCENES, SCENES)
+const files = option('files')?.split(',') ?? []
+const pickedScenes = files.length ? files.map((file) => `file:${file}`) : pick(option('scenes'), SCENES, SCENES)
 const runs = themes
 	.filter((theme) => pickedThemes.includes(theme.slug) || !option('themes'))
 	.flatMap((theme) => (pickedThemes.includes(theme.slug) ? pickedScenes : ['main']).map((scene) => ({ theme, scene })))
@@ -71,7 +73,7 @@ try {
 			workspace,
 			theme,
 			scene,
-			file: path.join(outputDir, `${theme.slug}-${scene}.png`),
+			file: path.join(outputDir, `${theme.slug}-${scene.replace(/^file:(demo\/)?/, '').replace(/\W+/g, '-')}.png`),
 		})
 	}
 
@@ -120,7 +122,9 @@ async function takeScreenshot({ executable, vsix, workspace, theme, scene, file 
 	const opened =
 		scene === 'diff'
 			? ['--diff', path.join(tmp, 'typescript.before.ts'), path.join(workspace, 'demo/typescript.ts')]
-			: (files[scene] ?? []).map((file) => path.join(workspace, file))
+			: scene.startsWith('file:')
+				? [path.join(workspace, scene.slice(5))]
+				: (files[scene] ?? []).map((file) => path.join(workspace, file))
 
 	const app = await _electron.launch({
 		executablePath: executable,
