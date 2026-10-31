@@ -3,6 +3,8 @@
 // Usage: npm run screenshots -- [label] [--themes=main,dark,...|all] [--scenes=main,scm,...|all] [--scale=2]
 //        npm run screenshots -- [label] --files=demo/go.go,demo/java.java:40 (one per file, optionally scrolled
 //        so that line is at the top)
+//        npm run screenshots -- [label] --setting=workbench.experimental.modernUIEditorTabStyle=pill
+//        (any VS Code setting, repeatable)
 //
 // Screenshots are saved in screenshots/<NN>-<label>/, numbered so rounds can be compared.
 // By default, the main theme gets every scene and the other themes get the main scene.
@@ -39,6 +41,20 @@ if (process.platform === 'linux' && !process.env.SCREENSHOTS_XVFB && hasCommand(
 const args = process.argv.slice(2)
 const option = (name) => args.find((arg) => arg.startsWith(`--${name}=`))?.split('=')[1]
 const label = args.find((arg) => !arg.startsWith('--')) ?? 'review'
+
+// --setting=key=value adds a VS Code setting; values are parsed as JSON when possible
+const extraSettings = Object.fromEntries(
+	args
+		.filter((arg) => arg.startsWith('--setting='))
+		.map((arg) => {
+			const [key, ...value] = arg.slice('--setting='.length).split('=')
+			try {
+				return [key, JSON.parse(value.join('='))]
+			} catch {
+				return [key, value.join('=')]
+			}
+		})
+)
 
 const { contributes } = await fs.readJson(path.join(ROOT, 'package.json'))
 const themes = contributes.themes.map(({ label, path: file }) => ({
@@ -105,6 +121,7 @@ async function takeScreenshot({ executable, vsix, workspace, theme, scene, file 
 		'git.openRepositoryInParentFolders': 'always',
 		'terminal.integrated.defaultProfile.linux': 'bash',
 		'terminal.integrated.defaultProfile.osx': 'bash',
+		...extraSettings,
 	})
 
 	const cli = resolveCliPathFromVSCodeExecutablePath(executable)
