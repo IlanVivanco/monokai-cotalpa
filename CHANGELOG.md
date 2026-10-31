@@ -13,6 +13,7 @@ All notable changes to the "Monokai Cotalpa" extension will be documented in thi
 -  Changed low-contrast UI text to be more readable: placeholders, side bar titles, section headers and inactive tabs.
 -  Changed bright terminal colors to be lighter than the normal ones, and made black text visible in the terminal.
 -  Made removed lines easier to spot in diffs.
+-  Changed the sticky scroll shadow, which blurred the code below it, to a thin border.
 -  Fixed diff markup: added lines were red.
 -  Fixed terminal colors: blue showed as orange and magenta as blue.
 -  Fixed TypeScript constants not using the constant color.

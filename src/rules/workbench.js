@@ -154,7 +154,8 @@ export default {
 
 	'editorStickyScroll.background': ['gray-700'],
 	'editorStickyScrollHover.background': ['blue', 0.05],
-	'editorStickyScroll.shadow': ['gray-900', 0.6],
+	'editorStickyScroll.shadow': ['gray-900', 0],
+	'editorStickyScroll.border': ['gray-800'],
 
 	'editorMultiCursor.primary.foreground': ['yellow'],
 	'editorMultiCursor.secondary.foreground': ['gray-300'],
