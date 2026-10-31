@@ -562,6 +562,41 @@ export default {
 	'editorOverviewRuler.inlineChatInserted': ['success', 0.3],
 	'editorOverviewRuler.inlineChatRemoved': ['error', 0.3],
 
+	// Agent sessions window
+	// https://code.visualstudio.com/api/references/theme-color#agent-sessions-colors
+	// Each color follows its workbench counterpart: shell = title bar, panels = editor,
+	// chat input = inline chat input, buttons and badges = their workbench versions.
+	'agents.background': ['gray-800'],
+	'agentsGradient.tintColor': ['gray-700'],
+	'agentsPanel.background': ['gray-700'],
+	'agentsPanel.foreground': ['gray-100'],
+	'agentsPanel.border': ['gray-700'],
+	'agentsCard.border': ['gray-700'],
+	'agentsBottomPanel.border': ['gray-600', 0.7],
+	'agentFeedbackEditorWidget.background': ['gray-600'],
+	'agentFeedbackEditorWidget.border': ['gray-600'],
+	'agentFeedbackInputWidget.border': ['gray-700'],
+	'agentsChatInput.background': ['gray-700'],
+	'agentsChatInput.foreground': ['gray-100'],
+	'agentsChatInput.border': ['gray-600'],
+	'agentsChatInput.focusBorder': ['gray-400'],
+	'agentsChatInput.placeholderForeground': ['gray-300'],
+	'agentsNewSessionButton.background': ['gray-600'],
+	'agentsNewSessionButton.foreground': ['gray-100'],
+	'agentsNewSessionButton.border': ['gray-600'],
+	'agentsNewSessionButton.hoverBackground': ['gray-500'],
+	'agentsBadge.background': ['yellow'],
+	'agentsBadge.foreground': ['gray-800'],
+	'agentsUnreadBadge.background': ['yellow'],
+	'agentsUnreadBadge.foreground': ['gray-800'],
+	'activeSessionView.background': ['gray-700'],
+	'activeSessionView.foreground': ['gray-100'],
+	'inactiveSessionView.background': ['gray-800'],
+	'inactiveSessionView.foreground': ['gray-400'],
+	'agentsMobileDiff.addedForeground': ['success'],
+	'agentsMobileDiff.modifiedForeground': ['warning'],
+	'agentsMobileDiff.deletedForeground': ['error'],
+
 	// Symbol icons (outline, breadcrumbs and suggestions), matching the syntax colors
 	// https://code.visualstudio.com/api/references/theme-color#symbol-icons-colors
 	'symbolIcon.arrayForeground': ['gray-300'],

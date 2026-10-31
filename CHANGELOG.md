@@ -6,7 +6,7 @@ All notable changes to the "Monokai Cotalpa" extension will be documented in thi
 -  Changed Monokai Cotalpa Dark: it was identical to the main theme; it now has darker backgrounds.
 -  Changed Monokai Cotalpa Coffee: grays now have the intended warm, coffee tone instead of a neutral gray.
 -  Added semantic highlighting: it uses the same colors as the syntax rules.
--  Added colors for newer VS Code features: modern UI, chat and inline chat, multi-cursor, inlay hints, ghost text, source control graph, diff editor, terminal search, status bar items, menus, symbol icons, testing, breakpoints, Markdown alerts and charts.
+-  Added colors for newer VS Code features: modern UI, chat, inline chat and the agent sessions window, multi-cursor, inlay hints, ghost text, source control graph, diff editor, terminal search, status bar items, menus, symbol icons, testing, breakpoints, Markdown alerts and charts.
 -  Added token scopes: YAML unquoted strings, Markdown strikethrough and list bullets, invalid code.
 -  Changed status colors: errors, warnings, info and git decorations now share one consistent set of colors.
 -  Changed the modern UI panel border to a lower contrast.
