@@ -276,7 +276,7 @@ export default {
 	'tab.lastPinnedBorder': ['gray-600'],
 	'tab.inactiveBackground': ['gray-800', 0.5],
 	'tab.unfocusedInactiveBackground': ['gray-800', 0.5],
-	'tab.inactiveForeground': ['gray-500'],
+	'tab.inactiveForeground': ['gray-400'],
 	'tab.unfocusedActiveForeground': ['gray-400'],
 	'tab.unfocusedInactiveForeground': ['gray-500'],
 	'tab.hoverBackground': ['gray-900', 0.5],
