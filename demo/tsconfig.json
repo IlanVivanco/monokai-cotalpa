@@ -1,0 +1,12 @@
+{
+	// Lets the TypeScript demos load without installing their dependencies.
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"jsx": "preserve",
+		"experimentalDecorators": true,
+		"strict": false,
+		"noEmit": true
+	}
+}
