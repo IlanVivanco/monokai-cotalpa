@@ -30,9 +30,9 @@ export default {
 	'sideBar.border': ['gray-900'],
 	'sideBar.dropBackground': ['gray-800', 0.6],
 	'sideBar.foreground': ['gray-300'],
-	'sideBarTitle.foreground': ['gray-500'],
+	'sideBarTitle.foreground': ['gray-400'],
 	'sideBarSectionHeader.background': ['gray-700', 0.4],
-	'sideBarSectionHeader.foreground': ['gray-400', 0.7],
+	'sideBarSectionHeader.foreground': ['gray-400'],
 	'sideBarSectionHeader.border': ['gray-800'],
 
 	// Minimap
