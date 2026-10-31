@@ -533,4 +533,31 @@ export default {
 
 	'widget.shadow': ['gray-800', 0.3],
 	'widget.border': ['gray-600', 0.1],
+
+
+	// Chat
+	// https://code.visualstudio.com/api/references/theme-color#chat-colors
+	'chat.requestBubbleBackground': ['gray-600'],
+	'chat.requestBubbleHoverBackground': ['gray-500', 0.6],
+	'chat.requestBorder': ['gray-600'],
+	'chat.slashCommandBackground': ['yellow', 0.15],
+	'chat.slashCommandForeground': ['yellow'],
+	'chat.avatarBackground': ['gray-600'],
+	'chat.avatarForeground': ['gray-200'],
+	'chat.editedFileForeground': ['warning'],
+	'chat.linesAddedForeground': ['success'],
+	'chat.linesRemovedForeground': ['error'],
+	'chat.checkpointSeparator': ['gray-500'],
+
+	'inlineChat.background': ['gray-600'],
+	'inlineChat.border': ['gray-600'],
+	'inlineChat.shadow': ['gray-800', 0.3],
+	'inlineChatInput.background': ['gray-700'],
+	'inlineChatInput.border': ['gray-700'],
+	'inlineChatInput.focusBorder': ['gray-400'],
+	'inlineChatInput.placeholderForeground': ['gray-400'],
+	'inlineChatDiff.inserted': ['green', 0.1],
+	'inlineChatDiff.removed': ['red', 0.1],
+	'editorOverviewRuler.inlineChatInserted': ['success', 0.3],
+	'editorOverviewRuler.inlineChatRemoved': ['error', 0.3],
 }
