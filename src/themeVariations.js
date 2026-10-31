@@ -35,6 +35,9 @@ const NEUTRALS = '^(transparent|white|black|(light|dark)?gray|gray-\\d+)$'
 // Accent colors: everything that is not a neutral.
 const ACCENTS = `^(?!${NEUTRALS.slice(1, -1)}$)`
 
+// Neutral colors used as backgrounds.
+const BACKGROUNDS = '^(transparent|black|darkgray|gray-[6-9]00)$'
+
 const coffee = {
 	[NEUTRALS]: {
 		hue: 30,
@@ -57,8 +60,8 @@ export default [
 		slug: 'main-dark',
 		type: 'dark',
 		variations: {
-			'^(?!gray)': {
-				// shift: -25,
+			[BACKGROUNDS]: {
+				brightness: -0.3,
 			},
 		},
 	},
