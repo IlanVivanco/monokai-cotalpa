@@ -3,3 +3,4 @@
 node_modules/
 /themes/
 screenshots/
+.vscode-test/
