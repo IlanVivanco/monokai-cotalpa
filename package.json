@@ -67,10 +67,10 @@
   },
   "devDependencies": {
     "@vscode/vsce": "^4.1.0",
-    "chroma-js": "^2.4.2",
-    "fs-extra": "^11.1.1",
-    "npm-watch": "^0.11.0",
-    "prettier": "^3.1.0"
+    "chroma-js": "^3.2.0",
+    "fs-extra": "^11.4.1",
+    "npm-watch": "^0.13.0",
+    "prettier": "^3.9.10"
   },
   "badges": [],
   "watch": {
