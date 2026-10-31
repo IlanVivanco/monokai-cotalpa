@@ -56,7 +56,6 @@ const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'cotalpa-screenshots-'))
 
 try {
 	console.log('Building and packaging the themes…')
-	execFileSync('npm', ['run', '-s', 'build'], { stdio: 'inherit' })
 	const vsix = path.join(tmp, 'cotalpa.vsix')
 	execFileSync('npx', ['vsce', 'package', '-o', vsix], { stdio: 'ignore' })
 

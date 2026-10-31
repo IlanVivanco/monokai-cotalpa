@@ -83,6 +83,7 @@
     "watch": "npm-watch",
     "validate": "node ./scripts/validateThemes.js",
     "package": "vsce package",
-    "screenshots": "node ./scripts/screenshots.js"
+    "screenshots": "node ./scripts/screenshots.js",
+    "vscode:prepublish": "npm run build"
   }
 }
