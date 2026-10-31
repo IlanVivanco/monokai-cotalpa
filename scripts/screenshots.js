@@ -1,6 +1,6 @@
 // Takes screenshots of the themes in a real VS Code, to review changes visually.
 //
-// Usage: npm run screenshots -- [label] [--themes=main,dark,...|all] [--scenes=main,scm,...|all]
+// Usage: npm run screenshots -- [label] [--themes=main,dark,...|all] [--scenes=main,scm,...|all] [--scale=2]
 //        npm run screenshots -- [label] --files=demo/go.go,demo/java.java (one screenshot per file)
 //
 // Screenshots are saved in screenshots/<NN>-<label>/, numbered so rounds can be compared.
@@ -18,15 +18,18 @@ import { _electron } from 'playwright-core'
 
 const ROOT = path.resolve('.')
 const OUTPUT = path.join(ROOT, 'screenshots')
-const SCENES = ['main', 'scm', 'diff', 'palette', 'markdown']
+const SCENES = ['main', 'scm', 'diff', 'palette', 'markdown', 'overview']
 const WIDTH = 1500
 const HEIGHT = 900
+
+// Pixel density of the screenshots: use --scale=2 for sharp README images
+const SCALE = Number(process.argv.find((arg) => arg.startsWith('--scale='))?.split('=')[1] ?? 1)
 
 // Without a display (CI, WSL without WSLg) or to avoid popping windows, run inside Xvfb.
 if (process.platform === 'linux' && !process.env.SCREENSHOTS_XVFB && hasCommand('xvfb-run')) {
 	const { status } = spawnSync(
 		'xvfb-run',
-		['-a', '-s', `-screen 0 ${WIDTH}x${HEIGHT}x24`, process.execPath, ...process.argv.slice(1)],
+		['-a', '-s', `-screen 0 ${WIDTH * SCALE}x${HEIGHT * SCALE}x24`, process.execPath, ...process.argv.slice(1)],
 		{ stdio: 'inherit', env: { ...process.env, SCREENSHOTS_XVFB: '1' } }
 	)
 	process.exit(status ?? 1)
@@ -88,6 +91,7 @@ async function takeScreenshot({ executable, vsix, workspace, theme, scene, file 
 
 	fs.outputJsonSync(path.join(userDataDir, 'User', 'settings.json'), {
 		'workbench.colorTheme': theme.label,
+		'window.newWindowDimensions': 'maximized',
 		'workbench.startupEditor': 'none',
 		'workbench.secondarySideBar.defaultVisibility': 'hidden',
 		'workbench.tips.enabled': false,
@@ -115,6 +119,7 @@ async function takeScreenshot({ executable, vsix, workspace, theme, scene, file 
 
 	const files = {
 		main: ['demo/typescript.ts', 'demo/php.php'],
+		overview: ['demo/python.py'],
 		scm: ['demo/python.py'],
 		palette: ['demo/react.js'],
 		markdown: ['demo/markdown.md'],
@@ -132,6 +137,7 @@ async function takeScreenshot({ executable, vsix, workspace, theme, scene, file 
 			`--user-data-dir=${userDataDir}`,
 			`--extensions-dir=${extensionsDir}`,
 			'--disable-gpu',
+			`--force-device-scale-factor=${SCALE}`,
 			'--no-sandbox',
 			'--skip-release-notes',
 			workspace,
@@ -141,11 +147,13 @@ async function takeScreenshot({ executable, vsix, workspace, theme, scene, file 
 
 	try {
 		const window = await app.firstWindow()
-		await window.setViewportSize({ width: WIDTH, height: HEIGHT })
+		// Resizing through Playwright resets the pixel density, so with --scale the window is
+		// maximized instead, filling the Xvfb screen
+		if (SCALE === 1) await window.setViewportSize({ width: WIDTH, height: HEIGHT })
 		await wait(6000)
 
 		const { keyboard } = window
-		if (scene === 'main') {
+		if (scene === 'main' || scene === 'overview') {
 			await keyboard.press('Control+Backquote')
 			await wait(2500)
 			await keyboard.type('clear; bash ../ansi.sh; ls --color=always demo')
