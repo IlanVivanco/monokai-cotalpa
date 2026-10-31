@@ -78,7 +78,8 @@
   },
   "scripts": {
     "build": "node ./src/buildThemes.js",
-    "watch": "npm-watch"
+    "watch": "npm-watch",
+    "validate": "node ./scripts/validateThemes.js"
   },
   "dependencies": {
     "lodash.clonedeep": "^4.5.0"
