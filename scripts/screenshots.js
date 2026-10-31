@@ -170,6 +170,7 @@ async function takeScreenshot({ executable, vsix, workspace, theme, scene, file 
 function createWorkspace(tmp) {
 	const workspace = path.join(tmp, 'workspace')
 	fs.copySync(path.join(ROOT, 'demo'), path.join(workspace, 'demo'))
+	fs.writeFileSync(path.join(workspace, 'demo/removed.txt'), 'Deleted in the demo repo\n')
 
 	const git = (...gitArgs) => execFileSync('git', gitArgs, { cwd: workspace, stdio: 'ignore' })
 	git('init', '-q')
@@ -187,7 +188,7 @@ function createWorkspace(tmp) {
 	)
 	fs.appendFileSync(path.join(workspace, 'demo/css.css'), '\n/* staged */\n')
 	git('add', 'demo/css.css')
-	git('rm', '-q', 'demo/go.go')
+	git('rm', '-q', 'demo/removed.txt')
 	fs.writeFileSync(path.join(workspace, 'demo/untracked.txt'), 'new\n')
 
 	// Prints every ANSI color in the terminal scene
