@@ -1,5 +1,5 @@
 /**
- * Each object will create a new theme.
+ * Each object will create a new theme, plus its italic version.
  *
  * You can also apply changes to the current theme by setting variations —see ./src/themeVariations.js—.
  * You can define a regex rule and then as many variations as you want for that particular match.
@@ -66,22 +66,9 @@ export default [
 		},
 	},
 	{
-		name: 'Italic',
-		slug: 'main-italic',
-		type: 'dark',
-		italics: true,
-	},
-	{
 		name: 'Coffee',
 		slug: 'coffee-dark',
 		type: 'dark',
-		variations: coffee,
-	},
-	{
-		name: 'Coffee Italic',
-		slug: 'coffee-italic',
-		type: 'dark',
-		italics: true,
 		variations: coffee,
 	},
 ]

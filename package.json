@@ -39,14 +39,19 @@
         "path": "./themes/monokai-cotalpa-color-theme.json"
       },
       {
+        "label": "Monokai Cotalpa Italic",
+        "uiTheme": "vs-dark",
+        "path": "./themes/monokai-cotalpa-main-italic-color-theme.json"
+      },
+      {
         "label": "Monokai Cotalpa Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/monokai-cotalpa-main-dark-color-theme.json"
       },
       {
-        "label": "Monokai Cotalpa Italic",
+        "label": "Monokai Cotalpa Dark Italic",
         "uiTheme": "vs-dark",
-        "path": "./themes/monokai-cotalpa-main-italic-color-theme.json"
+        "path": "./themes/monokai-cotalpa-main-dark-italic-color-theme.json"
       },
       {
         "label": "Monokai Cotalpa Coffee",
@@ -56,7 +61,7 @@
       {
         "label": "Monokai Cotalpa Coffee Italic",
         "uiTheme": "vs-dark",
-        "path": "./themes/monokai-cotalpa-coffee-italic-color-theme.json"
+        "path": "./themes/monokai-cotalpa-coffee-dark-italic-color-theme.json"
       }
     ]
   },

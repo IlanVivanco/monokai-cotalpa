@@ -16,6 +16,9 @@ async function addThemesToPackage(data = {}) {
 export function saveThemes(themes) {
 	const metaForPackage = []
 
+	// Start clean so removed or renamed themes don't linger
+	fs.emptyDirSync(path.resolve('.', 'themes'))
+
 	for (let theme of themes) {
 		const themeData = {
 			...theme.meta,
