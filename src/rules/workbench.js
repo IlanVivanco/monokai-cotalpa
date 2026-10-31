@@ -15,6 +15,10 @@ export default {
 	'activityBar.activeBackground': ['yellow', 0.1],
 	'activityBar.activeFocusBorder': ['yellow'],
 
+	// Modern UI
+	// https://code.visualstudio.com/api/references/theme-color#modern-ui-colors
+	'surface.border': ['gray-700'],
+
 	// Sidebar
 	// https://code.visualstudio.com/api/references/theme-color#side-bar
 	'sideBar.background': ['gray-800'],
