@@ -77,8 +77,8 @@ export default {
 	// https://code.visualstudio.com/api/references/theme-color#editor-colors
 	'editor.background': ['gray-700'],
 	'editor.foreground': ['gray-100'],
-	'editorLineNumber.foreground': null,
-	'editorLineNumber.activeForeground': null,
+	'editorLineNumber.foreground': ['gray-500'],
+	'editorLineNumber.activeForeground': ['gray-300'],
 	'editorCursor.background': ['gray-700'],
 	'editorCursor.foreground': ['gray-100'],
 
@@ -103,7 +103,7 @@ export default {
 	'editorStickyScroll.background': ['gray-700'],
 	'editorStickyScrollHover.background': ['blue', 0.05],
 
-	'searchEditor.findMatchB/* ackground': null,
+	'searchEditor.findMatchBackground': null,
 	'searchEditor.findMatchBorder': null,
 	'searchEditor.textInputBorder': null,
 
@@ -138,15 +138,15 @@ export default {
 	'editor.hoverHighlightBackground': ['gray-400', 0.1],
 	'editor.lineHighlightBackground': ['gray-400', 0.1],
 	'editor.lineHighlightBorder': null,
-	'editorLink.activeForeground': null,
+	'editorLink.activeForeground': ['cyan'],
 	'editor.rangeHighlightBackground': ['gray-600'],
 	'editor.rangeHighlightBorder': null,
 	'editor.symbolHighlightBackground': null,
 	'editor.symbolHighlightBorder': null,
-	'editorWhitespace.foreground': null,
+	'editorWhitespace.foreground': ['gray-500'],
 	'editorInlayHint.background': null,
 	'editorInlayHint.foreground': null,
-	'editorRuler.foreground': null,
+	'editorRuler.foreground': ['gray-500'],
 	'editor.linkedEditingBackground': null,
 
 	'editorCodeLens.foreground': ['gray-400'],
@@ -173,14 +173,14 @@ export default {
 	'editorError.foreground': ['error', 0.5],
 	'editorError.border': null,
 	'editorError.background': null,
-	'editorWarning.foreground': ['warning', 0.5],
+	'editorWarning.foreground': ['warning'],
 	'editorWarning.border': null,
 	'editorWarning.background': null,
-	'editorInfo.foreground': ['info', 0.5],
-	'editorInfo.border': null,
+	'editorInfo.foreground': ['cyan'],
+	'editorInfo.border': ['gray-700'],
 	'editorInfo.background': null,
-	'editorHint.foreground': ['info', 0.5],
-	'editorHint.border': null,
+	'editorHint.foreground': ['blue'],
+	'editorHint.border': ['gray-700'],
 	'problemsErrorIcon.foreground': null,
 	'problemsWarningIcon.foreground': null,
 	'problemsInfoIcon.foreground': null,
@@ -188,10 +188,10 @@ export default {
 	'editorUnnecessaryCode.border': null,
 	'editorUnnecessaryCode.opacity': null,
 
-	'editorGutter.background': null,
-	'editorGutter.modifiedBackground': null,
-	'editorGutter.addedBackground': null,
-	'editorGutter.deletedBackground': null,
+	'editorGutter.background': ['gray-700'],
+	'editorGutter.modifiedBackground': ['orange'],
+	'editorGutter.addedBackground': ['green'],
+	'editorGutter.deletedBackground': ['red'],
 	'editorGutter.commentRangeForeground': null,
 	'editorGutter.foldingControlForeground': null,
 
@@ -234,41 +234,19 @@ export default {
 	'tree.indentGuidesStroke': ['gray-500', 0.5],
 	'tree.inactiveIndentGuidesStroke': ['gray-600', 0.3],
 
-	'editorGutter.addedBackground': ['green'],
-	'editorGutter.background': ['gray-700'],
-	'editorGutter.deletedBackground': ['red'],
-	'editorGutter.modifiedBackground': ['orange'],
-
-	'editorHint.border': ['gray-700'],
-	'editorHint.foreground': ['blue'],
-
 	'editorHoverWidget.background': ['gray-600'],
 	'editorHoverWidget.border': ['gray-700'],
-
-	'editorInfo.border': ['gray-700'],
-	'editorInfo.foreground': ['cyan'],
-
-	'editorLineNumber.activeForeground': ['gray-300'],
-	'editorLineNumber.foreground': ['gray-500'],
-	'editorLink.activeForeground': ['cyan'],
 
 	'editorMarkerNavigation.background': ['gray-600'],
 	'editorMarkerNavigationError.background': ['red'],
 	'editorMarkerNavigationInfo.background': ['cyan'],
 	'editorMarkerNavigationWarning.background': ['orange'],
 
-	'editorRuler.foreground': ['gray-500'],
-
 	'editorSuggestWidget.background': ['gray-600'],
 	'editorSuggestWidget.border': ['gray-600'],
 	'editorSuggestWidget.foreground': ['gray-200'],
 	'editorSuggestWidget.highlightForeground': ['gray-100'],
 	'editorSuggestWidget.selectedBackground': ['gray-400'],
-
-	'editorWarning.border': null,
-	'editorWarning.foreground': ['orange'],
-
-	'editorWhitespace.foreground': ['gray-500'],
 
 	'editorWidget.background': ['gray-600'],
 	'editorWidget.border': ['gray-600'],
