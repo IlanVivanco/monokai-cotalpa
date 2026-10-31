@@ -43,25 +43,28 @@ export default [
 		},
 	},
 	{
-		name: 'Inherited classes & namespaces',
+		name: 'Classes',
 		scope: [
 			'entity.name.type.class',
 			'entity.name.type.class.generic',
 			'entity.other.inherited-class',
 			'support.class',
-			'support.type.primitive',
-			'variable.other.liquid',
-			'keyword.other.type.php',
-			'keyword.other.namespace',
-			'keyword.other.use',
 		],
+		settings: {
+			fontStyle: 'config',
+			foreground: { dark: ['green'], light: ['green'] },
+		},
+	},
+	{
+		name: 'PHP types',
+		scope: 'keyword.other.type.php',
 		settings: {
 			fontStyle: 'config',
 			foreground: { dark: ['cyan'], light: ['cyan'] },
 		},
 	},
 	{
-		name: 'Inherited classes & namespaces',
+		name: 'Primitive types & namespace keywords',
 		scope: ['support.type.primitive', 'variable.other.liquid', 'keyword.other.namespace', 'keyword.other.use'],
 		settings: {
 			fontStyle: 'config',
@@ -69,14 +72,10 @@ export default [
 		},
 	},
 	{
-		name: 'Function names & classes',
+		name: 'Function names & namespaces',
 		scope: [
 			'entity.name.function',
 			'entity.name.type.namespace',
-			'entity.name.type.class',
-			'entity.name.type.class.generic',
-			'entity.other.inherited-class',
-			'support.class',
 			'comment.block.documentation.phpdoc.php keyword.other.type.php',
 			'support.function',
 			'keyword.other.sql',
@@ -310,13 +309,6 @@ export default [
 		settings: {
 			fontStyle: 'config',
 			foreground: { dark: ['orange'], light: ['orange'] },
-		},
-	},
-	{
-		name: 'Provieded variables',
-		scope: 'variable.other',
-		settings: {
-			foreground: { dark: ['cyan'], light: ['cyan'] },
 		},
 	},
 	{
