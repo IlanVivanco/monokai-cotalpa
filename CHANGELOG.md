@@ -1,6 +1,6 @@
 All notable changes to the "Monokai Cotalpa" extension will be documented in this file.
 
-## [Unreleased]
+## [2.2.0] - 2026-10-31
 
 -  Added Monokai Cotalpa Dark Italic: every theme now has an italic version.
 -  Changed Monokai Cotalpa Dark: it was identical to the main theme; it now has darker backgrounds.
@@ -10,7 +10,11 @@ All notable changes to the "Monokai Cotalpa" extension will be documented in thi
 -  Added token scopes: YAML unquoted strings, Markdown strikethrough and list bullets, invalid code.
 -  Changed status colors: errors, warnings, info and git decorations now share one consistent set of colors.
 -  Changed the modern UI panel border to a lower contrast.
+-  Changed low-contrast UI text to be more readable: placeholders, side bar titles, section headers and inactive tabs.
+-  Changed bright terminal colors to be lighter than the normal ones, and made black text visible in the terminal.
+-  Made removed lines easier to spot in diffs.
 -  Fixed diff markup: added lines were red.
+-  Fixed terminal colors: blue showed as orange and magenta as blue.
 -  Fixed TypeScript constants not using the constant color.
 -  Fixed the terminal cursor background, the sixth bracket color and deprecated welcome page colors.
 -  Fixed rules that silently overrode each other.
