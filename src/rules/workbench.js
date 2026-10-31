@@ -597,4 +597,33 @@ export default {
 	'symbolIcon.typeParameterForeground': ['cyan'],
 	'symbolIcon.unitForeground': ['orange'],
 	'symbolIcon.variableForeground': ['blue'],
+
+
+	// Testing & debugging
+	'testing.iconPassed': ['success'],
+	'testing.iconFailed': ['error'],
+	'testing.iconErrored': ['error'],
+	'testing.iconQueued': ['warning'],
+	'testing.iconSkipped': ['gray-400'],
+	'testing.iconUnset': ['gray-400'],
+	'debugIcon.breakpointForeground': ['error'],
+	'debugIcon.breakpointDisabledForeground': ['gray-400'],
+	'debugIcon.breakpointUnverifiedForeground': ['gray-400'],
+	'debugIcon.breakpointStackframeForeground': ['yellow'],
+	'debugIcon.breakpointCurrentStackframeForeground': ['yellow'],
+
+	// Markdown alerts & charts
+	'markdownAlert.note.foreground': ['info'],
+	'markdownAlert.tip.foreground': ['success'],
+	'markdownAlert.important.foreground': ['purple'],
+	'markdownAlert.warning.foreground': ['warning'],
+	'markdownAlert.caution.foreground': ['error'],
+	'charts.foreground': ['gray-300'],
+	'charts.lines': ['gray-500'],
+	'charts.red': ['red'],
+	'charts.blue': ['blue'],
+	'charts.yellow': ['yellow'],
+	'charts.orange': ['orange'],
+	'charts.green': ['green'],
+	'charts.purple': ['purple'],
 }
