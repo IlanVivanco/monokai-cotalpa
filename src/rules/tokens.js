@@ -232,11 +232,24 @@ export default [
 		},
 	},
 	{
-		name: 'Markup images',
+		name: 'Diff inserted',
 		scope: ['markup.inserted', 'markup.inserted punctuation.definition.inserted'],
 		settings: {
-			fontStyle: 'config',
+			foreground: { dark: ['green'], light: ['green'] },
+		},
+	},
+	{
+		name: 'Diff deleted',
+		scope: ['markup.deleted', 'markup.deleted punctuation.definition.deleted'],
+		settings: {
 			foreground: { dark: ['red'], light: ['red'] },
+		},
+	},
+	{
+		name: 'Diff changed',
+		scope: ['markup.changed', 'markup.changed punctuation.definition.changed'],
+		settings: {
+			foreground: { dark: ['orange'], light: ['orange'] },
 		},
 	},
 	{
