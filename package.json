@@ -3,6 +3,7 @@
   "displayName": "Monokai Cotalpa",
   "description": "🎨 Yet another Monokai color scheme for VS Code.",
   "publisher": "ilanvivanco",
+  "author": "Ilán Vivanco <hi@ilanvivanco.com>",
   "version": "2.2.0",
   "icon": "images/logo.png",
   "license": "MIT",
