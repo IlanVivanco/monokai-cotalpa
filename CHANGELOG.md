@@ -1,5 +1,9 @@
 All notable changes to the "Monokai Cotalpa" extension will be documented in this file.
 
+## [2.2.1] - 2026-11-01
+
+-  Updated the extension logo.
+
 ## [2.2.0] - 2026-10-31
 
 -  Added Monokai Cotalpa Dark Italic: every theme now has an italic version.
